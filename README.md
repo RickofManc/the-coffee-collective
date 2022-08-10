@@ -56,15 +56,15 @@ Understand the user requirements to enable development of a B2C web application 
 
 ### Design Thinking
 
-Following a 'design thinking' approach and using the knowledge and experience from the Nielsen Norman Group, the following key personas have been used to empathize with and understand their needs.
+Following a design thinking approach and using the knowledge and experience of the Nielsen Norman Group, the following key personas have been used to empathize with and understand their needs.
 
 <details><summary><b>User Personas</b></summary>
     <p align="center">
-        <img src="" alt="User Personas created from research"/>
+        <img src="readme-images/the_coffee_collective_user_personas.png" alt="User Personas highlighting the needs of the differing types of users"/>
     </p>
 </details><br />
 
-The output from this phase led to the creation of User Stories complete with Acceptance Criteria and high-level tasks for the Development Phase. The GitHub issues area has been used to store, update and track these User Stories through to completion. 
+The output from this phase supported the ideation of potential features and also the creation of User Stories complete with Acceptance Criteria and high-level tasks for the Development Phase. The GitHub Projects Kanban Board has been used to prioritise, update and track all User Stories through to completion. Note this Kanban Board was also used for bug fixing and issue resolution, please see the Testing section of this document for further information. 
 
 <br />
 
@@ -150,13 +150,13 @@ In building the skeleton I used Wireframes to enable the client to feedback on h
 
 <br />
 
-#### Keyword Research
+**Keyword Research**
 
 Ahead of creating the Wireframes, I performed keyword research to understand what topics and categories users are searching for when they come to shop for fresh coffee and coffee related products online. First I brainstormed general coffee topics to ascertain some keywords, and followed this by researching these words using Amazon to understand potential short-tail and long-tail keywords. Using [wordtracker.com](https://www.wordtracker.com/) I evaluated which would be competitive, relevant, authoritative and trustworthy. 
 
 The output highlighted below helped with the naming conventions and descriptions for the products and page URLs to improve site searchability.
 
-**Short-tail Keywords**
+**_Short-tail Keywords_**
 * Coffee beans
 * Fresh coffee
 * Ground coffee
@@ -165,7 +165,7 @@ The output highlighted below helped with the naming conventions and descriptions
 * Coffee cup
 * Coffee grinder
 
-**Long-tail Keywords**
+**_Long-tail Keywords_**
 * Fresh coffee beans 1kg
 * Fresh coffee beans
 * Fresh coffee ground
@@ -218,13 +218,14 @@ The website is responsive through differing screen widths being designed for mob
 
 ### Surface
 
-In consideration that accessibility is a key design criteria, the visual language offers contrast using a simple colour palette, readable font and clear layout. Throughout the website this language has been applied consistently to promote intuitive behaviour with the most important links and information easily recognised.
+In consideration that accessibility is a key design criteria, the visual language offers contrast using a simple colour palette, readable font and clear layout. Throughout the website this language has been applied consistently to promote intuitive behaviour with the most important links and information easily recognised. The differing aspects of the Surface are described below.
 
 
 #### Colour
 
-This palette has been carefully selected to bring high contrasting colours to improve accessibility to visually impaired users. As the primary aim of the site is to inform, Black text on a White background is adopted throughout. The Teal based accents will be used to highlight buttons, points of reference or navigation and other key pieces of user information.
+This palette has been carefully selected to bring high contrasting colours to improve accessibility to visually impaired users. As the primary aim of the site is to inform and in turn promote, Black text on a White background is adopted throughout. Purple has been chosen as conventionally this represents luxury and glamour within e-commerce. As the products being sold are aimed at users who can afford fresh coffee at home, or potentially as a gift, Purple should help to being a special feel to their experience.
 
+Purple has been offset with some softer Grey tones to ensure where necessary information within Purple sections stands out and entices users.
 
 <p align="center">
     <img src="readme-images/the_coffee_collective_colour_palette.png" alt="The Coffee Collective Colour Palette"/>
@@ -232,7 +233,7 @@ This palette has been carefully selected to bring high contrasting colours to im
 
 <br />
 
-The mock-up's enabled me to work through differing layout styles, whilst using [Contrast Checker](https://coolors.co/contrast-checker) to test whether the combinations of colours would be highly accessible for visual impaired users.
+The mock-up's enabled me to work through differing layout styles with this colour palette in mind, whilst using [Contrast Checker](https://coolors.co/contrast-checker) to test whether the combinations of colours would be accessible for visual impaired users. The main Purple tone was evaluated as 'Super' whilst the slightly lighter shade will be used for larger text areas as guided.
 
 <details>
     <summary><b>Colour Palette Contrast Checker</b></summary>
@@ -241,3 +242,19 @@ The mock-up's enabled me to work through differing layout styles, whilst using [
     </p>
 </details>
 <br />
+
+
+#### Logo
+
+
+
+
+#### Fonts
+
+<br />
+
+***
+
+<br />
+
+## Data Model
