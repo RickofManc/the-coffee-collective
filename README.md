@@ -260,6 +260,14 @@ The mock-up's enabled me to work through differing layout styles with this colou
 
 #### Fonts
 
+Google Fonts has been used to provide free fonts for commercial use. The fonts selected have been chosen for differing reasons whilst still complementing each other. 
+Firstly, a strong bold font has been selected in 'Bebas Neue' for titles and subtitles to be impactful for a few words. Whereas 'Open Sans' will be used for body text at a conventional 16px as by design the font is clear and accessible for paragraphs as well as being legible for numbers and symbols.
+
+
+<p align="center">
+    <img src="readme-images/the_coffee_collective_fonts.png" alt="Image showing the two font choices Bebas Neue and Open Sans"/>
+</p>
+
 <br />
 
 ***
