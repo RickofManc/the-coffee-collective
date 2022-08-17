@@ -1,4 +1,4 @@
-# the Coffee Collective
+# The Coffee Collective
 
 [Insert Website Mockup]
 
@@ -64,7 +64,16 @@ Following a design thinking approach and using the knowledge and experience of t
     </p>
 </details><br />
 
-The output from this phase supported the ideation of potential features and also the creation of User Stories complete with Acceptance Criteria and high-level tasks for the Development Phase. The GitHub Projects Kanban Board has been used to prioritise, update and track all User Stories through to completion. Note this Kanban Board was also used for bug fixing and issue resolution, please see the Testing section of this document for further information. 
+The output from this phase supported the ideation of potential features and also the creation of User Stories complete with Acceptance Criteria and high-level tasks for the Development Phase. The GitHub Projects Kanban Board has been used to prioritise, update and track all User Stories through to completion. Note this Kanban Board was also used for bug fixing and issue resolution, please see the Testing section of this document for further information.
+
+The table below provide an overview of how the features are driving the epics, that in turn have been used to develop the user stories required to deliver the features.
+
+
+<details><summary><b>Epics and User Stories Overview</b></summary>
+    <p align="center">
+        <img src="readme-images/the_coffee_collective_epics_and_user_stories.png" alt="Table highlighting the Epics, Features and User Stories"/>
+    </p>
+</details><br />
 
 <br />
 
@@ -101,7 +110,7 @@ An agile approach of keeping the features simple and aligned to the strategy for
 #### In Scope Features
 * Responsive Navbar complete with product search, category menus, user account access.
 * A streamlined checkout that is easy-to-edit and retains products between visits.
-* New product listings, discounts and recommendations visible on the landing page.
+* New product listings, discounts and recommendations visible on the homepage.
 * Optional user accounts with editable profile data, order history and the storing of shipping details
 * Registered users will be able to leave product reviews to help build trust in the products for new customers.
 * A 10% discount code provided to those users signing up for the monthly newsletter.
@@ -140,9 +149,9 @@ This website will be built with the following design considerations. The final s
 
 ### Skeleton
 
-Key to meeting delivering for the differing user personas is a landing page that can immediately meet their priority requirements whilst not over complicating the UI with too much information, and too many choices. The hierarchal structure will be supported by the Navbar that within a click can navigated users to the main product categories. Similarly the landing page will host a carousel with a hero image enticing users who want to either find sale items, or learn more about the products.
+Key to meeting delivering for the differing user personas is a homepage that can immediately meet their priority requirements whilst not over complicating the UI with too much information, and too many choices. The hierarchal structure will be supported by the Navbar that within a click can navigated users to the main product categories. Similarly the homepage will host a carousel with a hero image enticing users who want to either find sale items, or learn more about the products.
 
-The landing page will also act as the main point of navigation to allow users to learn more about the business, the benefits of coffee and links to useful resources i.e. FAQ's.
+The homepage will also act as the main point of navigation to allow users to learn more about the business, the benefits of coffee and links to useful resources i.e. FAQ's.
 
 Aesthetically the layout and content will be clean and clear to promote the products and different areas of the site.
 
@@ -188,15 +197,15 @@ The output highlighted below helped with the naming conventions and descriptions
 
 #### Wireframes
 
-As part of this phase wireframes for desktop and mobile devices have been produced using Balsamiq (see images below - the wireframe files are located with the project [GitHub Repo](https://github.com/RickofManc/the-coffee-collective)). I focused on mocking up the main layouts; the landing page, a page with multiple products and a detailed view of a product.
+As part of this phase wireframes for desktop and mobile devices have been produced using Balsamiq (see images below - the wireframe files are located with the project [GitHub Repo](https://github.com/RickofManc/the-coffee-collective)). I focused on mocking up the main layouts; the homepage, a page with multiple products and a detailed view of a product.
 
 The website is responsive through differing screen widths being designed for mobile first to a max-width of 767px. Tablets are responsive from 768px through to 1023px, laptops from 1023-1440px, and desktops from 1440px upward.
 
 
 <details>
-    <summary><b>Landing Page Wireframe</b></summary>
+    <summary><b>Homepage Wireframe</b></summary>
     <p align="center">
-        <img src="readme-images/the_coffee_collective_landing_page_wireframe.png" alt="Landing page wireframe for desktop and mobile devices" />
+        <img src="readme-images/the_coffee_collective_homepage_wireframe.png" alt="Homepage wireframe for desktop and mobile devices" />
     </p>
 </details><br />
 
