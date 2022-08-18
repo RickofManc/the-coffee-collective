@@ -1,0 +1,16 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,400;0,700;1,400;1,700&family=Roboto+Flex:opsz,wght@8..144,100;8..144,300;8..144,400;8..144,500;8..144,600;8..144,700&display=swap');
+
+/* || GENERAL STYLES */
+
+body,
+html {
+    margin: 0;
+    overflow-x: hidden;
+    padding: 0;
+    width: 100%;
+    font-family: 'Roboto Flex', 'Roboto Condensed', sans-serif;
+    font: 1rem;
+    font-weight: 400;
+    color: #282828;
+}
+
