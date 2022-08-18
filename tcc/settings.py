@@ -12,6 +12,8 @@ https://docs.djangoproject.com/en/3.2/ref/settings/
 import os
 from pathlib import Path
 from django.contrib.messages import constants as messages
+if os.path.isfile('env.py'):
+    import env
 
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -23,13 +25,15 @@ TEMPLATES_DIR = os.path.join(BASE_DIR, 'templates')
 # See https://docs.djangoproject.com/en/3.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-=z3lz_j0jsx$j_lemr(^k!lm-ywk1ib!gf9z-9d5!ys9m5lbb0'
+SECRET_KEY = os.environ.get('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
 ALLOWED_HOSTS = []
 
+# Cross-Origin Resource Sharing to support third party resources to load
+X_FRAME_OPTIONS = 'SAMEORIGIN'
 
 # Application definition
 INSTALLED_APPS = [
@@ -43,6 +47,7 @@ INSTALLED_APPS = [
     'allauth',
     'allauth.account',
     'allauth.socialaccount',
+    'crispy_forms',
 ]
 
 MIDDLEWARE = [
@@ -65,8 +70,8 @@ MESSAGE_TAGS = {
 }
 
 # Crispy used to format post comments
-CRISPY_ALLOWED_TEMPLATE_PACKS = 'bootstrap5'
-CRISPY_TEMPLATE_PACK = 'bootstrap5'
+CRISPY_ALLOWED_TEMPLATE_PACKS = 'bootstrap4'
+CRISPY_TEMPLATE_PACK = 'bootstrap4'
 
 ROOT_URLCONF = 'tcc.urls'
 
