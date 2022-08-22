@@ -7,10 +7,55 @@ html {
     margin: 0;
     overflow-x: hidden;
     padding: 0;
-    width: 100%;
-    font-family: 'Roboto Flex', 'Roboto Condensed', sans-serif;
+    height: 100%;
+    font-family: 'Bebas Neue', cursive;
+    font-family: 'Open Sans', sans-serif;
     font: 1rem;
     font-weight: 400;
     color: #282828;
 }
 
+/* from Bulma */
+.icon {
+    align-items: center;
+    display: inline-flex;
+    justify-content: center;
+    height: 1.5rem;
+    width: 1.5rem;
+}
+
+
+
+/* |||| MEDIA QUERIES  */
+
+/* Small devices (smartphones, up to 767px) */
+@media (max-width: 767px) {
+    
+    /* || NAVBAR STYLES  */
+
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) {}
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+    
+    /* || NAVBAR STYLES  */
+    .fixed-top-desktop-only {
+        position: fixed;
+        top: 0;
+        right: 0;
+        left: 0;
+        z-index: 1030;
+    }
+}
+
+/* Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+    
+    /* || GENERAL STYLES  */
+    .container {
+        max-width: 80%;
+      }
+}
