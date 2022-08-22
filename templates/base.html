@@ -43,42 +43,57 @@
 
     {% block extra_js %}
     {% endblock %}
-
     <!-- Page Title -->
     <title>Coffee Collective {% block extra_title %}{% endblock %}</title>
   </head>
   
   <body>
-    <!-- NavBar -->
+    <!-- Collapsing Bootstrap NavBar -->
     <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top-desktop-only">
-        <a class="navbar-brand" href="#">the coffee collective</a>
+        <a class="navbar-brand" href="{% url 'home' %}">the coffee collective</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
-      
+        <!-- Dropdown Nav Menus & Search Feature -->
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav mr-auto">
             <li class="nav-item active">
-              <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Link</a>
+              <a class="nav-link" href="{% url 'home' %}">Home <span class="sr-only">(current)</span></a>
             </li>
             <li class="nav-item dropdown">
               <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-expanded="false">
-                Dropdown
+                Fresh Coffee
               </a>
               <div class="dropdown-menu">
-                <a class="dropdown-item" href="#">Action</a>
-                <a class="dropdown-item" href="#">Another action</a>
-                <div class="dropdown-divider"></div>
-                <a class="dropdown-item" href="#">Something else here</a>
+                <a class="dropdown-item" href="#">All Products</a>
+                <a class="dropdown-item" href="#">Ground Coffee</a>
+                <a class="dropdown-item" href="#">Coffee Beans</a>
               </div>
             </li>
-            <li class="nav-item">
-              <a class="nav-link disabled">Disabled</a>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-expanded="false">
+                Coffee Making
+              </a>
+              <div class="dropdown-menu">
+                <a class="dropdown-item" href="#">All Products</a>
+                <a class="dropdown-item" href="#">Coffee Machines</a>
+                <a class="dropdown-item" href="#">Cafetiere</a>
+                <a class="dropdown-item" href="#">Stove Top</a>
+              </div>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-expanded="false">
+                Accessories
+              </a>
+              <div class="dropdown-menu">
+                <a class="dropdown-item" href="#">All Products</a>
+                <a class="dropdown-item" href="#">Coffee Clothing</a>
+                <a class="dropdown-item" href="#">At Home Cups</a>
+                <a class="dropdown-item" href="#">On The Move Cups</a>
+              </div>
             </li>
           </ul>
+          <!-- Search Feature -->
           <form method="GET" action="" class="form-inline my-2 my-lg-0">
             <input class="form-control mr-sm-2" type="search" name="q" placeholder="Search" aria-label="Search">
             <button class="btn btn-outline-success my-2 my-sm-0" type="submit">
@@ -89,8 +104,6 @@
           </form>
         </div>
     </nav>
-
-
     <!-- Container to display standard messages to the user -->
     <div class="container">
         <div class="row">
@@ -126,7 +139,7 @@
         </div>
     </footer>
 
-    <!-- Script to automatically remove user alerts after 3 seconds -->
+  <!-- Script to automatically remove user alerts after 3 seconds -->
   <script>
     setTimeout(function () {
       let messages = document.getElementById("msg");
