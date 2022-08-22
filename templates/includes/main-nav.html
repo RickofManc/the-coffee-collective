@@ -1,0 +1,92 @@
+<div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+        <li class="nav-item active dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-expanded="false">
+                Fresh Coffee
+            </a>
+            <div class="dropdown-menu">
+                <a class="dropdown-item" href="#">All Products</a>
+                <a class="dropdown-item" href="#">Ground Coffee</a>
+                <a class="dropdown-item" href="#">Coffee Beans</a>
+            </div>
+        </li>
+        <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-expanded="false">
+                Coffee Making
+            </a>
+            <div class="dropdown-menu">
+                <a class="dropdown-item" href="#">All Products</a>
+                <a class="dropdown-item" href="#">Cafetiere</a>
+                <a class="dropdown-item" href="#">Moka Pot</a>
+                <a class="dropdown-item" href="#">Coffee Cups</a>
+                <a class="dropdown-item" href="#">Machines</a>
+                <a class="dropdown-item" href="#">Coffee Clothing</a>
+            </div>
+        </li>
+        <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-expanded="false">
+                About
+            </a>
+            <div class="dropdown-menu">
+                <a class="dropdown-item" href="#">Our Story</a>
+                <a class="dropdown-item" href="#">FAQ</a>
+                <a class="dropdown-item" href="#">Contact</a>
+                <a class="dropdown-item" href="#">Sustainability</a>
+                <a class="dropdown-item" href="#">Accessibility</a>
+                <a class="dropdown-item" href="#">User Agreement</a>
+                <a class="dropdown-item" href="#">Copyright</a>
+            </div>
+        </li>
+    </ul>
+    <!-- Search Feature -->
+    <div class="dropdown-menu border-0 w-100 p-3 rounded-0" aria-labelledby="search">
+        <form method="GET" action="" class="d-md-block">
+            <input class="form-control mr-sm-2" type="search" name="q" placeholder="Search" aria-label="Search">
+            <div class="input-group-append">
+                <button class="form-control btn btn-outline-success my-2 my-sm-0" type="submit">
+                    <span class="icon">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                    </span>
+                </button>
+            </div>
+        </form>
+    </div>
+    <div class="col-12 col-lg-4 my-auto py-1 py-lg-0">
+        <ul class="list-inline list-unstyled text-center text-lg-right my-0">
+            <li class="list-inline-item dropdown">
+                <a class="text-black nav-link" href="#" id="user-options" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <div class="text-center">
+                        <div class="nav-icon"><i class="fas fa-user fa-lg"></i></div>
+                        <p class="my-0 nav-label">My Account</p>
+                    </div>
+                </a>
+                <div class="dropdown-menu border-0" aria-labelledby="user-options">
+                    {% if request.user.is_authenticated %}
+                        {% if request.user.is_superuser %}
+                            <a href="" class="dropdown-item">Product Management</a>
+                        {% endif %}
+                        <a href="" class="dropdown-item">My Profile</a>
+                        <a href="{% url 'account_logout' %}" class="dropdown-item">Logout</a>
+                    {% else %}
+                        <a href="{% url 'account_signup' %}" class="dropdown-item">Register</a>
+                        <a href="{% url 'account_login' %}" class="dropdown-item">Login</a>
+                    {% endif %}
+                </div>
+            </li>
+            <li class="list-inline-item">
+                <a class="{% if grand_total %}text-info font-weight-bold{% else %}text-black{% endif %} nav-link" href="">
+                    <div class="text-center">
+                        <div class="nav-icon"><i class="fas fa-shopping-bag fa-lg"></i></div>
+                        <p class="my-0 nav-label">
+                            {% if grand_total %}
+                                ${{ grand_total|floatformat:2 }}
+                            {% else %}
+                                $0.00
+                            {% endif %}
+                        </p>
+                    </div>
+                </a>
+            </li>
+        </ul>
+    </div>
+</div>
