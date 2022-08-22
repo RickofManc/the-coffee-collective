@@ -58,77 +58,20 @@
 </head>
 
 <body>
-  <!-- Collapsing Bootstrap NavBar -->
+  
+  <!-- Collapsing Bootstrap Navbar -->
   <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top-desktop-only">
-    <a class="navbar-brand" href="{% url 'home' %}">the coffee collective</a>
+    <a class="navbar-brand d-none d-md-block" href="{% url 'home' %}">the coffee collective</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
       aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
+    <!-- Navbar for mobile devices -->
+    {% include 'includes/mobile-top_head.html' %}
     <!-- Dropdown Nav Menus & Search Feature -->
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav mr-auto">
-        <li class="nav-item active">
-          <a class="nav-link" href="{% url 'home' %}">Home <span class="sr-only">(current)</span></a>
-        </li>
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-expanded="false">
-            Fresh Coffee
-          </a>
-          <div class="dropdown-menu">
-            <a class="dropdown-item" href="#">All Products</a>
-            <a class="dropdown-item" href="#">Ground Coffee</a>
-            <a class="dropdown-item" href="#">Coffee Beans</a>
-          </div>
-        </li>
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-expanded="false">
-            Coffee Making
-          </a>
-          <div class="dropdown-menu">
-            <a class="dropdown-item" href="#">All Products</a>
-            <a class="dropdown-item" href="#">Coffee Machines</a>
-            <a class="dropdown-item" href="#">Cafetiere</a>
-            <a class="dropdown-item" href="#">Stove Top</a>
-          </div>
-        </li>
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-expanded="false">
-            Accessories
-          </a>
-          <div class="dropdown-menu">
-            <a class="dropdown-item" href="#">All Products</a>
-            <a class="dropdown-item" href="#">Coffee Clothing</a>
-            <a class="dropdown-item" href="#">At Home Cups</a>
-            <a class="dropdown-item" href="#">On The Move Cups</a>
-          </div>
-        </li>
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-expanded="false">
-            About
-          </a>
-          <div class="dropdown-menu">
-            <a class="dropdown-item" href="#">Our Story</a>
-            <a class="dropdown-item" href="#">FAQ</a>
-            <a class="dropdown-item" href="#">Contact</a>
-            <a class="dropdown-item" href="#">Sustainability</a>
-            <a class="dropdown-item" href="#">Accessibility</a>
-            <a class="dropdown-item" href="#">User Agreement</a>
-            <a class="dropdown-item" href="#">Copyright</a>
-          </div>
-        </li>
-      </ul>
-      <!-- Search Feature -->
-      <form method="GET" action="" class="form-inline my-2 my-lg-0">
-        <input class="form-control mr-sm-2" type="search" name="q" placeholder="Search" aria-label="Search">
-        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">
-          <span class="icon">
-            <i class="fa-solid fa-magnifying-glass"></i>
-          </span>
-        </button>
-      </form>
-    </div>
+    {% include 'includes/main-nav.html' %} 
   </nav>
+  
   <!-- Container to display standard messages to the user -->
   <div class="container">
     <div class="row">
@@ -156,60 +99,10 @@
     {% endblock content %}
   </main>
 
-  <!-- Footer : static throughout all pages -->
-  <footer class="w-100">
-    <div class="container footer-div">
-      <div class="row">
-        <!-- Useful Pages List -->
-        <div class="col-12 col-sm-8">
-          <ul class="footer-list-links">
-            <li><a href="#" class="footer-item">Our Story</a></li>
-            <li><a href="#" class="footer-item">Sustainability</a></li>
-            <li><a href="#" class="footer-item">FAQ</a></li>
-            <li><a href="#" class="footer-item">Contact</a></li>
-            <li><a href="#" class="footer-item">Site Map</a></li>
-          </ul>
-        </div>
-        <!-- Social Outlets -->
-        <div class="col-6 col-sm-4">
-          <ul class="footer-list-socials">
-            <li class="footer-item">
-              <a href="https://facebook.com" aria-label="Go to our Facebook page" target="_blank"
-                class="social-media-icon" rel="noopener noreferer"><i class="fa-brands fa-facebook-f"></i>
-              </a>
-            </li>
-            <li class="footer-item">
-              <a href="https://instagram.com" aria-label="Go to our Instagram page" target="_blank"
-                class="social-media-icon" rel="noopener noreferer"><i class="fa-brands fa-instagram"></i>
-              </a>
-            </li>
-            <li class="footer-item">
-              <a href="https://twitter.com" aria-label="Go to our Twitter feed" target="_blank"
-                class="social-media-icon" rel="noopener noreferer"><i class="fa-brands fa-twitter"></i>
-              </a>
-            </li>
-            <li class="footer-item">
-              <a href="https://youtube.com" aria-label="Go to our YouTube page" target="_blank"
-                class="social-media-icon" rel="noopener noreferer"><i class="fa-brands fa-youtube"></i>
-              </a>
-            </li>
-            <li class="footer-item">
-              <a href="https://linkedin.com" aria-label="Go to our LinkedIn page" target="_blank"
-                class="social-media-icon" rel="noopener noreferer"><i class="fa-brands fa-linkedin-in"></i>
-              </a>
-            </li>
-          </ul>
-        </div>
-      </div>
-      <!-- Copyright Information -->
-      <div class="row footer-copyright">
-        <p class="footer-item">
-          The Coffee Collective © 2022.
-          <br />All rights reserved
-        </p>
-      </div>
-    </div>
-  </footer>
+  <!-- Footer throughout all pages -->
+  {% include 'includes/footer.html' %}
+  
+  
   {% block postloadjs %}
   <!-- Script to automatically remove user alerts after 3 seconds -->
   <script>
