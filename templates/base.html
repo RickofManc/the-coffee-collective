@@ -2,143 +2,215 @@
 
 <!doctype html>
 <html lang="en" class="h-100">
-  <head>
-    <!-- Meta tags -->
-    {% block meta %}
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-    <meta name="author" content="Rick Atherton" />
-    <meta name="keywords" content="Espresso coffee beans, Fresh coffee machine, Fresh coffee beans, Fresh coffee ground, Cafetiere coffee ground strong, Coffee mug, Coffee cup, Coffee lover clothing, Cafetiere, Fresh coffee near me, Coffee in Manchester" />
-    {% endblock %}
 
-    {% block extra_meta %}
-    {% endblock %}
+<head>
+  <!-- Meta tags -->
+  {% block meta %}
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <meta name="author" content="Rick Atherton" />
+  <meta name="keywords"
+    content="Espresso coffee beans, Fresh coffee machine, Fresh coffee beans, Fresh coffee ground, Cafetiere coffee ground strong, Coffee mug, Coffee cup, Coffee lover clothing, Cafetiere, Fresh coffee near me, Coffee in Manchester" />
+  {% endblock %}
 
-    <!-- Core CSS -->
-    {% block corecss %}
-    <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap" rel="stylesheet">
-    <!-- Bootstrap v4.6 -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
-    <!-- CSS Styles -->
-    <link rel="stylesheet" href="{% static 'css/style.css' %}" />
-    {% endblock %}
+  {% block extra_meta %}
+  {% endblock %}
 
-    {% block extra_css %}
-    {% endblock %}
+  <!-- Core CSS -->
+  {% block corecss %}
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap"
+    rel="stylesheet">
+  <!-- Bootstrap v4.6 -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
+    integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+  <!-- CSS Styles -->
+  <link rel="stylesheet" href="{% static 'css/style.css' %}" />
+  {% endblock %}
 
-    <!-- Core JavaScript -->
-    {% block corejs %}
-    <!-- Font Awesome Kit Tag -->
-    <script src="https://kit.fontawesome.com/ac339da8f6.js" crossorigin="anonymous"></script>
-    <!-- Bootstrap jQuery and Popper JavaScript tags -->
-    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-    {% endblock %}
+  {% block extra_css %}
+  {% endblock %}
 
-    {% block extra_js %}
-    {% endblock %}
-    <!-- Page Title -->
-    <title>Coffee Collective {% block extra_title %}{% endblock %}</title>
-  </head>
-  
-  <body>
-    <!-- Collapsing Bootstrap NavBar -->
-    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top-desktop-only">
-        <a class="navbar-brand" href="{% url 'home' %}">the coffee collective</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
+  <!-- Core JavaScript -->
+  {% block corejs %}
+  <!-- Font Awesome Kit Tag -->
+  <script src="https://kit.fontawesome.com/ac339da8f6.js" crossorigin="anonymous"></script>
+  <!-- Bootstrap jQuery and Popper JavaScript tags -->
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js"
+    integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+    integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous">
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+    integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous">
+  </script>
+  {% endblock %}
+
+  {% block extra_js %}
+  {% endblock %}
+  <!-- Page Title -->
+  <title>Coffee Collective {% block extra_title %}{% endblock %}</title>
+</head>
+
+<body>
+  <!-- Collapsing Bootstrap NavBar -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top-desktop-only">
+    <a class="navbar-brand" href="{% url 'home' %}">the coffee collective</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <!-- Dropdown Nav Menus & Search Feature -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item active">
+          <a class="nav-link" href="{% url 'home' %}">Home <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-expanded="false">
+            Fresh Coffee
+          </a>
+          <div class="dropdown-menu">
+            <a class="dropdown-item" href="#">All Products</a>
+            <a class="dropdown-item" href="#">Ground Coffee</a>
+            <a class="dropdown-item" href="#">Coffee Beans</a>
+          </div>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-expanded="false">
+            Coffee Making
+          </a>
+          <div class="dropdown-menu">
+            <a class="dropdown-item" href="#">All Products</a>
+            <a class="dropdown-item" href="#">Coffee Machines</a>
+            <a class="dropdown-item" href="#">Cafetiere</a>
+            <a class="dropdown-item" href="#">Stove Top</a>
+          </div>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-expanded="false">
+            Accessories
+          </a>
+          <div class="dropdown-menu">
+            <a class="dropdown-item" href="#">All Products</a>
+            <a class="dropdown-item" href="#">Coffee Clothing</a>
+            <a class="dropdown-item" href="#">At Home Cups</a>
+            <a class="dropdown-item" href="#">On The Move Cups</a>
+          </div>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-expanded="false">
+            About
+          </a>
+          <div class="dropdown-menu">
+            <a class="dropdown-item" href="#">Our Story</a>
+            <a class="dropdown-item" href="#">FAQ</a>
+            <a class="dropdown-item" href="#">Contact</a>
+            <a class="dropdown-item" href="#">Sustainability</a>
+            <a class="dropdown-item" href="#">Accessibility</a>
+            <a class="dropdown-item" href="#">User Agreement</a>
+            <a class="dropdown-item" href="#">Copyright</a>
+          </div>
+        </li>
+      </ul>
+      <!-- Search Feature -->
+      <form method="GET" action="" class="form-inline my-2 my-lg-0">
+        <input class="form-control mr-sm-2" type="search" name="q" placeholder="Search" aria-label="Search">
+        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">
+          <span class="icon">
+            <i class="fa-solid fa-magnifying-glass"></i>
+          </span>
         </button>
-        <!-- Dropdown Nav Menus & Search Feature -->
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul class="navbar-nav mr-auto">
-            <li class="nav-item active">
-              <a class="nav-link" href="{% url 'home' %}">Home <span class="sr-only">(current)</span></a>
-            </li>
-            <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-expanded="false">
-                Fresh Coffee
+      </form>
+    </div>
+  </nav>
+  <!-- Container to display standard messages to the user -->
+  <div class="container">
+    <div class="row">
+      <div class="col-md-8 offset-md-2">
+        {% for message in messages %}
+        <div class="alert {{ message.tags }} alert-dismissible fade show" id="msg" role="alert">
+          {{ message | safe }}
+          <button type="button" class="close" data-bs-dismiss="alert" aria-label="Close">
+            <span aria-hidden="true">&times;
+            </span>
+          </button>
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+
+  {% block page_header %}
+  {% endblock %}
+
+  <!-- Main content where independent html templates will act as the different page views -->
+  <main class="main-content">
+    {% block content %}
+    <!-- Extended HTML page template content goes here -->
+    {% endblock content %}
+  </main>
+
+  <!-- Footer : static throughout all pages -->
+  <footer class="w-100">
+    <div class="container footer-div">
+      <div class="row">
+        <!-- Useful Pages List -->
+        <div class="col-12 col-sm-8">
+          <ul class="footer-list-links">
+            <li><a href="#" class="footer-item">Our Story</a></li>
+            <li><a href="#" class="footer-item">Sustainability</a></li>
+            <li><a href="#" class="footer-item">FAQ</a></li>
+            <li><a href="#" class="footer-item">Contact</a></li>
+            <li><a href="#" class="footer-item">Site Map</a></li>
+          </ul>
+        </div>
+        <!-- Social Outlets -->
+        <div class="col-6 col-sm-4">
+          <ul class="footer-list-socials">
+            <li class="footer-item">
+              <a href="https://facebook.com" aria-label="Go to our Facebook page" target="_blank"
+                class="social-media-icon" rel="noopener noreferer"><i class="fa-brands fa-facebook-f"></i>
               </a>
-              <div class="dropdown-menu">
-                <a class="dropdown-item" href="#">All Products</a>
-                <a class="dropdown-item" href="#">Ground Coffee</a>
-                <a class="dropdown-item" href="#">Coffee Beans</a>
-              </div>
             </li>
-            <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-expanded="false">
-                Coffee Making
+            <li class="footer-item">
+              <a href="https://instagram.com" aria-label="Go to our Instagram page" target="_blank"
+                class="social-media-icon" rel="noopener noreferer"><i class="fa-brands fa-instagram"></i>
               </a>
-              <div class="dropdown-menu">
-                <a class="dropdown-item" href="#">All Products</a>
-                <a class="dropdown-item" href="#">Coffee Machines</a>
-                <a class="dropdown-item" href="#">Cafetiere</a>
-                <a class="dropdown-item" href="#">Stove Top</a>
-              </div>
             </li>
-            <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-expanded="false">
-                Accessories
+            <li class="footer-item">
+              <a href="https://twitter.com" aria-label="Go to our Twitter feed" target="_blank"
+                class="social-media-icon" rel="noopener noreferer"><i class="fa-brands fa-twitter"></i>
               </a>
-              <div class="dropdown-menu">
-                <a class="dropdown-item" href="#">All Products</a>
-                <a class="dropdown-item" href="#">Coffee Clothing</a>
-                <a class="dropdown-item" href="#">At Home Cups</a>
-                <a class="dropdown-item" href="#">On The Move Cups</a>
-              </div>
+            </li>
+            <li class="footer-item">
+              <a href="https://youtube.com" aria-label="Go to our YouTube page" target="_blank"
+                class="social-media-icon" rel="noopener noreferer"><i class="fa-brands fa-youtube"></i>
+              </a>
+            </li>
+            <li class="footer-item">
+              <a href="https://linkedin.com" aria-label="Go to our LinkedIn page" target="_blank"
+                class="social-media-icon" rel="noopener noreferer"><i class="fa-brands fa-linkedin-in"></i>
+              </a>
             </li>
           </ul>
-          <!-- Search Feature -->
-          <form method="GET" action="" class="form-inline my-2 my-lg-0">
-            <input class="form-control mr-sm-2" type="search" name="q" placeholder="Search" aria-label="Search">
-            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">
-                <span class="icon">
-                  <i class="fa-solid fa-magnifying-glass"></i>
-                </span>
-            </button>
-          </form>
         </div>
-    </nav>
-    <!-- Container to display standard messages to the user -->
-    <div class="container">
-        <div class="row">
-        <div class="col-md-8 offset-md-2">
-            {% for message in messages %}
-            <div class="alert {{ message.tags }} alert-dismissible fade show" id="msg" role="alert">
-            {{ message | safe }}
-            <button type="button" class="close" data-bs-dismiss="alert" aria-label="Close">
-                <span aria-hidden="true">&times;
-                </span>
-            </button>
-            </div>
-            {% endfor %}
-        </div>
-        </div>
+      </div>
+      <!-- Copyright Information -->
+      <div class="row footer-copyright">
+        <p class="footer-item">
+          The Coffee Collective © 2022.
+          <br />All rights reserved
+        </p>
+      </div>
     </div>
-
-    {% block page_header %}
-    {% endblock %}
-
-    <!-- Main content where independent html templates will act as the different page views -->
-    <main class="main-content">
-        {% block content %}
-        <!-- Extended HTML page template content goes here -->
-        {% endblock content %}
-    </main>
-
-    <!-- Footer : static throughout all pages -->
-    <footer class="w-100">
-        <div class="container footer-div">
-            <div class="row">
-            </div>
-        </div>
-    </footer>
-
+  </footer>
+  {% block postloadjs %}
   <!-- Script to automatically remove user alerts after 3 seconds -->
   <script>
     setTimeout(function () {
@@ -147,7 +219,7 @@
       alert.close();
     }, 3000);
   </script>
-  
+  {% endblock %}
+</body>
 
-  </body>
 </html>
