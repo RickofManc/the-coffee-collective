@@ -23,6 +23,10 @@ html {
     width: 0.55rem;
 }
 
+.title-font {
+    font-family: 'Bebas Neue';
+}
+
 /* || HOMEPAGE STYLES */
 
 /* Navbar */
@@ -77,6 +81,7 @@ html {
     -webkit-transform: rotate(45deg) translate(-8px, -8px);
     transform: rotate(45deg) translate(-8px, -8px);
 }
+
 
 /* || FOOTER STYLES  */
 footer {
@@ -137,7 +142,15 @@ footer {
 
 /* // Extra Small devices (iPhone 5, Galaxy Fold, 280px and up) */
 @media (min-width: 280px) {
-
+    
+    /* || NAVBAR STYLES  */
+    .navbar {
+        padding: 0;
+    }
+    .nav-link {
+        padding: 0.5rem
+    }
+    
     /* || FOOTER STYLES  */
     .footer-list-links>li a {
         min-width: 18.75rem;
@@ -160,6 +173,11 @@ footer {
 
 /* Medium devices (tablets, 768px and up) */
 @media (min-width: 768px) {
+
+    /* || NAVBAR STYLES  */
+    .navbar {
+        padding: 0.5rem 1rem;
+    }
 
     /* || FOOTER STYLES  */
     .footer-item {
