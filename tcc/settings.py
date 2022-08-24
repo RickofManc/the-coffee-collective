@@ -50,6 +50,7 @@ INSTALLED_APPS = [
     'crispy_forms',
     'bulma',
     'home',
+    'products',
 ]
 
 MIDDLEWARE = [

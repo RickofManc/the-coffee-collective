@@ -1,0 +1,66 @@
+[
+ {
+   "pk": 1,
+   "model": "products.category",
+   "fields": {
+      "name": "ground_coffee",
+      "friendly_name": "Ground Coffee"
+   }
+},
+ {
+   "pk": 2,
+   "model": "products.category",
+   "fields": {
+      "name": "coffee_beans",
+      "friendly_name": "Coffee Beans"
+   }
+},
+ {
+   "pk": 3,
+   "model": "products.category",
+   "fields": {
+      "name": "cafetieres",
+      "friendly_name": "Cafetieres"
+   }
+},
+ {
+   "pk": 4,
+   "model": "products.category",
+   "fields": {
+      "name": "moka_pots",
+      "friendly_name": "Moka Pots"
+   }
+},
+ {
+   "pk": 5,
+   "model": "products.category",
+   "fields": {
+      "name": "coffee_cups",
+      "friendly_name": "Coffee Cups"
+   }
+},
+ {
+   "pk": 6,
+   "model": "products.category",
+   "fields": {
+      "name": "machines",
+      "friendly_name": "Machines"
+   }
+},
+ {
+   "pk": 7,
+   "model": "products.category",
+   "fields": {
+      "name": "coffee_clothing",
+      "friendly_name": "Coffee Clothing"
+   }
+},
+ {
+   "pk": 8,
+   "model": "products.category",
+   "fields": {
+      "name": "gift_voucher",
+      "friendly_name": "Gift Voucher"
+   }
+}
+]
