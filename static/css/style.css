@@ -13,7 +13,7 @@ html {
     color: #282828;
 }
 
-/* from Bulma */
+/* from Bulma to support Font Awesome icons */
 .icon {
     align-items: center;
     display: inline-flex;
@@ -25,6 +25,14 @@ html {
 
 .title-font {
     font-family: 'Bebas Neue';
+}
+
+.page-title {
+    font-size: 1.65rem;
+}
+
+hr {
+    background-color: #e1efe6;
 }
 
 /* || HOMEPAGE STYLES */
@@ -142,6 +150,43 @@ footer {
 }
 
 
+/* || PRODUCT PAGE STYLES  */
+.product-img-container {
+    min-height: 32rem;
+}
+
+.quick-add-btn {
+    background-color: #e1efe658;
+    border-radius: 0;
+    text-align: center;
+    width: inherit;
+}
+
+.card-title {
+    background-color: #e1efe6;
+    padding: 0.25rem 0.5rem;
+    width: 100%;
+    text-align: left;
+}
+
+.card-subtitle {
+    color: #383838;
+    font-size: 1.25rem;
+    line-height: 1.5;
+    padding: 0.75rem 0.5rem;
+}
+
+.lead {
+    font-size: 1.25rem;
+    font-weight: 500;
+    padding-left: 0.5rem;
+}
+
+.rating-icon i {
+    font-size: 1.25rem;
+    color: #674ea7;
+}
+
 
 /*************************************************************
 
@@ -173,6 +218,12 @@ footer {
     .footer-copyright {
         text-align: left;
     }
+
+    /* || PRODUCT STYLES  */
+    .product-img-container {
+        min-height: 0;
+    }
+
 }
 
 /* // Small devices (landscape phones, 576px and up) */
@@ -193,6 +244,11 @@ footer {
     }
     p.footer-item {
         margin-top: 2rem;
+    }
+
+    /* || PRODUCT STYLES  */
+    .product-img-container {
+        min-height: 17rem;
     }
 }
 
@@ -220,6 +276,11 @@ footer {
     }
     .social-media-icon i {
         font-size: 1.25rem;
+    }
+
+    /* || PRODUCT STYLES  */
+    .product-img-container {
+        min-height: 22rem;
     }
 }
 
