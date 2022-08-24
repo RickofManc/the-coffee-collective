@@ -94,12 +94,12 @@
                 <a class="{% if grand_total %}text-info font-weight-bold{% else %}text-black{% endif %} nav-link"
                     href="">
                     <div class="text-center">
-                        <div class="nav-icon"><i class="fas fa-shopping-bag fa-lg"></i></div>
+                        <div class="nav-icon"><i class="fas fa-cart-shopping fa-lg"></i></div>
                         <p class="my-0 nav-label">
                             {% if grand_total %}
-                            ${{ grand_total|floatformat:2 }}
+                            £{{ grand_total|floatformat:2 }}
                             {% else %}
-                            $0.00
+                            £0.00
                             {% endif %}
                         </p>
                     </div>
