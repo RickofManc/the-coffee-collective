@@ -150,8 +150,8 @@ footer {
 
 /* || PRODUCT PAGE STYLES  */
 .product-img-container {
-    min-height: 32rem;
-    padding: 0rem 3.125rem;
+    min-height: 23rem;
+    padding: 0rem 0.125rem;
 }
 
 .quick-add-btn {
@@ -168,10 +168,6 @@ footer {
     text-align: left;
 }
 
-.product-detail-title {
-    font-size: 3rem;
-}
-
 .card-subtitle {
     color: #383838;
     font-size: 1.25rem;
@@ -183,6 +179,10 @@ footer {
     padding: 0.75rem 0.5rem;
     line-height: 2;
     font-size: 1.2rem;
+}
+
+.product-detail-title {
+    font-size: 3rem;
 }
 
 .lead {
