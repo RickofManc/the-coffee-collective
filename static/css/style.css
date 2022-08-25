@@ -40,7 +40,6 @@ hr {
 /* Navbar */
 .navbar {
     background-color: #351c75 !important;
-    margin-bottom: 1rem;
 }
 .navbar-light .navbar-brand {
     color: #fff !important;
@@ -95,7 +94,6 @@ hr {
 .main-content {
     position: relative;
     margin-bottom: 1rem;
-    padding: 0rem 1rem;
 }
 
 /* || FOOTER STYLES  */
@@ -291,7 +289,7 @@ footer {
 
     /* || PRODUCT STYLES  */
     .product-img-container {
-        min-height: 27rem;
+        min-height: 17rem;
     }
 }
 
