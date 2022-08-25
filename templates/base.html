@@ -61,7 +61,8 @@
   <!-- Collapsing Bootstrap Navbar -->
   <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top-desktop-only">
     <a class="navbar-brand d-none d-md-block" href="{% url 'home' %}">the coffee collective</a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <div class="burger-menu-container" onclick="myFunction(this)">
         <div class="bar1"></div>
         <div class="bar2"></div>
@@ -71,7 +72,7 @@
     <!-- Navbar for mobile devices -->
     {% include 'includes/mobile-top_head.html' %}
     <!-- Dropdown Nav Menus & Search Feature -->
-    {% include 'includes/main-nav.html' %} 
+    {% include 'includes/main-nav.html' %}
   </nav>
   <!-- Container to display standard messages to the user -->
   <div class="container">
@@ -90,9 +91,6 @@
     </div>
   </div>
 
-  {% block page_header %}
-  {% endblock %}
-
   <!-- Main content where independent html templates will act as the different page views -->
   <main class="main-content">
     {% block content %}
@@ -102,8 +100,7 @@
 
   <!-- Footer throughout all pages -->
   {% include 'includes/footer.html' %}
-  
-  
+
   {% block postloadjs %}
   <!-- Script to automatically remove user alerts after 3 seconds -->
   <script>
