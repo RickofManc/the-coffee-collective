@@ -51,6 +51,7 @@ INSTALLED_APPS = [
     'bulma',
     'home',
     'products',
+    'bag',
 ]
 
 MIDDLEWARE = [
