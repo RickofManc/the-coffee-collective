@@ -94,9 +94,9 @@
             <!-- Shopping Cart Details -->
             <li class="list-inline-item">
                 <a class="{% if grand_total %}text-info font-weight-bold{% else %}text-black{% endif %} nav-link"
-                    href="">
+                    href="{% url 'view_bag' %}">
                     <div class="text-center">
-                        <div class="nav-icon"><i class="fas fa-cart-shopping fa-lg"></i></div>
+                        <div class="nav-icon"><i class="fas fa-bag-shopping"></i></div>
                         <p class="my-0 nav-label">
                             {% if grand_total %}
                             £{{ grand_total|floatformat:2 }}
