@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block content %}
+<!-- Page header -->
+<div class="container-fluid">
+    <div class="row">
+        <div class="col text-center mt-3">
+            <h1 class="page-title">Shopping Bag</h1>
+            <hr class="w-50 mb-1">
+        </div>
+    </div>
+    <!-- Container for shopping bag items -->
+    <div class="row">
+        <div class="col">
+            {% if bag_items %}
+                <div class="table-responsive rounded"></div>
+            {% else %}
+                <p class="lead mb-5">Your bag is empty.</p>
+                <a href="{% url 'products' %}" class="btn keep-shopping-btn">
+                    <span class="icon rating-icon">
+                        <i class="fas fa-chevron-left"></i>
+                    </span>
+                    <span class="title-font">Keep Shopping</span>
+                </a>
+            {% endif %}
+        </div>
+    </div>
+</div>
+{% endblock %}
