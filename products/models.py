@@ -17,14 +17,13 @@ class Category(models.Model):
 
 
 class Product(models.Model):
-    SIZE_CHOICES = (('Yes', "Yes"), ('No', "No"))
 
     category = models.ForeignKey('Category', null=True, blank=True, on_delete=models.SET_NULL)
     sku = models.CharField(max_length=55, unique=True)
     name = models.CharField(max_length=155)
     subtitle = models.CharField(max_length=205)
     description = models.TextField()
-    has_sizes = models.CharField(max_length=3, choices=SIZE_CHOICES)
+    has_sizes = models.BooleanField()
     size = models.CharField(max_length=6, null=True, blank=True)
     intensity = models.IntegerField(null=True, blank=True)
     price = models.DecimalField(max_digits=6, decimal_places=2)
