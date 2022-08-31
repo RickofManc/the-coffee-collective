@@ -154,6 +154,10 @@ footer {
     padding: 0rem 0.125rem;
 }
 
+.card-img-top {
+    width: auto;
+}
+
 .quick-add-btn {
     background-color: #e1efe658;
     border-radius: 0;
