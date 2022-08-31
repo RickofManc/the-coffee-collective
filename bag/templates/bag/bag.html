@@ -10,12 +10,13 @@
             <hr class="w-50 mb-1">
         </div>
     </div>
-    <!-- Container for shopping bag items -->
+    <!-- Container for Bag Items -->
     <div class="row">
         <div class="col">
             {% if bag_items %}
             <div class="table-responsive rounded">
                 <table class="table table-sm table-borderless">
+                    <!-- Table headers -->
                     <thead class="">
                         <tr>
                             <th scope="col">Product Info</th>
@@ -25,7 +26,7 @@
                             <th scope="col">Subtotal</th>
                         </tr>
                     </thead>
-
+                    <!-- Table row for Product details -->
                     {% for item in bag_items %}
                     <tr>
                         <td class="p-3 w-25">
@@ -40,7 +41,8 @@
                             <p class="my-0">£{{ item.product.price }}</p>
                         </td>
                         <td class="py-3 w-25">
-                            <form class="form update-form" method="POST" action="">
+                            <!-- Adjust bag item quantities -->
+                            <form class="form update-form" method="POST" action="{% url 'adjust_bag' item.item_id %}">
                                 {% csrf_token %}
                                 <div class="form-group">
                                     <div class="input-group">
@@ -79,6 +81,7 @@
                         </td>
                     </tr>
                     {% endfor %}
+                    <!-- Table row for Bag Total (£) -->
                     <tr>
                         <td colspan="5" class="pt-5 text-right">
                             <h6><strong>Bag Total: £{{ total|floatformat:2 }}</strong></h6>
@@ -92,6 +95,7 @@
                             {% endif %}
                         </td>
                     </tr>
+                    <!-- Table row for navigation buttons Keep Shopping/Checkout -->
                     <tr>
                         <td colspan="5" class="text-right">
                             <a href="{% url 'products' %}" class="btn keep-shopping-btn">
@@ -101,7 +105,7 @@
                                 <span class="text-uppercase title-font">Keep Shopping</span>
                             </a>
                             <a href="" class="btn btn-lg">
-                                <span class="text-uppercase title-font">Secure Checkout</span>
+                                <span class="text-uppercase title-font">Proceed to Checkout</span>
                                 <span class="icon rating-icon">
                                     <i class="fas fa-lock"></i>
                                 </span>
@@ -111,6 +115,7 @@
                 </table>
             </div>
             {% else %}
+            <!-- Information and navigation if the bag is empty -->
             <p class="lead mb-5">Your bag is empty.</p>
             <a href="{% url 'products' %}" class="btn keep-shopping-btn">
                 <span class="icon rating-icon">
@@ -131,7 +136,7 @@
 <!-- Enable Update/Remove buttons -->
 <script type="text/javascript">
     // Update quantity on click
-    $('.update-link').click(function(e) {
+    $('.update-item').click(function(e) {
         var form = $(this).prev('.update-form');
         form.submit();
     })
