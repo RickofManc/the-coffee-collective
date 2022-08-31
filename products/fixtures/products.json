@@ -615,7 +615,7 @@
       "name": "Barista Professional Apron",
       "subtitle": "Our apron in your kitchen!",
       "description": "Our medium length apron has three spacious pockets in the front so it holds everything whether you're cooking, painting or gardening. It's made from a 35/65 cotton-poly twill blend and it's machine washable.",
-      "has_sizes": false,
+      "has_sizes": true,
       "size": "",
       "price": 24.6,
       "category": 7,
