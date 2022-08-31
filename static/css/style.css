@@ -214,6 +214,11 @@ footer {
     border-color: #674ea7;
 }
 
+.update-item,
+.remove-item {
+    cursor: pointer;
+}
+
 
 /*************************************************************
 
