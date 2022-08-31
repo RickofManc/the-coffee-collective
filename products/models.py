@@ -25,6 +25,7 @@ class Product(models.Model):
     subtitle = models.CharField(max_length=205)
     description = models.TextField()
     has_sizes = models.CharField(max_length=3, choices=SIZE_CHOICES)
+    size = models.CharField(max_length=6, null=True, blank=True)
     intensity = models.IntegerField(null=True, blank=True)
     price = models.DecimalField(max_digits=6, decimal_places=2)
     rating = models.IntegerField(null=True, blank=True)
