@@ -59,6 +59,7 @@
                         </select>
                     </div>
                 {% endif %}
+                {% endwith %}
                 <!-- Quantity input -->
                 <div class="col-12">
                     <p class="mt-3"><strong>Quantity:</strong></p>
@@ -73,7 +74,6 @@
                     <input type="submit" class="btn mt-5 quick-add-btn" value="Add to Bag">
                 </div>
                 <input type="hidden" name="redirect_url" value="{{ request.path }}">
-                {% endwith %}
             </div>
         </form>
     </div>
