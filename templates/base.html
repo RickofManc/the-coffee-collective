@@ -74,22 +74,26 @@
     <!-- Dropdown Nav Menus & Search Feature -->
     {% include 'includes/main-nav.html' %}
   </nav>
+  
   <!-- Container to display standard messages to the user -->
-  <div class="container">
-    <div class="row">
-      <div class="col-md-8 offset-md-2">
+  {% if messages %}
+    <!-- Flexbox container for aligning the Bootstrap toasts -->
+      <div class="message-container">
         {% for message in messages %}
-        <div class="alert {{ message.tags }} alert-dismissible fade show" id="msg" role="alert">
-          {{ message | safe }}
-          <button type="button" class="close" data-bs-dismiss="alert" aria-label="Close">
-            <span aria-hidden="true">&times;
-            </span>
-          </button>
-        </div>
+          {% with message.level as level %}
+            {% if level == 40 %}
+                {% include 'includes/toasts/toast_error.html' %}
+            {% elif level == 30 %}
+                {% include 'includes/toasts/toast_warning.html' %}
+            {% elif level == 25 %}
+                {% include 'includes/toasts/toast_success.html' %}
+            {% else %}
+                {% include 'includes/toasts/toast_info.html' %}
+            {% endif %}
+          {% endwith %}
         {% endfor %}
       </div>
-    </div>
-  </div>
+  {% endif %}
 
   <!-- Main content where independent html templates will act as the different page views -->
   <main class="main-content">
@@ -102,19 +106,23 @@
   {% include 'includes/footer.html' %}
 
   {% block postloadjs %}
-  <!-- Script to automatically remove user alerts after 3 seconds -->
-  <script>
+  <!-- Script to automatically remove user messages after 5 seconds -->
+  <script type="text/javascript">
     setTimeout(function () {
       let messages = document.getElementById("msg");
       let alert = new bootstrap.Alert(messages);
       alert.close();
-    }, 3000);
+    }, 5000);
   </script>
   <!-- Script to animate burger icon on mobile devices -->
-  <script>
+  <script type="text/javascript">
     function myFunction(x) {
       x.classList.toggle("change");
     }
+  </script>
+  <!-- Script from Bootstrap to enable toast messaging -->
+  <script type="text/javascript">
+    $('.toast').toast('show');
   </script>
   {% endblock %}
 

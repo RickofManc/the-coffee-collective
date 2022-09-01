@@ -35,6 +35,13 @@ hr {
     background-color: #e1efe6;
 }
 
+.message-container {
+    position: fixed;
+    top: 4.5rem;
+    right: 0.9375rem;
+    z-index: 999999999;
+}
+
 /* || HOMEPAGE STYLES */
 
 /* Navbar */

@@ -64,6 +64,9 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
+# Message storage for supporting Bootstrap toasts
+MESSAGE_STORAGE = 'django.contrib.messages.storage.session.SessionStorage'
+
 # Standard Bootstraps message tags to change colour accordingly
 MESSAGE_TAGS = {
     messages.DEBUG: 'alert-info',
