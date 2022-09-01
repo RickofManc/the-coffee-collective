@@ -81,7 +81,7 @@ def adjust_bag(request, item_id):
 
 def remove_from_bag(request, item_id):
     """ Remove an item from the bag """
-    
+
     product = get_object_or_404(Product, pk=item_id)
     # Try block to catch any errors
     try:
