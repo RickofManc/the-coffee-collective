@@ -35,13 +35,6 @@ hr {
     background-color: #e1efe6;
 }
 
-.message-container {
-    position: fixed;
-    top: 4.5rem;
-    right: 0.9375rem;
-    z-index: 999999999;
-}
-
 /* || HOMEPAGE STYLES */
 
 /* Navbar */
@@ -224,6 +217,21 @@ footer {
 .update-item,
 .remove-item {
     cursor: pointer;
+}
+
+/* || MESSAGE STYLES */
+.message-container {
+    position: fixed;
+    top: 4.5rem;
+    right: 0.9375rem;
+    z-index: 999999999;
+}
+
+/* Add to bag success message */
+.bag-notification-wrapper {
+    height: 6.25rem;
+    overflow-x: hidden;
+    overflow-y: auto;
 }
 
 
