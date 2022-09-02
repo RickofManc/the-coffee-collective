@@ -1,16 +1,16 @@
 import stripe
 
-from django.shortcuts import render, reverse, redirect
+from django.shortcuts import render, reverse, redirect, get_object_or_404
 from django.contrib import messages
 from django.conf import settings
 from .forms import OrderForm
-from .models import OrderLineItem
+from .models import OrderLineItem, Order
 from products.models import Product
 from bag.contexts import bag_contents
 
 
 def checkout(request):
-    """ Function to display the checkout template """
+    """ Function to process the checkout form """
     # call Stripe keys
     stripe_public_key = settings.STRIPE_PUBLIC_KEY
     stripe_secret_key = settings.STRIPE_SECRET_KEY
@@ -28,7 +28,7 @@ def checkout(request):
             'street_address1': request.POST['street_address1'],
             'street_address2': request.POST['street_address2'],
             'town_or_city': request.POST['town_or_city'],
-            'county': request.POST['county'],          
+            'county': request.POST['county'],         
             'postcode': request.POST['postcode'],
             'country': request.POST['country'],
         }
@@ -37,7 +37,7 @@ def checkout(request):
             order = order_form.save()
             for item_id, item_data in bag.items():
                 try:
-                    product = Products.objects.get(id=item_id)
+                    product = Product.objects.get(id=item_id)
                     # if the item has no sizes
                     if isinstance(item_data, int):
                         order_line_item = OrderLineItem(
@@ -88,18 +88,38 @@ def checkout(request):
         )
         # Execute function
         order_form = OrderForm()
-    
+
     # Alert msg if public key not enabled
     if not stripe_public_key:
         messages.warning(request, 'Stripe Public Key is missing. \
-            Did you forget to export it in your environment or set in variables?')
-    
+            Did you forget to set it in your environment?')
+
     # Items to render on template
     template = 'checkout/checkout.html'
     context = {
         'order_form': order_form,
         'stripe_public_key': stripe_public_key,
         'client_secret': intent.client_secret,
+    }
+
+    return render(request, template, context)
+
+
+def checkout_success(request, order_number):
+    """ Function to handle successful checkouts """
+    
+    save_info = request.session.get('save_info')
+    order = get_object_or_404(Order, order_number=order_number)
+    messages.success(request, f'Your order has been successfully processed" \
+        <br> Your order number is {order_number}. <br> A confirmation \
+            email will be sent to {order.email}')
+    # Clear the bag contents as processed
+    if 'bag' in request.session:
+        del request.session['bag']
+
+    template = 'checkout/checkout_success.html'
+    context = {
+        'order': order,
     }
 
     return render(request, template, context)
