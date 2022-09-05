@@ -1,5 +1,5 @@
 """
-Home URL Configuration
+Bag URL Configuration
 """
 from django.urls import path
 from . import views
