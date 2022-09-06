@@ -1,4 +1,4 @@
-/* Stripe payment styles */
+/* Billing and Shipping form styles */
 #payment-form .form-control,
 #card-element {
     color: #383838;
@@ -41,7 +41,18 @@
     color: #aab7c4;
 }
 
-/* Spinner whilst page is loading */
+/* Country Field styles */
+select,
+select option {
+  color:#383838
+}
+
+select:invalid,
+select option[value=""] {
+  color: #aab7c4 !important
+}
+
+/* Page loading spinner whilst payment is being confirmed */
 #loading-overlay {
 	display: none;
 	position: fixed;
