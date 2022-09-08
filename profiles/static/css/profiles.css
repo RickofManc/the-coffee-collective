@@ -1,3 +1,4 @@
+/* Profile Section */
 #profile-update-form input::placeholder {
     color: #aab7c4
 }
@@ -13,4 +14,10 @@
 
 #id_default_country option:first-child {
     color: #aab7c4
+}
+
+/* Order History Section */
+.order-history {
+    max-height: 416px; /* height of Profile Section + Submit btn */
+    overflow-y: auto;
 }
