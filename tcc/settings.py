@@ -182,6 +182,7 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 # Email
 EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+DEFAULT_FROM_EMAIL = 'thecoffeecollective@gmail.com'
 
 # Account Authentication
 ACCOUNT_AUTHENTICATION_METHOD = 'username_email'
