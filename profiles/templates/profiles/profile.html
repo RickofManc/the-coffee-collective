@@ -6,12 +6,35 @@
 {% endblock %}
 
 {% block content %}
-<!-- Page header -->
 <div class="container-fluid">
+    <!-- Page header -->
     <div class="row">
         <div class="col text-center mt-3">
             <h1 class="page-title">My Profile</h1>
             <hr class="w-50 mb-1">
         </div>
     </div>
+    <div class="row">
+        <!-- Delivery Info Container -->
+        <div class="col-12 col-lg-6">
+            <h2>Default Delivery Information</h2>
+            <form action="{% url 'profile' %}" method="POST" class="mt-3" id="profile-update-form">
+                {% csrf_token %}
+                {{ form|crispy }}
+                <button class="btn rounded-0 float-right">Update Information</button>
+            </form>
+        </div>
+        <!-- Order History container-->
+        <div class="col-12 col-lg-6">
+            <h2>Order History</h2>
+            {{ orders }}
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block postloadjs %}
+{{ block.super }}
+<!-- Script for Country field formatting -->
+<script type="text/javascript" src="{% static 'js/profiles.js' %}"></script>
 {% endblock %}
