@@ -23,11 +23,11 @@ def all_products(request):
                 sortkey = 'lower_name'
                 products = products.annotate(lower_name=Lower('name'))
             if sortkey == 'category':
-                sortkey = 'category__name'            
+                sortkey = 'category__name'
             if 'direction' in request.GET:
                 direction = request.GET['direction']
-                if direction == 'desc':
-                    sortkey = f'-{sortkey}'
+            if direction == 'desc':
+                sortkey = f'-{sortkey}'
             products = products.order_by(sortkey)
 
         # Handle the page request to return a specific category
@@ -75,10 +75,53 @@ def product_detail(request, product_id):
 
 def add_product(request):
     """ Add a product from the front end """
-    form = ProductForm()
+    if request.method == 'POST':
+        form = ProductForm(request.POST, request.FILES)
+        if form.is_valid():
+            product = form.save()
+            messages.success(request, 'Product added successfully')
+            return redirect(reverse('product_detail', args=[product.id]))
+        else:
+            messages.error(request, 'Failed to add product. \
+                            Please ensure the form is completed correctly')
+    else:
+        form = ProductForm()
+
     template = 'products/add_product.html'
     context = {
         'form': form,
     }
+    return render(request, template, context)
+
+
+def edit_product(request, product_id):
+    """ Edit a product from the front end """
+    product = get_object_or_404(Product, pk=product_id)
+    if request.method == 'POST':
+        form = ProductForm(request.POST, request.FILES, instance=product)
+        if form.is_valid():
+            form.save()
+            messages.success(request, 'Successfully updated the product')
+            return redirect(reverse('product_detail', args=[product.id]))
+        else:
+            messages.error(request, 'Failed to update product. \
+                            Please ensure the form is completed correctly')
+    else:
+        form = ProductForm(instance=product)
+        messages.info(request, f'You are editing {product.name}')
+
+    template = 'products/edit_product.html'
+    context = {
+        'form': form,
+        'product': product,
+    }
 
     return render(request, template, context)
+
+
+def delete_product(request, product_id):
+    """ Delete a product from the front end """
+    product = get_object_or_404(Product, pk=product_id)
+    product.delete()
+    messages.success(request, 'Product successfully deleted')
+    return redirect(request('products'))
