@@ -9,7 +9,7 @@ from checkout.models import Order
 @login_required
 def profile(request):
     """ Display the users profile with orders """
-    
+
     profile = get_object_or_404(UserProfile, user=request.user)
     # Function to save changes to User Profile
     if request.method == 'POST':
@@ -22,7 +22,7 @@ def profile(request):
                            Please ensure the form is completed correctly')
     else:
         form = UserProfileForm(instance=profile)
-    
+
     orders = profile.orders.all()
 
     template = 'profiles/profile.html'
