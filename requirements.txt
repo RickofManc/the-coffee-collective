@@ -9,6 +9,7 @@ django-crispy-forms==1.14.0
 dodgy==0.2.1
 flake8==4.0.1
 flake8-polyfill==1.0.2
+gunicorn==20.1.0
 mccabe==0.6.1
 oauthlib==3.2.0
 pep8-naming==0.10.0
