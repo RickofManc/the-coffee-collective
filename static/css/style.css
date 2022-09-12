@@ -45,25 +45,32 @@ input[name='q']::placeholder P {
 .navbar {
     background-color: #351c75 !important;
 }
+
 .navbar-light .navbar-brand {
     color: #fff !important;
 }
+
 .navbar-light .navbar-nav .show>.nav-link {
     color: #fff !important;
 }
+
 .navbar-light .navbar-nav .nav-link {
     color: #fff !important;
 }
+
 .navbar-brand {
     font-family: 'Bebas Neue';
     font-size: 2rem;
 }
+
 .nav-label {
     color: #fff;
 }
+
 .nav-icon i {
     color: #fff;
 }
+
 .dropdown-item {
     color: #282828;
 }
@@ -73,6 +80,7 @@ input[name='q']::placeholder P {
     display: inline-block;
     cursor: pointer;
 }
+
 .bar1,
 .bar2,
 .bar3 {
@@ -82,13 +90,16 @@ input[name='q']::placeholder P {
     margin: 6px 0;
     transition: 0.4s;
 }
+
 .change .bar1 {
     -webkit-transform: rotate(-45deg) translate(-9px, 6px);
     transform: rotate(-45deg) translate(-9px, 6px);
 }
+
 .change .bar2 {
     opacity: 0;
 }
+
 .change .bar3 {
     -webkit-transform: rotate(45deg) translate(-8px, -8px);
     transform: rotate(45deg) translate(-8px, -8px);
@@ -109,12 +120,15 @@ footer {
     color: #383838;
     box-shadow: 0 50vh 0 50vh #e1efe6;
 }
+
 .footer-div {
     padding: 2rem 1rem;
 }
+
 .footer-div>.row .col-12 {
     padding-left: 0;
 }
+
 .footer-list-links {
     list-style-type: none;
     margin: 0;
@@ -122,9 +136,11 @@ footer {
     overflow: hidden;
     background-color: #e1efe6;
 }
+
 .footer-list-links li {
     float: left;
 }
+
 .footer-list-links li a {
     display: block;
     color: #383838;
@@ -132,19 +148,23 @@ footer {
     padding: 1rem;
     text-decoration: none;
 }
+
 .footer-list-socials {
     padding-inline-start: 0;
 }
+
 .footer-list-socials li {
     display: inline-block;
     text-align: center;
 }
+
 .footer-copyright {
     display: contents;
     text-align: center;
     font-size: 0.875rem;
     color: #383838;
 }
+
 .social-media-icon i {
     font-size: 2.5rem;
     color: #6c757d;
@@ -285,7 +305,7 @@ footer {
 
 .allauth-form-inner-content button,
 .allauth-form-inner-content input[type='submit'] {
-	display: inline-block;
+    display: inline-block;
     border: 0.15rem solid #351c75;
     border-radius: 0;
     padding: 0.375rem;
@@ -302,18 +322,25 @@ footer {
     -ms-user-select: none;
     user-select: none;
     /* standard bootstrap btn transitions */
-    transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+    transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out;
 }
 
 .allauth-form-inner-content button:hover,
-.allauth-form-inner-content input[type='submit']:hover {	
-	color: #351c75;
+.allauth-form-inner-content input[type='submit']:hover {
+    color: #351c75;
     background-color: #fff;
     border-color: #351c75;
 }
 
 .allauth-form-inner-content a {
-	color: #6c757d; /* text-info */
+    color: #6c757d;
+    /* text-info */
+}
+
+
+/* || 404 & 505 ERROR PAGE STYLES  */
+.error-page-header {
+    font-weight: 500;
 }
 
 
@@ -323,27 +350,31 @@ footer {
 
 /* // Extra Small devices (iPhone 5, Galaxy Fold, 280px and up) */
 @media (min-width: 280px) {
-    
+
     /* || NAVBAR STYLES  */
     .navbar {
         padding: 0;
     }
+
     .nav-link {
         padding: 0.5rem
     }
-    
+
     /* || FOOTER STYLES  */
     .footer-list-links>li a {
         min-width: 18.75rem;
     }
+
     .footer-list-socials {
         display: flex;
         margin-top: 2rem;
         margin-bottom: 2rem;
     }
+
     .social-media-icon i {
         font-size: 1.25rem;
     }
+
     .footer-copyright {
         text-align: left;
     }
@@ -357,7 +388,7 @@ footer {
 /* // Small devices (landscape phones, 576px and up) */
 @media (min-width: 576px) {
     .d-sm-block {
-        display: block!important;
+        display: block !important;
         padding: 0;
     }
 }
@@ -375,6 +406,7 @@ footer {
         padding-top: 0.5rem;
         padding-bottom: 0.5rem;
     }
+
     p.footer-item {
         margin-top: 2rem;
     }
@@ -405,12 +437,14 @@ footer {
     .footer-list-links>li a {
         min-width: 0;
     }
+
     .footer-list-socials {
         display: flex;
         margin-top: 0;
         margin-bottom: 0;
         justify-content: space-evenly;
     }
+
     .social-media-icon i {
         font-size: 1.25rem;
     }
