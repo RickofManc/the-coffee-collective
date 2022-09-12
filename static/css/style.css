@@ -355,7 +355,12 @@ footer {
 }
 
 /* // Small devices (landscape phones, 576px and up) */
-@media (min-width: 576px) {}
+@media (min-width: 576px) {
+    .d-sm-block {
+        display: block!important;
+        padding: 0;
+    }
+}
 
 /* Medium devices (tablets, 768px and up) */
 @media (min-width: 768px) {
@@ -390,6 +395,10 @@ footer {
         right: 0;
         left: 0;
         z-index: 1030;
+    }
+
+    .py-lg-0 {
+        padding: 0;
     }
 
     /* || FOOTER STYLES  */
