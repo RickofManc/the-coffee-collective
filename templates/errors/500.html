@@ -2,16 +2,16 @@
 {% load static %}
 {% block content %}
 <!-- Details of 500 error and button to navigate to home -->
-<div class="container h-100">
-    <div class="row h-100">
-        <div class="col-7 col-md-6 my-auto">
+<div class="container">
+    <div class="row">
+        <div class="col-12 mt-3">
             <h1 class="display-4 error-page-header">
                 500 Internal Server Error
             </h1>
-            <p class="lead">Oops! Something has gone wrong with The Coffee Collective website.</p>
+            <p class="lead-error-p">Oops! Something has gone wrong with our website.</p>
             <hr class="my-4">
             <p>This isn't a problem with your browser, your computer, or your internet connection. We have been alerted
-                to this issue and will have an espresso and fix it.</p>
+                to this issue and will have a quick espresso and start fixing it.</p>
             <p>Please use the button below to return to our store.</p>
             <p class="lead">
                 <a class="btn btn-lg" href="{% url 'home' %}" role="button">Home</a>
