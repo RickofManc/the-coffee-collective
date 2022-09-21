@@ -16,7 +16,9 @@ urlpatterns = [
     path('bag/', include('bag.urls')),
     path('checkout/', include('checkout.urls')),
     path('profile/', include('profiles.urls')),
-    path('favicon.ico', RedirectView.as_view(url=staticfiles_storage.url('images/favicon.ico'))),
+    path("favicon.ico",
+        RedirectView.as_view(url=staticfiles_storage.url("images/favicon.ico")),
+    ),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 
 # override the standard 404 and 500 handlers
