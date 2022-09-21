@@ -45,7 +45,7 @@
                     <div class="col-sm-6 col-md-6 col-lg-4 col-xl-3 mb-4">
                         <div class="card h-100 border-0">
                             <!-- Product image (if available) -->
-                            <div class="product-img-container">
+                            <div class="product-img-container text-center">
                                 {% if product.image %}
                                 <a href="{% url 'product_detail' product.id %}">
                                     <img class="card-img-top img-fluid" src="{{ product.image.url }}" alt="{{ product.name }}">
@@ -61,14 +61,14 @@
                                 <h2 class="mb-0 card-title title-font">{{ product.name }}</h2>
                                 <h3 class="card-subtitle mb-2">{{ product.subtitle }}</h3>
                             </div>
-                            <div class="card-footer bg-white pt-0 border-0 text-left">
+                            <div class="card-footer pt-0">
                                 <div class="row">
-                                    <div class="col">
+                                    <div class="col mb-3 product-price">
                                         <p class="lead mb-0">£{{ product.price }}</p>
                                     </div>
-                                    <div class="col mb-3">
+                                    <div class="col mb-3 product-rating">
                                         {% if product.rating %}
-                                            <small class="lead rating-icon"><i class="fas fa-mug-hot"></i> {{ product.rating }} / 5</small>
+                                            <small class="lead rating-icon"><i class="fa-sharp fa-solid fa-mug-saucer"></i> {{ product.rating }} / 5</small>
                                         {% else %}
                                             <small class="text-muted">No Rating</small>
                                         {% endif %}
@@ -77,10 +77,10 @@
                                 <!-- Buttons to Learn More / Add to Bag -->
                                 <div class="row">
                                     <div class="col">
-                                        <a href="" class="btn info-btn">Learn More</a>
+                                        <a href="" class="btn learn-more-btn">Learn<br>More</a>
                                     </div>
                                     <div class="col">
-                                        <a href="" class="btn quick-add-btn">Quick Add</a>
+                                        <a href="" class="btn quick-add-btn">Quick<br>Add</a>
                                     </div>
                                 </div>
                             </div>
