@@ -33,7 +33,8 @@
     border-radius: 0;
     padding: 0.1rem 0.75rem;
     text-align: center;
-    color: #674ea7;
+    background-color: #6c757d;
+    color: #fff;
 }
 
 .learn-more-btn {
@@ -44,7 +45,7 @@
     padding: 0.1rem 0.75rem;
     text-align: center;
     background-color: #e1efe6;
-    color: #282828;
+    color: #6c757d;
 }
 
 .quick-add-btn:hover,
