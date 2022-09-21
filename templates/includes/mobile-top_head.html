@@ -7,7 +7,7 @@
             <p class="my-0 nav-label">Search</p>
         </div>
     </a>
-    <div class="dropdown-menu border-0 w-100 p-3 rounded-0 my-0" aria-labelledby="mobile-search">
+    <div class="dropdown-menu w-100 p-3 rounded-0 my-auto mx-auto text text-center" aria-labelledby="mobile-search">
         <form class="form" method="GET" action="{% url 'products' %}">
             <div class="input-group w-100">
                 <input class="form-control border border-black rounded-0" type="text" name="q"
@@ -33,16 +33,16 @@
             <p class="my-0 nav-label">My Account</p>
         </div>
     </a>
-    <div class="dropdown-menu border-0" aria-labelledby="user-options">
+    <div class="dropdown-menu" aria-labelledby="user-options">
         {% if request.user.is_authenticated %}
         {% if request.user.is_superuser %}
-        <a href="{% url 'add_product' %}" class="dropdown-item">Product Management</a>
+        <a href="{% url 'add_product' %}" class="dropdown-item user-profile-link">Product Management</a>
         {% endif %}
-        <a href="{% url 'profile' %}" class="dropdown-item">My Profile</a>
-        <a href="{% url 'account_logout' %}" class="dropdown-item">Logout</a>
+        <a href="{% url 'profile' %}" class="dropdown-item user-profile-link">My Profile</a>
+        <a href="{% url 'account_logout' %}" class="dropdown-item user-profile-link">Logout</a>
         {% else %}
-        <a href="{% url 'account_signup' %}" class="dropdown-item">Register</a>
-        <a href="{% url 'account_login' %}" class="dropdown-item">Login</a>
+        <a href="{% url 'account_signup' %}" class="dropdown-item user-profile-link">Register</a>
+        <a href="{% url 'account_login' %}" class="dropdown-item user-profile-link">Login</a>
         {% endif %}
     </div>
 </li>

@@ -39,20 +39,35 @@ input[name='q']::placeholder P {
     color: #aab7c4
 }
 
-.standard.btn {
+.standard-btn {
     width: inherit;
     min-height: 3.375rem;
     border: 0.08rem solid #e1efe6;
     border-radius: 0;
     padding: 0.1rem 0.75rem;
-    text-align: center;
-    background-color: #6c757d;;
+    background-color: #6c757d;
     color: #fff
 }
 
-.standard.btn:hover {
+.standard-btn:hover {
     background-color: #e1efe6;
     color: #383838;
+}
+
+.home-btn {
+    border: 0.08rem solid #6c757d;
+    background-color: #fff;
+    color: #383838;
+    margin-right: 1.5rem;
+}
+
+.form-control:focus {
+    border-color: #ced4da;
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 0.5rem rgba(103, 78, 167, 0.5);
+}
+
+input:-internal-autofill-selected {
+    background-color: none!important;
 }
 
 /* || HOMEPAGE STYLES */
@@ -87,8 +102,18 @@ input[name='q']::placeholder P {
     color: #fff;
 }
 
+.dropdown-menu {
+    margin-left: -1rem;
+    border-radius: 0;
+}
+
 .dropdown-item {
     color: #282828;
+    padding: 0.25rem 0.75rem;
+}
+
+.dropdown-item::selection {
+    background-color: #674ea7;
 }
 
 /* Burger icon */
@@ -250,10 +275,18 @@ footer {
 }
 
 .allauth-form-inner-content a {
-    color: #6c757d;
+    color: #351c75!important;
     /* text-info */
 }
 
+/* Login Form */
+#login-form input::placeholder {
+    color: #aab7c4
+}
+
+#login-form .form-control {
+    color: #282828;
+}
 
 /* || 404 & 505 ERROR PAGE STYLES  */
 .error-page-header {
@@ -275,9 +308,22 @@ footer {
     .navbar {
         padding: 0;
     }
+    
+    .navbar-nav {
+        padding-left: 0.75rem;
+    }
 
     .nav-link {
         padding: 0.5rem
+    }
+
+    .dropdown-item {
+        padding-left: 1.25rem;
+    }
+
+    .user-profile-link {
+        padding-left: 0.5rem;
+        padding-right: 0.5rem;
     }
 
     .list-inline-item:not(:last-child) {
