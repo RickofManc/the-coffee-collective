@@ -2,6 +2,10 @@
 {% load static %}
 {% load bag_tools %}
 
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'css/bag.css' %}">
+{% endblock %}
+
 {% block content %}
 <!-- Page header -->
 <div class="container-fluid">
