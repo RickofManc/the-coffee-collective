@@ -4,25 +4,27 @@
 {% block content %}
 <!-- Page header -->
 <div class="container-fluid">
+    <!-- Title -->
     <div class="row">
         <div class="col text-center mt-3">
             <h1 class="page-title">Products</h1>
             <hr class="w-50 mb-1">
         </div>
     </div>
-    <div class="col-12 col-md-6">
-        <p class="text-muted mt-3 text-center text-md-left">
-            {% if search_term or current_categories or current_sorting != 'None_None' %}
-                <span class="small"><a href="{% url 'products' %}">Products Home</a> | </span>
-            {% endif %}
-            {{ products|length }} Products{% if search_term %} found for <strong>"{{ search_term }}"</strong>{% endif %}
-        </p>
-    </div>
-    <!-- Container for sorting and products -->
+    <!-- Product Count and Sorting Options -->
     <div class="row">
+        <!-- Count of products in view -->
+        <div class="col-12 col-md-6 order-md-first">
+            <p class="text-muted mt-3 text-center">
+                {% if search_term or current_categories or current_sorting != 'None_None' %}
+                    <span class="small all-products-link"><a href="{% url 'products' %}">All Products</a> | </span>
+                {% endif %}
+                {{ products|length }} Products{% if search_term %} found for <strong>"{{ search_term }}"</strong>{% endif %}
+            </p>
+        </div>
         <!-- Sorting by category feature -->
-        <div class="col-2 order-md-first">
-            <div class="sort-select-wrapper">
+        <div class="col-12 col-md-6">
+            <div class="sort-select-wrapper mt-3 mb-3 text-center">
                 <select id="sort-selector" class="custom-select custom-select-sm rounded-0 border border-{% if current_sorting != 'None_None' %}info{% else %}black{% endif %}">
                     <option value="reset" {% if current_sorting == 'None_None' %}selected{% endif %}>Sort by...</option>
                     <option value="price_asc" {% if current_sorting == 'price_asc' %}selected{% endif %}>Price (low to high)</option>
@@ -36,8 +38,11 @@
                 </select>
             </div>
         </div>
+    </div>
+    <!-- Container for products -->
+    <div class="row">
         <!-- Grid layout for products -->
-        <div class="product-container col-10 order-md-last">
+        <div class="product-container col-10 mx-auto">
             <div class="row mt-1 mb-2"></div>
             <div class="row">
                 <!-- Bootstrap card combined with for loop to show all products -->
@@ -58,7 +63,7 @@
                             </div>
                             <!-- Product details -->
                             <div class="card-body pb-0">
-                                <h2 class="mb-0 card-title title-font">{{ product.name }}</h2>
+                                <h2 class="card-title title-font mb-0">{{ product.name }}</h2>
                                 <h3 class="card-subtitle mb-2">{{ product.subtitle }}</h3>
                             </div>
                             <div class="card-footer pt-0">
