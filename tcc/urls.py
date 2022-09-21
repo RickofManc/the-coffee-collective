@@ -5,7 +5,8 @@ from django.conf import settings
 from django.conf.urls.static import static
 from django.contrib.staticfiles.storage import staticfiles_storage
 from django.views.generic.base import RedirectView
-from .views import handler404
+from .views import handler404, handler500
+
 
 urlpatterns = [
     path('admin/', admin.site.urls),
