@@ -8,7 +8,7 @@ html {
     padding: 0;
     height: 100%;
     font-family: 'Open Sans', sans-serif;
-    font: 1rem;
+    font-size: 1rem;
     font-weight: 400;
     color: #282828;
 }
@@ -31,6 +31,10 @@ html {
     font-size: 1.65rem;
 }
 
+.page-subtitle {
+    font-size: 1.25rem;
+}
+
 hr {
     background-color: #e1efe6;
 }
@@ -49,17 +53,23 @@ input[name='q']::placeholder P {
     color: #fff
 }
 
-.standard-btn:hover {
-    background-color: #e1efe6;
+.home-btn {
+    width: inherit;
+    min-height: 3.375rem;
+    border: 0.08rem solid #e1efe6;
+    border-radius: 0;
+    padding: 0.1rem 0.75rem;
+    text-align: center;
+    background-color: rgba(100, 105, 109, 0.19);
     color: #383838;
 }
 
-.home-btn {
-    border: 0.08rem solid #6c757d;
-    background-color: #fff;
-    color: #383838;
-    margin-right: 1.5rem;
+.home-btn:hover,
+.standard-btn:hover {
+    background-color: #674ea7;
+    color: #fff;
 }
+
 
 .form-control:focus {
     border-color: #ced4da;
@@ -236,7 +246,7 @@ footer {
 }
 
 .allauth-form-inner-content input {
-    border-color: #6c757d;
+    border-color: #ced4da;
     border-radius: 0;
 }
 
