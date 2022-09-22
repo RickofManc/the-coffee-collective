@@ -2,7 +2,7 @@
 
 {% load i18n %}
 
-{% block head_title %}{% trans "Account" %}{% endblock %}
+{% block title %}{% trans "Account" %}{% endblock %}
 
 {% block inner_content %}
 <!-- Page header -->
@@ -36,9 +36,9 @@
     {% endfor %}
 
     <div class="buttonHolder">
-      <button class="secondaryAction" type="submit" name="action_primary">{% trans 'Make Primary' %}</button>
-      <button class="secondaryAction" type="submit" name="action_send">{% trans 'Re-send Verification' %}</button>
-      <button class="primaryAction" type="submit" name="action_remove">{% trans 'Remove' %}</button>
+      <button class="secondaryAction standard-btn" type="submit" name="action_primary">{% trans 'Make Primary' %}</button>
+      <button class="secondaryAction standard-btn" type="submit" name="action_send">{% trans 'Re-send Verification' %}</button>
+      <button class="primaryAction home-btn" type="submit" name="action_remove">{% trans 'Remove' %}</button>
     </div>
 
   </fieldset>
@@ -57,7 +57,7 @@
 <form method="post" action="{% url 'account_email' %}" class="add_email">
   {% csrf_token %}
   {{ form.as_p }}
-  <button name="action_add" type="submit">{% trans "Add E-mail" %}</button>
+  <button class="standard-btn" name="action_add" type="submit">{% trans "Add E-mail" %}</button>
 </form>
 
 {% endblock %}
