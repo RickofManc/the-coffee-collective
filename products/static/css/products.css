@@ -44,8 +44,8 @@
     border-radius: 0;
     padding: 0.1rem 0.75rem;
     text-align: center;
-    background-color: #e1efe6;
-    color: #6c757d;
+    background-color: rgba(100, 105, 109, 0.19);
+    color: #383838;
 }
 
 .quick-add-btn:hover,
