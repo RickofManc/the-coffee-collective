@@ -6,45 +6,51 @@
 {% endblock %}
 
 {% block content %}
+<!-- User will be logged in to access this page -->
+{% if user.is_authenticated %}
+<!-- Main container for page content -->
 <div class="container-fluid">
     <!-- Page header -->
     <div class="row">
-        <div class="col text-center mt-3">
+        <div class="col text-center mt-3 mb-3">
             <h1 class="page-title">My Profile</h1>
             <hr class="w-50 mb-1">
         </div>
     </div>
     <div class="row">
         <!-- Delivery Info Container -->
-        <div class="col-12 col-lg-6">
-            <h2>Default Delivery Information</h2>
+        <div class="col-12 col-lg-6 mb-4">
+            <h2 class="page-subtitle mb-3">Default Delivery Information</h2>
             <form action="{% url 'profile' %}" method="POST" class="mt-3" id="profile-update-form">
                 {% csrf_token %}
                 {{ form|crispy }}
-                <button class="btn rounded-0 float-right">Update Information</button>
+                <!-- Button to cancel if navigated to in error or made an error -->
+                <input class="home-btn" type="button" name="cancel" value="Cancel" 
+                onClick="window.location='https://the-coffee-collective.herokuapp.com/';return false;" />
+                <!-- Button to submit changes to Profile Information -->
+                <button class="btn standard-btn">Save Changes</button>
             </form>
         </div>
         <!-- Order History container-->
-        <div class="col-12 col-lg-6">
-            <h2>Order History</h2>
+        <div class="col-12 col-lg-6 mb-4">
+            <h2 class="page-subtitle mb-3">Order History</h2>
             <div class="order-history table-responsive">
                 <table class="table table-sm table-borderless">
-                    <thead>
+                    <thead class="thead-dark">
                         <tr>
                             <th>Order Number</th>
-                            <th>Date</th>
                             <th>Items</th>
+                            <th class="col-date">Date</th>
                             <th>Total</th>
                         </tr>
                     </thead>
-                    <tbody>
+                    <tbody class="table-striped">
                         {% for order in orders %}
                         <tr>
                             <td>
                                 <a href="{% url 'order_history' order.order_number %}"
-                                    title="{{ order.order_number }}">{{ order.order_number|truncatechars:6 }}</a>
+                                    title="{{ order.order_number }}">{{ order.order_number|truncatechars:8 }}</a>
                             </td>
-                            <td>{{ order.order_date}}</td>
                             <td>
                                 <ul class="list-unstyled">
                                     {% for item in order.lineitems.all %}
@@ -55,7 +61,8 @@
                                     {% endfor %}
                                 </ul>
                             </td>
-                            <td>{{ order.grand_total }}</td>
+                            <td class="col-date">{{ order.order_date}}</td>
+                            <td>£{{ order.grand_total }}</td>
                         </tr>
                         {% endfor %}
                     </tbody>
@@ -64,6 +71,21 @@
         </div>
     </div>
 </div>
+{% else %}
+<!-- Information to user if navigated to in error without being signed in -->
+<div class="container fluid">
+  <div class="row justify-content-center">
+    <div class="card-block">
+      <p class="card-text">
+        Sorry you must be signed in to access this page, please use the button below to
+        return to our homepage
+      </p>
+      <a href="{% url 'home' %}" type="button" class="anchor-tag-btn">Home
+      </a>
+    </div>
+  </div>
+</div>
+{% endif %}
 {% endblock %}
 
 {% block postloadjs %}

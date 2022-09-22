@@ -18,6 +18,32 @@
 
 /* Order History Section */
 .order-history {
-    max-height: 416px; /* height of Profile Section + Submit btn */
+    max-height: 416px; /* height of Profile Section + Save Changes btn */
     overflow-y: auto;
+}
+
+.table .thead-dark th {
+    color: #fff;
+    border-color: #674ea7;
+    background-color: #674ea7;
+    font-weight: 400;
+    font-size: 1rem;
+}
+
+thead {
+    height: 2.374375rem;
+}
+
+
+.table tbody td a {
+    color: #352c75;
+}
+
+.table tbody td,
+.table tbody li {
+    font-size: 1rem;
+}
+
+.col-date {
+    max-width: 4rem;
 }
