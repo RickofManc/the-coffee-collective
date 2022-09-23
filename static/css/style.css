@@ -44,7 +44,7 @@ input[name='q']::placeholder P {
 }
 
 .standard-btn {
-    width: inherit;
+    max-width: 6.6875rem;
     min-height: 3.375rem;
     border: 0.08rem solid #e1efe6;
     border-radius: 0;
@@ -53,21 +53,27 @@ input[name='q']::placeholder P {
     color: #fff
 }
 
-.home-btn {
-    width: inherit;
+.back-btn {
+    max-width: 6.6875rem;
     min-height: 3.375rem;
     border: 0.08rem solid #e1efe6;
     border-radius: 0;
     padding: 0.1rem 0.75rem;
+    margin-right: 0.5rem;
     text-align: center;
     background-color: rgba(100, 105, 109, 0.19);
     color: #383838;
 }
 
-.home-btn:hover,
+.back-btn:hover,
 .standard-btn:hover {
     background-color: #674ea7;
     color: #fff;
+}
+
+button {
+    border: none;
+    background: none;
 }
 
 
@@ -78,6 +84,13 @@ input[name='q']::placeholder P {
 
 input:-internal-autofill-selected {
     background-color: none!important;
+}
+
+.admin-links {
+    text-transform: uppercase;
+    font-weight: 400;
+    padding: 0.75rem 0.5rem;
+    margin-left: 0.35rem;
 }
 
 /* || HOMEPAGE STYLES */
