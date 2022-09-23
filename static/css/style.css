@@ -73,6 +73,10 @@ button {
     background: none;
 }
 
+.cancel-anchor-btn {
+    line-height: 3rem;
+}
+
 /* Generic form styles  */
 .form-control:focus {
     border-color: #ced4da;
