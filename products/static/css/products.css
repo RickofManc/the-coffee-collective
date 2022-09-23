@@ -111,6 +111,10 @@
     border-radius: 0;
 }
 
+.form-row>.col {
+    padding-left: 2px;
+}
+
 .input-group>.input-group-append>.btn {
     background-color: #674ea7;
     color: #fff;
