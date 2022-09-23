@@ -10,7 +10,7 @@
 <div class="container-fluid">
     <!-- Container for product details -->
     <div class="row">
-        <div class="col-md-6 product-details-container my-5">
+        <div class="col-md-6 product-details-container mt-3">
             <!-- Title, Subtitle, Description -->
             <div class="card-body pb-0">
                 <h2 class="card-title title-font product-detail-title mb-4">{{ product.name }}</h2>
@@ -25,11 +25,11 @@
                         <p class="card-description mb-2"><strong>Price:</strong> £{{ product.price }}</p>
                     </div>
                 </div>
-                <!-- Rating --> 
+                <!-- Rating -->
                 <div class="row">
                     <div class="col">
                         {% if product.rating %}
-                        <p class="rating-icon card-description mb-2"><strong>Rating:</strong> {{ product.rating }} /  
+                        <p class="rating-icon card-description mb-2"><strong>Rating:</strong> {{ product.rating }} /
                             5 <i class="fa-sharp fa-solid fa-mug-saucer"></i></p>
                         {% else %}
                         <p class="text-muted card-description mb-2">No Rating</p>
@@ -91,8 +91,9 @@
                                             </button>
                                         </div>
                                         <!-- Quantity -->
-                                        <input class="form-control qty_input" type="number" name="quantity" value="1" min="1"
-                                            max="99" data-item_id="{{ product.id }}" id="id_qty_{{ product.id }}">
+                                        <input class="form-control qty_input" type="number" name="quantity" value="1"
+                                            min="1" max="99" data-item_id="{{ product.id }}"
+                                            id="id_qty_{{ product.id }}">
                                         <!-- Increase quantity button -->
                                         <div class="input-group-append">
                                             <button class="increment-qty btn" data-item_id="{{ product.id }}"
@@ -105,11 +106,17 @@
                                     </div>
                                 </div>
                             </div>
-                            <!-- Button to add product to cart -->
-                            <div class="form-row">
-                                <input type="submit" class="btn mt-5 quick-add-btn" value="Add to Bag">
+                            <!-- Form buttons -->
+                            <div class="form-row mt-3 mb-3">
+                                <div class="col">
+                                    <!-- Back to products page -->
+                                    <button><a href="{% url 'products' %}"
+                                            class="btn back-btn">Keep<br>Shopping</a></button>
+                                    <!-- Add product to bag -->
+                                    <input type="submit" class="btn standard-btn" value="Add to Bag">
+                                </div>
+                                <input type="hidden" name="redirect_url" value="{{ request.path }}">
                             </div>
-                            <input type="hidden" name="redirect_url" value="{{ request.path }}">
                             {% endwith %}
                         </form>
                     </div>
@@ -117,7 +124,7 @@
             </div>
         </div>
         <!-- Product image (if available) -->
-        <div class="col-md-6 product-img-container my-5">
+        <div class="col-md-6 product-img-container mt-3 text-center">
             {% if product.image %}
             <a href="">
                 <img class="card-img-top img-fluid" src="{{ product.image.url }}" alt="{{ product.name }}">
@@ -129,27 +136,15 @@
             {% endif %}
         </div>
     </div>
-
     <!-- Container for Admins only to Edit/Delete Products -->
     {% if request.user.is_superuser %}
     <div class="row">
-        <div class="col-12">
-            <button><a href="{% url 'edit_product' product.id %}">Edit</a></button>
-            <input type="button"><a href="{% url 'delete_product' product.id %}">Delete</a>
+        <div class="col-12 mb-3">
+            <a class="admin-links" style="color:#155724" href="{% url 'edit_product' product.id %}">Edit</a>
+            <a class="admin-links" style="color:#721c24;" href="{% url 'delete_product' product.id %}">Delete</a>
         </div>
     </div>
     {% endif %}
-    <!-- Container to redirect user to previous Products page -->
-    <div class="row">
-        <div class="col-12">
-            <a href="{% url 'products' %}" class="btn keep-shopping-btn">
-                <span class="icon rating-icon">
-                    <i class="fas fa-chevron-left"></i>
-                </span>
-                <span class="title-font">Keep Shopping</span>
-            </a>
-        </div>
-    </div>
 </div>
 {% endblock %}
 
