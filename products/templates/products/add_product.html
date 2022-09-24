@@ -9,16 +9,15 @@
 <!-- Page header -->
 <div class="container-fluid">
     <div class="row">
-        <div class="col text-center mt-3">
+        <div class="col text-center mt-3 mb-3">
             <h1 class="page-title">Product Management</h1>
             <hr class="w-50 mb-1">
         </div>
     </div>
     <!-- Container for Add Product form -->
     <div class="row">
-        <div class="col-12 col-md-6">
-            <h2>Add a Product</h2>
-            <hr>
+        <div class="col-12 col-md-6 mb-4">
+            <h2 class="page-subtitle mb-3">Add a Product</h2>
             <form action="{% url 'add_product' %}" class="form mb-2" method="POST" enctype="multipart/form-data">
                 {% csrf_token %}
                 {% for field in form %}
@@ -28,9 +27,11 @@
                         {{ field }}
                     {% endif %}
                 {% endfor %}
-                <div class="text-right">
-                    <a href="{% url 'products' %}" class="btn rounded-0">Cancel</a>
-                    <button class="btn rounded-0" type="submit">Add Product</button>
+                <div class="text-left">
+                    <!-- Cancel button -->
+                    <a href="{% url 'products' %}" class="btn rounded-0 back-btn cancel-anchor-btn">Cancel</a>
+                    <!-- Submit button -->
+                    <button class="btn rounded-0 standard-btn" type="submit">Add Product</button>
                 </div>
             </form>
         </div>
