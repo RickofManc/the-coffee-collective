@@ -10,104 +10,106 @@
 <!-- Page header -->
 <div class="container-fluid">
     <div class="row">
-        <div class="col text-center mt-3">
+        <div class="col text-center mt-3 mb-3">
             <h1 class="page-title">Shopping Bag</h1>
             <hr class="w-50 mb-1">
         </div>
     </div>
     <!-- Container for Bag Items -->
     <div class="row">
-        <div class="col">
+        <div class="col mt-3 mb-4">
+            <p class="text-muted mb-5">Here is a summary of your bag, please check you are happy with all items before
+                proceeding to checkout below.</p>
             {% if bag_items %}
-            <!-- Layout for mobile devices -->
-            <div class="d-block d-md-none">
-                {% for item in bag_items %}
-                <div class="row">
-                    <div class="col-12 col-sm-6 mb-2">
-                        {% include 'bag/includes/product-image.html' %}
-                    </div>
-                    <div class="col-12 col-sm-6 mb-2">
-                        {% include 'bag/includes/product-info.html' %}
-                    </div>
-                    <div class="col-12 col-sm-6 mb-2">
-                        <p class="my-0">£{{ item.product.price }}</p>
-                        <p class="my-0"><strong>Subtotal: </strong>£{{ item.product.price | calc_subtotal:item.quantity }}</p>
-                    </div>
-                    <div class="col-12 col-sm-6 mb-2">
-                        {% include 'bag/includes/quantity-form.html' %}
-                    </div>
+                <!-- Layout for mobile devices -->
+                <div class="d-block d-md-none">
+                    {% for item in bag_items %}
+                    <div class="row">
+                        <div class="col-12 col-sm-6 mb-2">
+                            {% include 'bag/includes/product-image.html' %}
+                        </div>
+                        <div class="col-12 col-sm-6 mb-2">
+                            {% include 'bag/includes/product-info.html' %}
+                        </div>
+                        <div class="col-12 col-sm-6 mb-2">
+                            <p class="my-0 text-right">£{{ item.product.price }}</p>
+                            <p class="my-0 text-right"><strong>Subtotal:
+                                </strong>£{{ item.product.price | calc_subtotal:item.quantity }}</p>
+                        </div>
+                        <div class="col-12 col-sm-6 mb-4">
+                            {% include 'bag/includes/quantity-form.html' %}
+                        </div>
+                    </div>    
+                    <!-- Divider between each item above -->
                     <div class="row">
                         <div class="col">
+                            <hr>
+                        </div>
+                    </div>
+                    {% endfor %}
+                    <div class="row">
+                        <div class="col-12 col-sm-6 mb-2 mt-2">
                             {% include 'bag/includes/bag-total.html' %}
                         </div>
                     </div>
                     <div class="row">
-                        <div class="col">
+                        <div class="col-12 col-sm-6 mb-2 text-center">
                             {% include 'bag/includes/checkout-buttons.html' %}
-                            <p class="text-muted mb-5">Below is a summary of your bag.</p>   
                         </div>
                     </div>
                 </div>
-                <!-- Divider between each item above -->
-                <div class="row"><div class="col"><hr></div></div>
-                {% endfor %}
-            </div>
-            <!-- Layout for medium and large devices -->
-            <div class="table-responsive rounded d-none d-md-block">
-                <table class="table table-sm table-borderless">
-                    <!-- Table headers -->
-                    <thead class="">
+                <!-- Layout for medium and large devices -->
+                <div class="table-responsive rounded-0 d-none d-md-block">
+                    <table class="table table-sm table-borderless">
+                        <!-- Table headers -->
+                        <thead>
+                            <tr>
+                                <th scope="col">Product Info</th>
+                                <th scope="col"></th>
+                                <th scope="col">Price</th>
+                                <th scope="col">Qty</th>
+                                <th scope="col" class="text-right">Subtotal</th>
+                            </tr>
+                        </thead>
+                        <!-- Table row for Product details -->
+                        {% for item in bag_items %}
                         <tr>
-                            <th scope="col">Product Info</th>
-                            <th scope="col"></th>
-                            <th scope="col">Price</th>
-                            <th scope="col">Qty</th>
-                            <th scope="col">Subtotal</th>
+                            <td class="p-3 w-25">
+                                {% include 'bag/includes/product-image.html' %}
+                            </td>
+                            <td class="py-3">
+                                {% include 'bag/includes/product-info.html' %}
+                            </td>
+                            <td class="py-3">
+                                <p class="my-0">£{{ item.product.price }}</p>
+                            </td>
+                            <td class="py-3 w-25">
+                                {% include 'bag/includes/quantity-form.html' %}
+                            </td>
+                            <td class="py-3">
+                                <p class="my-0 text-right">£{{ item.product.price | calc_subtotal:item.quantity }}</p>
+                            </td>
                         </tr>
-                    </thead>
-                    <!-- Table row for Product details -->
-                    {% for item in bag_items %}
-                    <tr>
-                        <td class="p-3 w-25">
-                            {% include 'bag/includes/product-image.html' %}
-                        </td>
-                        <td class="py-3">
-                            {% include 'bag/includes/product-info.html' %}
-                        </td>
-                        <td class="py-3">
-                            <p class="my-0">£{{ item.product.price }}</p>
-                        </td>
-                        <td class="py-3 w-25">
-                            {% include 'bag/includes/quantity-form.html' %}  
-                        </td>
-                        <td class="py-3">
-                            <p class="my-0">£{{ item.product.price | calc_subtotal:item.quantity }}</p>
-                        </td>
-                    </tr>
-                    {% endfor %}
-                    <!-- Table row for Bag Total (£) -->
-                    <tr>
-                        <td colspan="5" class="pt-5 text-right">
-                            {% include 'bag/includes/bag-total.html' %}
-                        </td>
-                    </tr>
-                    <!-- Table row for navigation buttons Keep Shopping/Checkout -->
-                    <tr>
-                        <td colspan="5" class="text-right">
-                            {% include 'bag/includes/checkout-buttons.html' %}
-                        </td>
-                    </tr>
-                </table>
-            </div>
+                        {% endfor %}
+                        <!-- Table row for Bag Total (£) -->
+                        <tr>
+                            <td colspan="5" class="pt-5 text-right">
+                                {% include 'bag/includes/bag-total.html' %}
+                            </td>
+                        </tr>
+                        <!-- Table row for navigation buttons Keep Shopping/Checkout -->
+                        <tr>
+                            <td colspan="5" class="text-right">
+                                {% include 'bag/includes/checkout-buttons.html' %}
+                            </td>
+                        </tr>
+                    </table>
+                </div>
             {% else %}
-            <!-- Information and navigation if the bag is empty -->
-            <p class="lead mb-5">Your bag is empty.</p>
-            <a href="{% url 'products' %}" class="btn keep-shopping-btn">
-                <span class="icon rating-icon">
-                    <i class="fas fa-chevron-left"></i>
-                </span>
-                <span class="title-font">Keep Shopping</span>
-            </a>
+                <!-- Information and navigation if the bag is empty -->
+                <p class="lead mb-5">Your bag is empty.</p>
+                <!-- Back to products page -->
+                <button><a href="{% url 'products' %}" class="btn back-btn">Keep<br>Shopping</a></button>
             {% endif %}
         </div>
     </div>
@@ -121,23 +123,26 @@
 <!-- Enable Update/Remove buttons -->
 <script type="text/javascript">
     // Update quantity on click
-    $('.update-item').click(function(e) {
+    $('.update-item').click(function (e) {
         var form = $(this).prev('.update-form');
         form.submit();
     })
 
     // Remove item and reload on click
-    $('.remove-item').click(function(e) {
+    $('.remove-item').click(function (e) {
         var csrfToken = "{{ csrf_token }}";
         var itemId = $(this).attr('id').split('remove_')[1];
         var size = $(this).data('product_size');
         var url = `/bag/remove/${itemId}/`;
-        var data = {'csrfmiddlewaretoken': csrfToken, 'product_size': size};
+        var data = {
+            'csrfmiddlewaretoken': csrfToken,
+            'product_size': size
+        };
 
         $.post(url, data)
-         .done(function() {
-             location.reload();
-         });
+            .done(function () {
+                location.reload();
+            });
     })
 </script>
 

@@ -16,6 +16,25 @@
     cursor: pointer;
 }
 
+.input-group>.input-group-append>.btn {
+    background-color: #674ea7;
+    color: #fff;
+    border-radius: 0;
+    border: 1px solid #ced4da;
+}
+
+.input-group>.input-group-prepend>.btn {
+    background-color: #e9ecef;
+    color: #383838;
+    border-radius: 0;
+    border: 1px solid #ced4da;
+}
+
+.input-group>.form-control {
+    text-align: center;
+}
+
+
 /****************************************************************/
 
 /* |||| MEDIA QUERIES  */
