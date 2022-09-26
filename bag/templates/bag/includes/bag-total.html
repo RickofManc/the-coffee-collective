@@ -1,6 +1,6 @@
-<h6><strong>Bag Total: £{{ total|floatformat:2 }}</strong></h6>
-<h6>Delivery: £{{ delivery|floatformat:2 }}</h6>
-<h5 class="mt-3"><strong>Grand Total: £{{ grand_total|floatformat:2 }}</strong></h5>
+<p><strong>Bag Total: £{{ total|floatformat:2 }}</strong></p>
+<p>Delivery: £{{ delivery|floatformat:2 }}</p>
+<p class="mt-3"><strong>Grand Total: £{{ grand_total|floatformat:2 }}</strong></p>
 {% if free_delivery_delta > 0 %}
 <p class="mb-1 mt-3 text-danger">
     You could get free delivery by spending <strong>£{{ free_delivery_delta }}</strong>
