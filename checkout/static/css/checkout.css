@@ -1,3 +1,5 @@
+/* || CHECKOUT PAGE STYLES  */
+
 /* Billing and Shipping form styles */
 #payment-form .form-control,
 #card-element {
@@ -39,6 +41,14 @@
 
 .stripe-style-input::placeholder {
     color: #aab7c4;
+}
+
+.submit-button {
+  padding-right: 1rem;
+}
+
+.submit-button p span i {
+  margin-right: 1.25rem;
 }
 
 /* Country Field styles */
