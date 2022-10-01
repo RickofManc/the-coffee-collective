@@ -35,6 +35,10 @@ html {
     font-size: 1.25rem;
 }
 
+p {
+    margin-bottom: 0.5rem;
+}
+
 hr {
     background-color: #e1efe6;
 }
