@@ -41,7 +41,7 @@ def all_products(request):
         if 'q' in request.GET:
             query = request.GET['q']
             if not query:
-                messages.error(request, 
+                messages.error(request,
                                "Please enter a search criteria")
                 return redirect(reverse('products'))
             queries = Q(name__icontains=query) | Q(subtitle__icontains=query) | Q(description__icontains=query)
@@ -78,7 +78,7 @@ def add_product(request):
     if not request.user.is_superuser:
         messages.error(request, 'Sorry, only the owners can do that')
         return redirect(reverse('home'))
-    
+
     if request.method == 'POST':
         form = ProductForm(request.POST, request.FILES)
         if form.is_valid():
