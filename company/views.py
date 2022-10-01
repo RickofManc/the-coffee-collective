@@ -12,3 +12,15 @@ class AccessibilityStatement(CreateView):
 
     def get(self, request, *args, **kwargs):
         return render(request, self.template_name, {})
+
+
+class CopyrightStatement(CreateView):
+    """
+    Displays Copyright Statement page.
+    gets : requested template by name
+    returns : rendered view of the html template
+    """
+    template_name = "copyright_statement.html"
+
+    def get(self, request, *args, **kwargs):
+        return render(request, self.template_name, {})
