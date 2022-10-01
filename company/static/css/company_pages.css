@@ -1,4 +1,7 @@
-/* || ACCESSIBILITY STATEMENT STYLES */
+.card-text {
+    padding-left: 0.9375rem;
+    padding-right: 0.9375rem;
+}
 
 .mailto-anchor {
     color: #351c75!important;
