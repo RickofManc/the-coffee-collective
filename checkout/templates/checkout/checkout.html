@@ -1,6 +1,8 @@
 {% extends "base.html" %}
 {% load static %}
 {% load bag_tools %}
+{% load i18n %}
+{% block title %}{% trans 'Checkout' %}{% endblock %}
 
 {% block extra_css %}
 <link rel="stylesheet" href="{% static 'css/checkout.css' %}">
