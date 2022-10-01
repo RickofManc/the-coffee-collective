@@ -1,0 +1,54 @@
+{% extends "base.html" %}
+{% load static %}
+{% load i18n %}
+{% block title %}{% trans 'Accessibility Statement' %}{% endblock %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'css/company.css' %}">
+{% endblock %}
+
+{% block content %}
+<!-- Main container for page content : Accessibility Statement -->
+<div class="container fluid">
+    <!-- Page header -->
+    <div class="row">
+        <div class="col text-center mt-3 mb-3">
+            <h1 class="page-title">Accessibility Statement</h1>
+            <hr class="w-50 mb-1">
+        </div>
+    </div>
+    <div class="row">
+        <p class="card-text">
+            The Coffee Collective values audience diversity and inclusion, and to that end, we
+            are actively working to further enhance the accessibility of our
+            websites to visitors who use digital assistive technologies like screen
+            readers, screen magnifiers, or voice recognition software. We view
+            accessibility as an ongoing effort.
+        </p>
+        <br />
+        <p class="card-text text-left">We are:
+        </p>
+        <!--List for bulleted information on accessibility commitments  -->
+        <ul>
+            <li>
+                Implementing measures to ensure we meet Levels A and AA of the Web
+                Content Accessibility Guidelines (WCAG) version 2.0;
+            </li>
+            <li>
+                Engaging with accessibility and usability specialists to advise us on
+                our efforts and provide regular third-party testing of our websites;
+                and
+            </li>
+            <li>
+                Reviewing existing measures for potential improvements in performance,
+                speed, and accessibility.
+            </li>
+        </ul>
+        <br />
+        <p class="card-text">
+        If you have any questions, comments, or concerns, please contact <a class="mailto-anchor"
+            href="mailto:thecoffeecollective1972@gmail.com">thecoffeecollective1972@gmail.com</a>
+        </p>
+    </div>
+</div>
+{% endblock content %}
