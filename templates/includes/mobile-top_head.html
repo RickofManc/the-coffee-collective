@@ -39,10 +39,10 @@
         <a href="{% url 'add_product' %}" class="dropdown-item user-profile-link">Product Management</a>
         {% endif %}
         <a href="{% url 'profile' %}" class="dropdown-item user-profile-link">My Profile</a>
-        <a href="{% url 'account_logout' %}" class="dropdown-item user-profile-link">Logout</a>
+        <a href="{% url 'account_logout' %}" class="dropdown-item user-profile-link">Sign Out</a>
         {% else %}
         <a href="{% url 'account_signup' %}" class="dropdown-item user-profile-link">Register</a>
-        <a href="{% url 'account_login' %}" class="dropdown-item user-profile-link">Login</a>
+        <a href="{% url 'account_login' %}" class="dropdown-item user-profile-link">Sign In</a>
         {% endif %}
     </div>
 </li>
