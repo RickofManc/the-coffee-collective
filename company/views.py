@@ -36,3 +36,15 @@ class TermsAndConditions(CreateView):
 
     def get(self, request, *args, **kwargs):
         return render(request, self.template_name, {})
+
+
+class Sustainability(CreateView):
+    """
+    Displays Sustainability page.
+    gets : requested template by name
+    returns : rendered view of the html template
+    """
+    template_name = "sustainability.html"
+
+    def get(self, request, *args, **kwargs):
+        return render(request, self.template_name, {})
