@@ -1,0 +1,63 @@
+{% extends "base.html" %}
+{% load static %}
+{% load i18n %}
+{% block title %}{% trans 'Sustainability' %}{% endblock %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'css/company_pages.css' %}">
+{% endblock %}
+
+{% block content %}
+<!-- Main container for page content : Sustainability -->
+<div class="container-fluid">
+    <!-- Page header -->
+    <div class="row">
+        <div class="col mt-3 mb-3">
+            <h1 class="page-title">Sustainability</h1>
+            <hr class="mb-1">
+        </div>
+    </div>
+    <div class="row">
+        <div class="col">
+            <p class="card-text">
+                At The Coffee Collective we are not perfect but are pushing on all fronts to be more sustainable with
+                focus on the following items. If you have a suggestion on how we can improve our sustainability, please
+                let us know!
+            </p>
+            <p class="card-text">Coffee. It's something that most people rely on first thing in the morning to get them
+                ready for the day, it's the drink that old friends catch up over, and the perfect accompaniment to a
+                piece of cake. Therefore, it's no surprise that coffee is in high demand and as a provider of coffee we
+                take our responsibilities towards our impact seriously.</p>
+            <br />
+            <h2 class="page-subtitle">Use recyclable cups</h2>
+            <p class="card-text">Takeaway coffee is a crucial part of our business; however, it is important that you
+                know we have eco-friendly options. You may be surprised to find that standard white paper cups are lined
+                with a polythene coating and are therefore unable to be completely recycled. Instead of selling
+                takeaway coffee in standard paper cups, we have opted for 100% recyclable cups. Alternatively, there is
+                a 10% discount for customers who bring their own takeaway cups.
+            </p>
+            <br />
+            <h2 class="page-subtitle">Source locally</h2>
+            <p class="card-text">Sourcing locally is not only a great way to support the local economy, but it is also
+                the eco-friendly option. We buy all our milk from local farms and coffee from local roasters. This
+                greatly helps to reduce our carbon footprint, ensuring that we are doing our bit for the planet.</p>
+            <br />
+            <h2 class="page-subtitle">Free water</h2>
+            <p class="card-text">Coffee is known to be dehydrating; after a cup of coffee, many people need a glass of
+                water, and lots of people will buy it in a plastic bottle. We have chosen not to sell water in plastic
+                bottles, and instead offer free water that you can help yourself to. This helps us all to reduce our
+                plastic consumption.</p>
+            <br />
+            <h2 class="page-subtitle">Eco friendly waste management</h2>
+            <p class="card-text">We have selected eco-friendly waste management company to dispose of our waste. Making
+                sure this company recycles their waste and disposes of rubbish using environmentally friendly processes.
+            </p>
+            <br />
+            <p class="card-text">
+                If you have any questions, comments, or concerns, please contact <a class="mailto-anchor"
+                    href="mailto:thecoffeecollective1972@gmail.com">thecoffeecollective1972@gmail.com</a>
+            </p>
+        </div>
+    </div>
+</div>
+{% endblock content %}
