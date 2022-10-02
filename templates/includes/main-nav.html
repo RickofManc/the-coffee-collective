@@ -34,13 +34,13 @@
                 About
             </a>
             <div class="dropdown-menu">
-                <a class="dropdown-item" href="#">Our Story</a>
-                <a class="dropdown-item" href="#">FAQ</a>
-                <a class="dropdown-item" href="#">Contact</a>
-                <a class="dropdown-item" href="#">Sustainability</a>
-                <a class="dropdown-item" href="#">Accessibility</a>
-                <a class="dropdown-item" href="#">User Agreement</a>
-                <a class="dropdown-item" href="#">Copyright Statement</a>
+                <a class="dropdown-item" href="">Our Story</a>
+                <a class="dropdown-item" href="{% url 'faqs' %}">FAQs</a>
+                <a class="dropdown-item" href="">Contact</a>
+                <a class="dropdown-item" href="{% url 'sustainability' %}">Sustainability</a>
+                <a class="dropdown-item" href="{% url 'accessibility_statement' %}">Accessibility</a>
+                <a class="dropdown-item" href="{% url 'terms_and_conditions' %}">T&C's</a>
+                <a class="dropdown-item" href="{% url 'copyright_statement' %}">Copyright Info</a>
             </div>
         </li>
     </ul>
