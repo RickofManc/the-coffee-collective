@@ -1,3 +1,15 @@
+/* || COMPANY PAGES STYLES */
+.page-subtitle,
+.page-h3-title {
+    margin-left: 1rem;
+}
+
+.page-h3-title {
+    font-size: 1.1rem;
+    font-style: italic;
+}
+
+
 .card-text {
     padding-left: 0.9375rem;
     padding-right: 0.9375rem;
@@ -6,4 +18,118 @@
 .mailto-anchor {
     color: #351c75!important;
     text-decoration: none;
+}
+
+ul {
+    list-style-type: none;
+    padding-inline-end: 2.5rem;
+}
+
+
+/* FAQs Vertical Accordion credited to Monica Wheeler on CodePen  */
+#faqs-section {
+    width: 100%;
+    display: block;
+    margin-bottom: 4rem;
+  }
+
+details {
+    width: 75%;
+    min-height: 2.5rem;
+    max-width: 50rem;
+    margin: 0 auto;
+    padding: 1rem;
+    position: relative;
+    border: 0.1rem solid #ccc;
+    box-sizing: border-box;
+    transition: all 0.4s;
+  }
+  
+  details + details {
+    margin-top: 1.5rem;
+  }
+  
+  details[open] {
+    min-height: 2.5rem;
+    background-color: #fff;
+    box-shadow: 0.35rem 0.35rem 0.35rem #ccc;
+  }
+  
+  summary {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: 400;
+    cursor: pointer;
+  }
+  
+  summary:focus {
+    outline: none;
+  }
+  
+  summary:focus::after {
+    content: "";
+    height: 100%;
+    width: 100%;
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    box-shadow: 0 0 0 0.15rem #674ea780;
+  }
+  
+  summary::-webkit-details-marker {
+    display: none;
+  }
+  
+  .control-icon {
+    fill: #674ea7;
+    transition: 0.4s;
+    pointer-events: none;
+    height: 3rem;
+    width: 3rem;
+  }
+  
+  .control-icon-close {
+    display: none;
+    height: 3rem;
+    width: 3rem;
+  }
+  
+  details[open] .control-icon-close {
+    display: initial;
+    transition: 0.4s;
+    height: 3rem;
+    width: 3rem;
+  }
+  
+  details[open] .control-icon-expand {
+    display: none;
+    height: 3rem;
+    width: 3rem;
+  }
+
+
+
+/****************************************************************/
+
+/* |||| MEDIA QUERIES  */
+
+/* // Extra Small devices (iPhone 5, Galaxy Fold, 280px and up) */
+@media (min-width: 280px) {}
+
+/* // Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) {}
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) {}
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {}
+
+/* Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+    .container-fluid {
+        max-width: 80%;
+    }
 }
