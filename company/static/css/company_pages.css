@@ -9,22 +9,25 @@
     font-style: italic;
 }
 
-
 .card-text {
     padding-left: 0.9375rem;
     padding-right: 0.9375rem;
+    margin-bottom: 0.8rem;
+}
+
+.faq-list {
+  list-style-type: none;
+  padding-inline-end: 2.5rem;
+}
+
+.faq-list-item {
+  margin-bottom: 0.8rem;
 }
 
 .mailto-anchor {
     color: #351c75!important;
     text-decoration: none;
 }
-
-ul {
-    list-style-type: none;
-    padding-inline-end: 2.5rem;
-}
-
 
 /* FAQs Vertical Accordion credited to Monica Wheeler on CodePen  */
 #faqs-section {
@@ -59,7 +62,7 @@ details {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    font-weight: 400;
+    font-weight: 600;
     cursor: pointer;
   }
   
@@ -116,10 +119,18 @@ details {
 /* |||| MEDIA QUERIES  */
 
 /* // Extra Small devices (iPhone 5, Galaxy Fold, 280px and up) */
-@media (min-width: 280px) {}
+@media (min-width: 280px) {
+      .card-text {
+        margin-top: 0.8rem;
+    }
+}
 
 /* // Small devices (landscape phones, 576px and up) */
-@media (min-width: 576px) {}
+@media (min-width: 576px) {
+      .card-text {
+        margin-top: 0.8rem;
+    }
+}
 
 /* Medium devices (tablets, 768px and up) */
 @media (min-width: 768px) {}
@@ -133,3 +144,5 @@ details {
         max-width: 80%;
     }
 }
+
+
