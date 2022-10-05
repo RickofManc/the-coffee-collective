@@ -60,3 +60,15 @@ class Faqs(CreateView):
 
     def get(self, request, *args, **kwargs):
         return render(request, self.template_name, {})
+
+
+class OurStory(CreateView):
+    """
+    Displays Sustainability page.
+    gets : requested template by name
+    returns : rendered view of the html template
+    """
+    template_name = "our_story.html"
+
+    def get(self, request, *args, **kwargs):
+        return render(request, self.template_name, {})
