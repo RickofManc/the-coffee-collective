@@ -1,0 +1,77 @@
+{% extends "base.html" %}
+{% load static %}
+{% load i18n %}
+{% block title %}{% trans 'Our Story' %}{% endblock %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'css/company_pages.css' %}">
+{% endblock %}
+
+{% block content %}
+<!-- Main container for page content : Our Story -->
+<div class="container-fluid">
+    <!-- Page header -->
+    <div class="row">
+        <div class="col mt-3 mb-3">
+            <h1 class="page-title">Our Story</h1>
+            <hr class="mb-1">
+        </div>
+    </div>
+    <div class="row">
+        <!-- First section of text -->
+        <div class="col-md-6 mt-3 mb-3">
+            <h2 class="page-subtitle mt-2 mb-3">In the beginning...</h2>
+            <p class="card-text">The Ferodo family has a rich history in preparing and serving coffee since the first
+                coffee shops open in Venice, Italy in the 16th century.</p>
+            <p class="card-text">After the Second World War, Italy's economy was depressed, and despite Italian's love
+                affair with coffee it become challenging for the Ferodo family to survive.</p>
+            <p class="card-text">The head of the family, Lorenzo Ferodo (see photo), had seen other areas of Europe
+                prosper in the 1960's, in particular London. And so Lorenzo sold their coffee shop in Venice and headed
+                for a country that could improve their financial standing</p>
+            <p class="card-text">Being football crazy, the family were attracted to Manchester as there was an
+                opportunity to join a thriving Italian community and see the country's greatest football team,
+                Manchester United</p>
+            <p class="card-text">Lorenzo wanted to test the locals love of coffee so he opted to be mobile, cycling a
+                cart into the city each morning to sell coffee, testing the areas.</p>
+            <p class="card-text">As this was before takeaway cups, clients stood and socialised whilst sipping their
+                morning espressos. The group at the cart became known to passers-by and onlookers as <strong>"the coffee
+                    collective"</strong>, and so the name was born.</p>
+        </div>
+        <!-- Image of Lorenzo Ferodo -->
+        <div class="col-md-6 mt-3 mb-3 text-center mx-auto">
+            <img class="lorenzo-ferodo-img" src="{% static 'images/lorenzo_ferodo.webp' %}"
+                alt="The Coffee Collective founder, Lorenzo Ferodo as an elderly gentleman">
+        </div>
+    </div>
+    <div class="row">
+        <!-- Second section of text -->
+        <div class="col-md-6 mt-3 mb-3">
+            <h2 class="page-subtitle mt-2 mb-3">And now...</h2>
+            <p class="card-text">It took Lorenzo many years to decide where to set up shop as each area of the city
+                offered a slightly different clientele and he enjoyed to differing conversations.</p>
+            <p class="card-text">However in the end the family settled on a spot near to Piccadilly train station that
+                attracted customers day and night, whilst also catching many passing Italians.</p>
+            <p class="card-text">During the last 40 years, Lorenzo's son Luca learnt the art of roasting, blending and
+                preparing coffee and as his father aged Luca became the face everyone in Manchester knows for great
+                coffee (and football chat!).</p>
+            <p class="card-text">As the businesses around them started to modernise, so did Luca, continually keeping on
+                trend and using his Italian style to attract new generations.</p>
+            <p class="card-text">The shop has become so popular that now many local coffee roasters provide bags of
+                coffee for sale as some clients like to enjoy fresh coffee in work or at home.</p>
+            <p class="card-text">However as the Covid pandemic reduced the footfall into the shop, Luca had to adapt
+                again and ensure their clients could still access TCC coffee whilst being locked down - and this
+                eCommerce site is the result!</p>
+            <!-- Link to offer account sign up -->
+            <h2 class="page-subtitle sign-up-h2 mt-2 mb-3">Join la familia!...</h2>
+            <p class="card-text">Why not <a class="mailto-anchor" href="{% url 'account_signup' %}"><strong>Sign
+                        Up</strong></a> and become one of The Coffee Collective. In return we will look after you like
+                one of our own, how old man Lorenzo taught us so well.</p>
+        </div>
+        <!-- Image of the coffee shop -->
+        <div class="col-md-6 mt-3 mb-3 text-center">
+            <img class="coffee-shop-img" src="{% static 'images/tcc_shop_inside.webp' %}"
+                alt="View of the coffee shop inside with contemporary black and white decor">
+        </div>
+    </div>
+</div>
+{% endblock content %}
