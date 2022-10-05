@@ -104,6 +104,28 @@ details {
     display: none;
   }
 
+/* Our Story Page */
+.lorenzo-ferodo-img {
+  max-height: 28.125rem;
+  margin-top: 2rem;
+}
+
+.coffee-shop-img {
+  max-height: 31.8rem;
+  margin-top: 2rem;
+}
+
+.sign-up-h2 {
+  margin-top: 3rem!important
+}
+
+
+/* Sustainability Page */
+.icon {
+  margin-left: 0.875rem;
+  color: #351c75;
+  font-size: 1.25rem;
+}
 
 
 /****************************************************************/
@@ -123,6 +145,11 @@ details {
       height: 1.5rem!important;
       width: 1.5rem!important;
     }
+
+    .col-md-6 {
+      padding-left: 0!important;
+      padding-right: 0!important;
+    }
 }
 
 /* // Small devices (landscape phones, 576px and up) */
@@ -141,6 +168,11 @@ details {
     .details[open] .control-icon-expand {
       height: 3rem;
       width: 3rem;
+    }
+
+    .col-md-6 {
+      padding-left: 0.9375rem!important;
+      padding-right: 0.9375rem!important;
     }
 }
 
