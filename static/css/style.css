@@ -32,7 +32,11 @@ html {
 }
 
 .page-subtitle {
-    font-size: 1.25rem;
+    font-size: 1.35rem;
+}
+
+.page-h3-title {
+    font-size: 1.15rem;
 }
 
 p {
@@ -116,6 +120,10 @@ input[name='q']::placeholder P {
 
 /* || HOMEPAGE STYLES */
 
+section {
+    margin-bottom: 5rem;
+}
+
 /* Navbar */
 .navbar {
     background-color: #351c75 !important;
@@ -189,6 +197,35 @@ input[name='q']::placeholder P {
     -webkit-transform: rotate(45deg) translate(-8px, -8px);
     transform: rotate(45deg) translate(-8px, -8px);
 }
+
+
+/* Mailchimp newsletter sign-up */
+#mc_embed_signup {
+    background: #fff;
+    clear: left;
+    font: 1rem Open Sans, sans-serif;
+    max-width: 600px;
+}
+
+#mc_embed_signup h2 {
+    color: #351c75;
+}
+
+#mc_embed_signup .button {
+    background-color: #674ea7;
+    border-radius: 0;
+}
+
+#mc_embed_signup .button:hover {
+    background-color: #fff;
+    border: 0.08rem solid #674ea7;
+    color: #351c75;
+}
+
+.mailchimp-disclaimer-text {
+    font-size: 0.875rem;
+}
+
 
 /* || MAIN CONTENT STYLES  */
 .main-content {
