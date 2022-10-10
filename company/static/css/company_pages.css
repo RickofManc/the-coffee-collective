@@ -187,4 +187,37 @@ details {
     }
 }
 
+/* Extra extra large devices (large desktops, 2560px and up) */
+@media (min-width: 2560px) {
+  
+  /* Sustainability Page */
+  .icon {
+    margin-left: 1.15rem;
+    font-size: 1.75rem;
+  }
 
+  /* Our Story Page */
+  .lorenzo-ferodo-img {
+    max-height: 37.125rem
+  }
+  .coffee-shop-img {
+    max-height: 41.8rem
+  }
+  .sign-up-h2 {
+    margin-top: 5rem!important
+  }
+
+  /* FAQs Vertical Accordion credited to Monica Wheeler on CodePen  */
+  #faqs-section {
+    margin-bottom: 7rem;
+  }
+
+  details {
+    width: 75%;
+    max-width: 80rem;
+  }
+
+  details + details {
+    margin-top: 3rem;
+  }
+}

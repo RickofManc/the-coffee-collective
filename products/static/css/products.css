@@ -112,7 +112,7 @@
 }
 
 .form-row>.col {
-    padding-left: 2px;
+    padding-left: 0.125rem;
 }
 
 .input-group>.input-group-append>.btn {
@@ -212,3 +212,41 @@
 
 /* Extra large devices (large desktops, 1200px and up) */
 @media (min-width: 1200px) {}
+
+
+/* Extra extra large devices (large desktops, 2560px and up) */
+@media (min-width: 2560px) {
+    
+    .xl-screen-products-grid {
+        margin-bottom: 4rem!important;
+    }
+
+    .product-details-container,
+    .product-img-container {
+        margin-top: 5rem!important;
+    }
+
+    .product-detail-title {
+        font-size: 4rem;
+    }
+
+    .card-title {
+        font: 3rem;
+    }
+
+    .card-subtitle {
+        font-size: 1.75rem;
+    }
+    
+    .card-img-top {
+        min-height: 500px;
+    }
+
+    .xl-screen-img {
+        min-height: 66rem;
+    }
+
+    .card-description {
+        line-height: 3.5rem;
+    }
+}

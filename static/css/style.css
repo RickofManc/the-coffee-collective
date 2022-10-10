@@ -499,3 +499,87 @@ footer {
         max-width: 80%;
     }
 }
+
+/* Extra extra large devices (large desktops, 2560px and up) */
+@media (min-width: 2560px) {
+    
+    /* || SITE WIDE STYLES */
+    html {
+        background-image: url(/static/images/html_background_image.webp);
+        background-color: #282828;
+        background-size: cover;
+        background-position: center;
+        background-attachment: fixed;
+        position: relative;
+    }
+    
+    body {
+        font-size: 1.5rem!important;
+        max-width: 2800px;
+        margin: 0 auto !important; 
+	    float: none !important; 
+    }
+
+    /* from Bulma to support Font Awesome icons */
+    .icon {
+        font-size: 1.5rem!important;
+    }
+    
+    .page-title {
+        font-size: 2.5rem!important;
+        margin-top: 5rem;
+    }
+    
+    .page-subtitle {
+        font-size: 1.75rem!important;
+    }
+
+    .page-h3-title {
+        font-size: 1.45rem!important;
+    }
+
+    p {
+        margin-bottom: 1rem!important;
+    }
+
+    .container-fluid {
+        padding-right: 2.8125rem;
+        padding-left: 2.8125rem;
+    }
+
+    /* Navbar */
+    .navbar-brand {
+        font-size: 4rem;
+    }
+
+    .nav-link {
+        font-size: 2rem; 
+    }
+
+    .navbar-expand-lg .navbar-nav .nav-link {
+        padding-right: 1.5rem;
+        padding-left: 1.5rem;
+    }
+
+    .dropdown-item {
+        font-size: 1.75rem;
+    }
+
+    /* Homepage */
+    .mailchimp-disclaimer-text {
+        font-size: 1.15rem!important;
+    }
+
+    /* Footer */
+    .footer-list-links>li a {
+        font-size: 2rem;
+    }
+
+    .social-media-icon i {
+        font-size: 3.25rem!important;
+    }
+
+    .footer-copyright {
+        font-size: 1.15rem;
+    }
+}
