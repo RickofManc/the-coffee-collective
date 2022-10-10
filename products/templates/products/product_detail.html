@@ -129,11 +129,11 @@
         <div class="col-md-6 product-img-container mt-3 mb-3 text-center">
             {% if product.image %}
             <a href="">
-                <img class="card-img-top img-fluid" src="{{ product.image.url }}" alt="{{ product.name }}">
+                <img class="card-img-top img-fluid xl-screen-img" src="{{ product.image.url }}" alt="{{ product.name }}">
             </a>
             {% else %}
             <a href="">
-                <img class="card-img-top img-fluid" src="{{ MEDIA_URL }}noimage.png" alt="{{ product.name }}">
+                <img class="card-img-top img-fluid xl-screen-img" src="{{ MEDIA_URL }}noimage.png" alt="{{ product.name }}">
             </a>
             {% endif %}
         </div>
