@@ -119,7 +119,6 @@ input[name='q']::placeholder P {
 }
 
 /* || HOMEPAGE STYLES */
-
 section {
     margin-bottom: 5rem;
 }
@@ -198,6 +197,18 @@ section {
     transform: rotate(45deg) translate(-8px, -8px);
 }
 
+/* Business information section */
+.homepage-business-card {
+    border: 0;
+    border-radius: 0;
+}
+
+.homepage-business-card > .card-body > .card-title {
+    font-size: 2em;
+    font-weight: bold;
+    color: #351c75;
+}
+
 
 /* Mailchimp newsletter sign-up */
 #mc_embed_signup {
@@ -209,6 +220,7 @@ section {
 
 #mc_embed_signup h2 {
     color: #351c75;
+    font-size: 2em;
 }
 
 #mc_embed_signup .button {
@@ -225,7 +237,6 @@ section {
 .mailchimp-disclaimer-text {
     font-size: 0.875rem;
 }
-
 
 /* || MAIN CONTENT STYLES  */
 .main-content {
@@ -411,6 +422,11 @@ footer {
         margin-right: 0;
     }
 
+    /* || HOMEPAGE STYLES */
+    .homepage-carousel-section {
+        margin-bottom: 0;
+    }
+
     /* || FOOTER STYLES  */
     .footer-list-links>li a {
         min-width: 18.75rem;
@@ -445,6 +461,16 @@ footer {
     /* || NAVBAR STYLES  */
     .navbar {
         padding: 0.5rem 1rem;
+    }
+
+    /* || HOMEPAGE STYES */
+    .homepage-carousel-section {
+        margin-bottom: 4rem;
+    }
+    
+    .homepage-business-card > .card-body > img,
+    .homepage-business-card > .card-body > .embed-responsive > iframe {
+        margin-top: 1.5rem;
     }
 
     /* || FOOTER STYLES  */
@@ -494,9 +520,14 @@ footer {
 /* Extra large devices (large desktops, 1200px and up) */
 @media (min-width: 1200px) {
 
-    /* || GENERAL STYLES  */
+    /* || GENERAL STYLES */
     .container {
         max-width: 80%;
+    }
+
+    /* || HOMEPAGE STYES */
+    .carousel-item {
+        max-height: 35rem;
     }
 }
 
@@ -568,6 +599,10 @@ footer {
     /* Homepage */
     .mailchimp-disclaimer-text {
         font-size: 1.15rem!important;
+    }
+
+    .carousel-item {
+        max-height: 70rem;
     }
 
     /* Footer */
