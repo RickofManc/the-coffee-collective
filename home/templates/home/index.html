@@ -90,20 +90,20 @@
       <div class="card mb-3 homepage-recommendations-div" style="max-width: 900px;">
         <div class="row no-gutters">
           <div class="col-md-6">
-            <img class="recommendation-img img-responsive" src="{% static 'images/luca_ferodo.webp' %}" alt="Owner Luca, mid aged with a warm smile">
+            <img class="recommendation-img img-responsive" src="{% static 'images/luca_ferodo.webp' %}"
+              alt="Owner Luca, mid aged with a warm smile">
           </div>
           <div class="col-md-6 homepage-business-card">
             <div class="card-body">
               <h2 class="card-title">A word from Luca...</h2>
-              <p class="card-text">"My mission was to carry my fathers work in Manchester, spreading the joy of our coffee and enjoying it with friends. Decades later I want to build on that mission by enabling anyone to discover and enjoy our coffee at home. Why not join us?"</p>
-              <!-- Sign-up button -->
+              <p class="card-text">"My mission was to carry my fathers work in Manchester, spreading the joy of our
+                coffee and enjoying it with friends.<br>Decades later I want to build on that mission by enabling anyone
+                to discover and enjoy our coffee at home.<br>If you would like to learn more about our history and
+                values use the button below"</p>
+              <!-- Our Story button -->
               <div class="justify-content-center">
-                <a
-                  href="{% url 'account_signup' %}"
-                  aria-label="Navigates to the account sign-up page"
-                  class="btn standard-btn sign-up-btn mt-3 mb-3"
-                  >Sign Up</a
-                >
+                <a href="{% url 'our_story' %}" aria-label="Navigates to learning the company history"
+                  class="btn standard-btn our-story-btn mt-3 mb-3">Our Story</a>
               </div>
             </div>
           </div>
