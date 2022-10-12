@@ -123,7 +123,6 @@ input[name='q']::placeholder P {
     text-decoration: none;
 }
 
-
 /* Navbar */
 .navbar {
     background-color: #351c75 !important;
@@ -201,6 +200,22 @@ input[name='q']::placeholder P {
 /* || HOMEPAGE STYLES */
 section {
     margin-bottom: 5rem;
+}
+
+.carousel-caption {
+    background-color: #e1efe682;
+}
+
+.carousel-anchor {
+    color: #351c75!important;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.carousel-anchor > h5 {
+    font-size: 1.5em;
+    font-weight: 700;
+    color: #351c75;
 }
 
 /* Business information section */
@@ -329,7 +344,6 @@ footer {
     overflow-x: hidden;
     overflow-y: auto;
 }
-
 
 /* || ALLAUTH FORM FORMATTING  */
 .allauth-form-inner-content p {

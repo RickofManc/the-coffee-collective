@@ -5,24 +5,27 @@
 <!-- Homepage carousel section -->
 <section class="homepage-carousel-section">
   <div id="carouselExampleCaptions" class="carousel slide" data-ride="carousel">
-    <ol class="carousel-indicators">
-      <li data-target="#carouselExampleCaptions" data-slide-to="0" class="active"></li>
-      <li data-target="#carouselExampleCaptions" data-slide-to="1"></li>
-      <li data-target="#carouselExampleCaptions" data-slide-to="2"></li>
-    </ol>
     <div class="carousel-inner">
       <div class="carousel-item active">
-        <img src="{% static 'images/carousal_about_us.webp' %}" class="d-block w-100 img-responsive" alt="...">
+        <img src="{% static 'images/carousal_about_us.webp' %}" class="d-block w-100 img-responsive" alt="Large bowl of roasted coffee beans">
         <div class="carousel-caption d-none d-md-block">
-          <h5>Buy Now</h5>
+          <!-- Shop now button -->
+          <a class="carousel-anchor" href="{% url 'products' %}?category=cafetieres,moka_pots,coffee_cups,machines,coffee_clothing"
+            aria-label="Navigates to view all products">
+            <h5>Shop Now</h5>
           <p>Enjoy our coffee in your home and at work</p>
+        </a>
         </div>
       </div>
       <div class="carousel-item">
-        <img src="{% static 'images/carousal_coffee_benefits.webp' %}" class="d-block w-100 img-responsive" alt="...">
+        <img src="{% static 'images/carousal_coffee_benefits.webp' %}" class="d-block w-100 img-responsive" alt="Coffee beans growing on a plant in the sunshine">
         <div class="carousel-caption d-none d-md-block">
-          <h5>Learn More</h5>
-          <p>Have you heard about the benefits of coffee?</p>
+          <!-- Shop now button -->
+          <a class="carousel-anchor" href="{% url 'products' %}?category=cafetieres,moka_pots,coffee_cups,machines,coffee_clothing"
+            aria-label="Navigates to view all products">
+            <h5>Shop Now</h5>
+          <p>Enjoy the health benefits coffee provides</p>
+        </a>
         </div>
       </div>
     </div>
