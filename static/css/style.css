@@ -85,6 +85,11 @@ button {
     line-height: 3rem;
 }
 
+.sign-up-btn {
+    font-size: 1.15rem;
+    padding-top: 0.5rem;
+}
+
 /* Generic form styles  */
 .form-control:focus {
     border-color: #ced4da;
@@ -486,7 +491,7 @@ footer {
     }
 
     .homepage-recommendations-div {
-        
+
     }
     
     .homepage-business-card > .card-body > img,
