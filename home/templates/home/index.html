@@ -12,16 +12,14 @@
     </ol>
     <div class="carousel-inner">
       <div class="carousel-item active">
-        <img src="{% static 'images/carousal_about_us.webp' %}" class="d-block w-100 img-responsive"
-          alt="...">
+        <img src="{% static 'images/carousal_about_us.webp' %}" class="d-block w-100 img-responsive" alt="...">
         <div class="carousel-caption d-none d-md-block">
           <h5>Buy Now</h5>
           <p>Enjoy our coffee in your home and at work</p>
         </div>
       </div>
       <div class="carousel-item">
-        <img src="{% static 'images/carousal_coffee_benefits.webp' %}"
-          class="d-block w-100 img-responsive" alt="...">
+        <img src="{% static 'images/carousal_coffee_benefits.webp' %}" class="d-block w-100 img-responsive" alt="...">
         <div class="carousel-caption d-none d-md-block">
           <h5>Learn More</h5>
           <p>Have you heard about the benefits of coffee?</p>
@@ -49,13 +47,14 @@
           <div class="card-body">
             <h2 class="card-title">Visit Us</h2>
             <p class="card-text">Everyone is welcome, even if you don't drink coffee!</p>
-            <div class="card-header">Opening Times</div>
-              <ul class="list-group list-group-flush">
-                <li class="list-group-item">Open everyday</li>
-                <li class="list-group-item">Open from: 7:30 a.m.</li>
-                <li class="list-group-item">Close at: 7:30 p.m.</li>
-              </ul>
-              <img src="{% static 'images/homepage_pastry_image.webp' %}" class="card-img-top img-responsive" width="600" style="border:0;" loading="lazy" alt="Fresh pastries on the shop counter">
+            <div class="card-header">Opening times for service or order collection.</div>
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item">Open everyday</li>
+              <li class="list-group-item">Open from: 7:30 a.m.</li>
+              <li class="list-group-item">Close at: 7:30 p.m.</li>
+            </ul>
+            <img src="{% static 'images/homepage_pastry_image.webp' %}" class="card-img-top img-responsive" width="600"
+              style="border:0;" loading="lazy" alt="Fresh pastries on the shop counter">
           </div>
         </div>
       </div>
@@ -72,7 +71,10 @@
               <li class="list-group-item">Postcode: M1 2FF</li>
             </ul>
             <div class="embed-responsive embed-responsive-4by3">
-              <iframe class="embed-responsive-item card-img-top" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2374.281863791832!2d-2.2325100000000004!3d53.4812934!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x487bb1be8fbe6941%3A0x5e9dfa0c96a5c4ac!2s1%20Tariff%20St%2C%20Manchester%20M1%202FF!5e0!3m2!1sen!2suk!4v1665436070362!5m2!1sen!2suk" width="600" height="450" style="border:0;" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+              <iframe class="embed-responsive-item card-img-top"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2374.281863791832!2d-2.2325100000000004!3d53.4812934!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x487bb1be8fbe6941%3A0x5e9dfa0c96a5c4ac!2s1%20Tariff%20St%2C%20Manchester%20M1%202FF!5e0!3m2!1sen!2suk!4v1665436070362!5m2!1sen!2suk"
+                width="600" height="450" style="border:0;" loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"></iframe>
             </div>
           </div>
         </div>
@@ -84,10 +86,20 @@
 <!-- Recommendations section -->
 <section class="homepage-recommendations-section">
   <div class="container-fluid">
-    <div class="row">
-      <div class="col-4">1st Recommendations</div>
-      <div class="col-4">2st Recommendations</div>
-      <div class="col-4">3st Recommendations</div>
+    <div class="row justify-content-center">
+      <div class="card mb-3 homepage-recommendations-div" style="max-width: 900px;">
+        <div class="row no-gutters">
+          <div class="col-md-6">
+            <img class="recommendation-img img-responsive" src="{% static 'images/luca_ferodo.webp' %}" alt="Owner Luca, mid aged with a warm smile">
+          </div>
+          <div class="col-md-6 homepage-business-card">
+            <div class="card-body">
+              <h2 class="card-title">A word from Luca...</h2>
+              <p class="card-text">"My mission was to carry my fathers work in Manchester, spreading the joy of our coffee and enjoying it with friends. Decades later I want to build on that mission by enabling anyone to discover and enjoy our coffee at home"</p>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 </section>
@@ -96,61 +108,64 @@
 <section class="homepage-newsletter-section">
   <div class="container">
     <div class="row justify-content-center">
-        <!-- Begin Mailchimp Signup Form -->
-        <div id="mc_embed_signup" class="col">
-          <form
-            action="https://herokuapp.us8.list-manage.com/subscribe/post?u=e8b2b86c756ac8c928b1050b6&amp;id=a6bc723509&amp;f_id=0026b6e0f0"
-            method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate"
-            target="_blank" novalidate>
-            <div id="mc_embed_signup_scroll">
-              <h2 class="page-subtitle">Love Coffee?</h2>
-              <h3 class="page-h3-title">Get the low down on our latest arrivals, brewing tips and roasting house events.</h3>
-              <div class="indicates-required"><span class="asterisk">*</span> indicates required</div>
-              <div class="mc-field-group">
-                <label for="mce-EMAIL">Email Address <span class="asterisk">*</span>
-                </label>
-                <input type="email" value="" name="EMAIL" class="required email" id="mce-EMAIL" required>
-                <span id="mce-EMAIL-HELPERTEXT" class="helper_text"></span>
-              </div>
-              <div id="mce-responses" class="clear foot">
-                <div class="response" id="mce-error-response" style="display:none"></div>
-                <div class="response" id="mce-success-response" style="display:none"></div>
-              </div>
-              <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text"
-                  name="b_e8b2b86c756ac8c928b1050b6_a6bc723509" tabindex="-1" value=""></div>
-              <div class="optionalParent">
-                <div class="clear foot">
-                  <input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button">
-                  <p class="brandingLogo"><a href="http://eepurl.com/iaNIen"
-                      title="Mailchimp - email marketing made easy and fun"><img
-                        src="https://eep.io/mc-cdn-images/template_images/branding_logo_text_dark_dtp.svg"></a></p>
-                </div>
-              </div>
-              <p class="text-muted mailchimp-disclaimer-text mt-2 mb-2">By submitting your details you agree to sign up to receive emails from The Coffee Collective. We won't share your details with anyone and you can unsubscribe at any time.</p>
+      <!-- Begin Mailchimp Signup Form -->
+      <div id="mc_embed_signup" class="col">
+        <form
+          action="https://herokuapp.us8.list-manage.com/subscribe/post?u=e8b2b86c756ac8c928b1050b6&amp;id=a6bc723509&amp;f_id=0026b6e0f0"
+          method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate"
+          target="_blank" novalidate>
+          <div id="mc_embed_signup_scroll">
+            <h2 class="page-subtitle">Love Coffee?</h2>
+            <h3 class="page-h3-title">Get the low down on our latest arrivals, brewing tips and roasting house events.
+            </h3>
+            <div class="indicates-required"><span class="asterisk">*</span> indicates required</div>
+            <div class="mc-field-group">
+              <label for="mce-EMAIL">Email Address <span class="asterisk">*</span>
+              </label>
+              <input type="email" value="" name="EMAIL" class="required email" id="mce-EMAIL" required>
+              <span id="mce-EMAIL-HELPERTEXT" class="helper_text"></span>
             </div>
-          </form>
-        </div>
-        <script type='text/javascript' src='//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js'></script>
-        <script type='text/javascript'>
-          (function ($) {
-            window.fnames = new Array();
-            window.ftypes = new Array();
-            fnames[0] = 'EMAIL';
-            ftypes[0] = 'email';
-            fnames[1] = 'FNAME';
-            ftypes[1] = 'text';
-            fnames[2] = 'LNAME';
-            ftypes[2] = 'text';
-            fnames[3] = 'ADDRESS';
-            ftypes[3] = 'address';
-            fnames[4] = 'PHONE';
-            ftypes[4] = 'phone';
-            fnames[5] = 'BIRTHDAY';
-            ftypes[5] = 'birthday';
-          }(jQuery));
-          var $mcj = jQuery.noConflict(true);
-        </script>
-        <!--End mc_embed_signup-->
+            <div id="mce-responses" class="clear foot">
+              <div class="response" id="mce-error-response" style="display:none"></div>
+              <div class="response" id="mce-success-response" style="display:none"></div>
+            </div>
+            <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text"
+                name="b_e8b2b86c756ac8c928b1050b6_a6bc723509" tabindex="-1" value=""></div>
+            <div class="optionalParent">
+              <div class="clear foot">
+                <input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button">
+                <p class="brandingLogo"><a href="http://eepurl.com/iaNIen"
+                    title="Mailchimp - email marketing made easy and fun"><img
+                      src="https://eep.io/mc-cdn-images/template_images/branding_logo_text_dark_dtp.svg"></a></p>
+              </div>
+            </div>
+            <p class="text-muted mailchimp-disclaimer-text mt-2 mb-2">By submitting your details you agree to sign up to
+              receive emails from The Coffee Collective. We won't share your details with anyone and you can unsubscribe
+              at any time.</p>
+          </div>
+        </form>
+      </div>
+      <script type='text/javascript' src='//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js'></script>
+      <script type='text/javascript'>
+        (function ($) {
+          window.fnames = new Array();
+          window.ftypes = new Array();
+          fnames[0] = 'EMAIL';
+          ftypes[0] = 'email';
+          fnames[1] = 'FNAME';
+          ftypes[1] = 'text';
+          fnames[2] = 'LNAME';
+          ftypes[2] = 'text';
+          fnames[3] = 'ADDRESS';
+          ftypes[3] = 'address';
+          fnames[4] = 'PHONE';
+          ftypes[4] = 'phone';
+          fnames[5] = 'BIRTHDAY';
+          ftypes[5] = 'birthday';
+        }(jQuery));
+        var $mcj = jQuery.noConflict(true);
+      </script>
+      <!--End mc_embed_signup-->
     </div>
   </div>
 </section>

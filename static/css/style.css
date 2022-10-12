@@ -118,10 +118,6 @@ input[name='q']::placeholder P {
     text-decoration: none;
 }
 
-/* || HOMEPAGE STYLES */
-section {
-    margin-bottom: 5rem;
-}
 
 /* Navbar */
 .navbar {
@@ -197,6 +193,11 @@ section {
     transform: rotate(45deg) translate(-8px, -8px);
 }
 
+/* || HOMEPAGE STYLES */
+section {
+    margin-bottom: 5rem;
+}
+
 /* Business information section */
 .homepage-business-card {
     border: 0;
@@ -209,6 +210,10 @@ section {
     color: #351c75;
 }
 
+/* Recommendations */
+.recommendation-img {
+    margin: 1rem;
+}
 
 /* Mailchimp newsletter sign-up */
 #mc_embed_signup {
@@ -427,6 +432,11 @@ footer {
         margin-bottom: 0;
     }
 
+    /* Recommendations */
+    .recommendation-img {
+        width: 12.5rem;
+    }
+
     /* || FOOTER STYLES  */
     .footer-list-links>li a {
         min-width: 18.75rem;
@@ -453,6 +463,13 @@ footer {
         display: block !important;
         padding: 0;
     }
+
+    /* || HOMEPAGE STYLES */
+
+    /* Recommendations */
+    .recommendation-img {
+        width: 18.5rem;
+    }
 }
 
 /* Medium devices (tablets, 768px and up) */
@@ -466,6 +483,10 @@ footer {
     /* || HOMEPAGE STYES */
     .homepage-carousel-section {
         margin-bottom: 4rem;
+    }
+
+    .homepage-recommendations-div {
+        
     }
     
     .homepage-business-card > .card-body > img,
@@ -498,6 +519,13 @@ footer {
 
     .py-lg-0 {
         padding: 0;
+    }
+
+    /* || HOMEPAGE STYLES */
+
+    /* Recommendations */
+    .recommendation-img {
+        width: 25rem;
     }
 
     /* || FOOTER STYLES  */
