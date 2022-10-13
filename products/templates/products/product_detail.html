@@ -21,10 +21,18 @@
             </div>
             <!-- Price, Rating, Quantity, Size, Buttons -->
             <div class="card-footer bg-white pt-0 border-0 text-left mb-3">
-                <!-- Price -->
+                <!-- Intensity -->
                 <div class="row">
                     <div class="col">
-                        <p class="card-description mb-2"><strong>Price:</strong> £{{ product.price }}</p>
+                        {% with product.intensity as s %}
+                        {% if s %}
+                        {% if product.category.name == "ground_coffee" %}
+                        <p class="card-description mb-2"><strong>Intensity:</strong> {{ product.intensity }} / 10</p>
+                        {% elif product.category.name == "coffee_beans" %}
+                        <p class="card-description mb-2"><strong>Intensity:</strong> {{ product.intensity }} / 10</p>
+                        {% endif %}
+                        {% endif %}
+                        {% endwith %}
                     </div>
                 </div>
                 <!-- Rating -->
@@ -36,6 +44,12 @@
                         {% else %}
                         <p class="text-muted card-description mb-2">No Rating</p>
                         {% endif %}
+                    </div>
+                </div>
+                <!-- Price -->
+                <div class="row">
+                    <div class="col">
+                        <p class="card-description mb-2"><strong>Price:</strong> £{{ product.price }}</p>
                     </div>
                 </div>
                 <!-- Size, Quantity -->
@@ -129,11 +143,13 @@
         <div class="col-md-6 product-img-container mt-3 mb-3 text-center">
             {% if product.image %}
             <a href="">
-                <img class="card-img-top img-fluid xl-screen-img" src="{{ product.image.url }}" alt="{{ product.name }}">
+                <img class="card-img-top img-fluid xl-screen-img" src="{{ product.image.url }}"
+                    alt="{{ product.name }}">
             </a>
             {% else %}
             <a href="">
-                <img class="card-img-top img-fluid xl-screen-img" src="{{ MEDIA_URL }}noimage.png" alt="{{ product.name }}">
+                <img class="card-img-top img-fluid xl-screen-img" src="{{ MEDIA_URL }}noimage.png"
+                    alt="{{ product.name }}">
             </a>
             {% endif %}
         </div>
