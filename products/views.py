@@ -1,10 +1,13 @@
 from django.shortcuts import render, redirect, reverse, get_object_or_404
 from django.contrib import messages
 from django.contrib.auth.decorators import login_required
+from django.contrib.auth import get_user_model
+from django.contrib.messages.views import SuccessMessageMixin
+from django.contrib import messages
 from django.db.models import Q
 from django.db.models.functions import Lower
-from .models import Product, Category
-from .forms import ProductForm
+from .models import Product, Category, Review
+from .forms import ProductForm, ReviewForm
 
 
 def all_products(request):
@@ -44,7 +47,7 @@ def all_products(request):
                 messages.error(request,
                                "Please enter a search criteria")
                 return redirect(reverse('products'))
-            queries = Q(name__icontains=query) | Q(description__icontains=query)
+            queries = Q(category__icontains=query) | Q(description__icontains=query)
             products = products.filter(queries)
 
     current_sorting = f'(sort)_(direction)'
@@ -60,14 +63,32 @@ def all_products(request):
 
 
 def product_detail(request, product_id):
-    """ A view to show a single product in detail """
+    """ 
+    A view to show a single product in detail
+    and enable signed in users to add reviews
+    """
 
     # Return the requested product or 404
     product = get_object_or_404(Product, pk=product_id)
+    reviews = product.reviews.order_by("-created_on")
+
+    if request.user.is_authenticated:
+        review_form = ReviewForm(data=request.POST)
+
+        if review_form.is_valid():
+            review_form.instance.username = request.user
+            review = review_form.save(commit=False)
+            review.product = product
+            review.save()
+            messages.success(request, 'Thank you for taking \
+                the time to provide a review')
 
     # Context to return to the page
     context = {
         'product': product,
+        'reviews': reviews,
+        'reviewed': False,
+        'review_form': ReviewForm(),
     }
     return render(request, 'products/product_detail.html', context)
 
