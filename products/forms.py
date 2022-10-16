@@ -1,10 +1,13 @@
 from django import forms
-from .models import Product, Category
+from .models import Product, Category, Review
 from .widgets import CustomClearableFileInput
 
 
 class ProductForm(forms.ModelForm):
-
+    """
+    Uses Django form to create
+    a form for product details
+    """
     class Meta:
         model = Product
         fields = '__all__'
@@ -20,3 +23,14 @@ class ProductForm(forms.ModelForm):
         self.fields['category'].choices = friendly_names
         for field_name, field in self.fields.items():
             field.widget.attrs['class'] = 'rounded-0'
+
+
+class ReviewForm(forms.ModelForm):
+    """
+    Uses Django form to enable users
+    to add product reviews within
+    Post Detail view.
+    """
+    class Meta:
+        model = Review
+        fields = ('message',)
