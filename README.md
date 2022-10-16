@@ -27,11 +27,12 @@ The Coffee Collective is a small family run coffee shop serving fresh coffee to 
     * [Structure](#Structure)
     * [Skeleton](#Skeleton)
     * [Surface](#Surface)
-* [Data Model](#Data-Model) 
+* [Web Marketing Strategy](#Web-marketing-strategy)
 * [Features](#Features)
+* [Data Model](#Data-Model)
 * [Testing](#Testing)
 * [Deployment](#Deployment)
-* [Credit & Attributes](#Credit&Attributes)
+* [Credit & Attributes](#Credit-&-attributes)
 
 <br />
 
@@ -114,16 +115,16 @@ An agile approach of keeping the features simple and aligned to the strategy for
 * Optional user accounts with editable profile data, order history and the storing of shipping details
 * Registered users will be able to leave product reviews to help build trust in the products for new customers.
 * A 10% discount code provided to those users signing up for the monthly newsletter.
-* Free shipping on orders over £45.
+* Free shipping on orders over £30.
 * Business pages to inform of the company, and their position towards Accessibility, Copyright etc.
 * Clear Terms & Conditions.
-* All site visitors should have an option to share a product listing via social media.
 * FAQ's to help the users navigation and experience of the site and service
 
 
 #### Out of Scope Features - for future release
 * Site visitors being able to compare products side by side.
 * Realtime stock inventory updating the site when a product is out of stock.
+* All site visitors should have an option to share a product listing via social media.
 * Single Sign-on to user accounts with social media logins.
 * The status of a placed order with the users account area.
 * Sale of e-vouchers to buy as gifts to be redeemed in the store.
@@ -253,11 +254,6 @@ The mock-up's enabled me to work through differing layout styles with this colou
 <br />
 
 
-#### Logo
-
-
-
-
 #### Fonts
 
 Google Fonts has been used to provide free fonts for commercial use. The fonts selected have been chosen for differing reasons whilst still complementing each other. 
@@ -269,6 +265,60 @@ Firstly, a strong bold font has been selected in 'Bebas Neue' for titles and sub
 </p>
 
 <br />
+
+
+
+***
+
+<br />
+
+## Web Marketing Strategy
+
+Using the user research where I created user personas and the other aspects of design thinking, I have created marketing features to improve search results ranking and in turn increase traffic to the clients website.
+
+
+### Search Engine Optimisation (SEO)
+
+SEO research is key to driving traffic from a browser based search i.e. Google to the website.
+
+
+### MailChimp Newsletter
+
+To allow the business to communicate with their customers to promote products and events through digital marketing, I've partnered with MailChimp. This is initially a free service with MailChimp to collect customers email addresses. The business can then construct the newsletter using MailChimp's online service. The feature is located on the Homepage, offering an opportunity for customers to enter their address to subscribe. Once the email address is submitted a success message is presented to thank them for signing up.
+
+<details>
+    <summary><b>MailChimp</b></summary>
+    <p align="center">
+        <img src="readme-images/the_coffee_collective_mailchimp_newsletter.png" alt="Homepage feature allowing users to sign-up for a newsletter" />
+    </p>
+</details><br />
+
+
+### Coffee Shop Location
+
+I've utilised Google Maps within an iframe on the Homepage to promote the physical store location as a build to how customers can purchase and experience the businesses coffee and relating products.
+
+<details>
+    <summary><b>Google Maps</b></summary>
+    <p align="center">
+        <img src="readme-images/the_coffee_collective_google_maps.png" alt="Homepage feature allowing users to navigate to the coffee shop" />
+    </p>
+</details><br />
+
+
+
+### Facebook Page
+
+
+
+
+***
+
+<br />
+
+## Features
+
+
 
 ***
 
@@ -355,8 +405,6 @@ Meta data is included within the HTML head element to increase the traffic to th
 * [Pillow](https://pillow.readthedocs.io/en/stable/) to support image processing capabilities.
 
 
-
-
 ### Software & Web Applications
 
 * [Balsamiq](https://balsamiq.com/) to build wireframes for the Skelton phase.
@@ -382,6 +430,13 @@ Meta data is included within the HTML head element to increase the traffic to th
 
 
 
+
+
+***
+
+<br />
+
+## Testing
 
 
 
