@@ -307,4 +307,23 @@ The Contact Model (within the Company All) does not have a relationship with the
 <p align="center">
     <img src="readme-images/the_coffee_collective_erd.png" alt="Entity relationship diagram for this website"/>
 </p>
+
 <br />
+
+
+### Data Security
+
+Specific steps have been taken to ensure the security of users data and the websites integrity. These are as follows;
+* The use of an env.py file to store key variables for accessing secure environments i.e. Postgres Database.
+* A gitignore file has been incorporated to ensure the env.py file is never committed to production. Therefore retaining the security of these key variables.
+* Additionally, these variables are stored within the Config Variables in Heroku to ensure GitPod and Heroku can synchronise securely.
+* Cross Site Request Forgery (CSRF) tokens have been applied to all HTML Forms. Their application provides protection from malicious attacks where users maybe performing certain actions or sending data when logged-in.
+* Django's inbuilt User Authentication has been applied to several key areas to ensure only authenticated users can add reviews. A further layer of security has been applied to ensure the ability to manage products (Create, Update, Delete) in the front end can only be performed by users with 'Admin' status.
+
+
+### Meta data
+
+Meta data is included within the HTML head element to increase the traffic to the website. Additionally, site pages are titled appropriately as another method of informing users of their location.
+
+
+***
