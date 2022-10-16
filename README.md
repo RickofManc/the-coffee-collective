@@ -31,7 +31,7 @@ The Coffee Collective is a small family run cart serving fresh coffee to city wo
 * [Features](#Features)
 * [Testing](#Testing)
 * [Deployment](#Deployment)
-* [Credits](#Credit)
+* [Credit & Attributes](#Credit&Attributes)
 
 <br />
 
@@ -301,7 +301,7 @@ The diagram highlights the following relationships:
 * One user can add many reviews to one product
 
 
-The Contact Model (within the Company All) does not have a relationship with the other apps, however I have included for awareness towards future development.
+The Contact Model (within the Company App) does not have a relationship with the other apps, however I have included for awareness towards future development.
 
  
 <p align="center">
@@ -362,12 +362,14 @@ Meta data is included within the HTML head element to increase the traffic to th
 * [Balsamiq](https://balsamiq.com/) to build wireframes for the Skelton phase.
 * [Figma](https://www.figma.com/) for the high-level site structure.
 * [draw.io](https://www.draw.io/index.html) to diagram data schema/model.
+* [Photopea](https://www.photopea.com/) to create the clothing product images and brand logo.
+* [CovertCSV](https://www.convertcsv.com/csv-to-json.htm) used to convert the csv files with products and categories to json for importing to the repo.
 * [GitPod](https://gitpod.io/) used for the IDE and [GitHub](https://github.com/) as a hosting repository.
 * [Google Developer Tools](https://developers.google.com/web/tools/chrome-devtools) Used as the primary method for developing the sites responsiveness and identifying bugs.
 * [GitHub Kanban board](https://github.com/users/RickofManc/projects/5/views/1) adopted for managing and tracking the user stories using the kanban agile methodology.
 * [Heroku](https://dashboard.heroku.com/) to host the live website, including database.
 * [Kaffeine](https://kaffeine.herokuapp.com/) used to ping the Heroku every 30 minutes to ensure the website doesn't go to sleep, ensuring fastest load times.
-*[AWS](https://aws.amazon.com/) used to store media files.
+* [AWS](https://aws.amazon.com/) used to store media files.
 * [Wave](https://wave.webaim.org/) - Accessibility Testing to ensure content is readable for all users.
 * [HTML Validator](https://validator.w3.org/) validates HMTL code.
 * [W3 CSS Validator](https://jigsaw.w3.org/css-validator/validator) validates CSS code.
@@ -394,6 +396,45 @@ Meta data is included within the HTML head element to increase the traffic to th
 
 
 
+
+
+
+***
+
+<br />
+
+## Credit & Attributes
+
+
+### Credit
+
+* Mentor Brian Macharia for continuing to guide and feedback throughout the projects lifecycle, especially on how to improve UX and my code.
+
+
+### Attributes
+
+Support with how to develop ideas into code also came from various online resources, as well as using open source code and free images. All these are documented below.
+
+* In general the coding and testing has relied on the Code Institutes walkthrough project "Boutique Ado", with customisations to bring in information about the business and how to contact TCC. Additionally, users can add product reviews, as well as the products containing some differing attributes from the walkthrough project.
+* [W3schools](https://www.w3schools.com/) as a source of 'How to...' information throughout the build, and specifically on adapting the Bootsrap NavBar to have a [burger menu icon](https://www.w3schools.com/howto/howto_css_menu_icon.asp) for mobile devices
+* [Django Project Docs](https://docs.djangoproject.com/en/4.0/ref/models/fields/) were referenced many times, especially in how to reference fields correctly across differing python files.
+* [Ordinary Coders](https://ordinarycoders.com/blog/article/add-a-custom-favicon-to-your-django-web-app) guided me on how to create and add a customised favicon.
+* [Monica Wheeler](https://codepen.io/frogmcw/pen/deqRwa) for the code to build the FAQs feature, Union Roasted Coffee provided inspiration for some of the typical questions users may ask.
+* [RocketLawyer](http://rocketlawyer.com/) for free creation of a basic Terms & Conditions document.
+
+#### Images
+
+* Photo of Lorenzo Ferodo by Andrea Piacquadio on [Pexels](https://www.pexels.com/)
+* Photo of Luca Ferodo by Apunto Group Agencia on [Pexels](https://www.pexels.com/)
+* Photo of Coffee Shop interior by Dmitry Zvolskiy on [Pexels](https://www.pexels.com/)
+* Favicon from Vecteezy by [icon0.com](https://www.vecteezy.com/free-png/coffee-bean)
+* HTML Background sourced from Pexels by [Engin Akyurt](https://www.pexels.com/photo/photo-of-a-black-mug-on-top-of-brown-coffee-beans-9899791/)
+* Image of Barista Aprons from [Zazzle](https://www.zazzle.co.uk/barista+aprons)
+* Images of Moka Pots from [Bialetti](https://www.bialetti.com/it_en/)
+* Images of Cafetieres from [Olympia](https://www.nisbets.co.uk/olympia-contemporary-cafetiere-black-8-cup/cw951)
+* Images and descriptions of Coffee Cups from [Gimoka](https://cafazzini.co.uk/collections/all/italian-coffee-cups)
+* Inspiration on coffee sizing and prices from [Cafazzini](https://www.gimokacoffee.com/)
+* Adobe Stock was used for clothing images under licence.
 
 
 
