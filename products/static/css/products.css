@@ -133,6 +133,16 @@
     text-align: center;
 }
 
+/* Register to leave review */
+.register-text {
+    margin-bottom: 2rem;
+}
+
+.register-btn {
+    padding-top: 0.7rem;
+    letter-spacing: 0.08rem;
+}
+
 
 /* || PRODUCT FORM STYLES  */
 .btn-file {
@@ -176,6 +186,13 @@
         margin-top: 0!important;
     }
     
+    .product-details-container,
+    .card-body,
+    .cust-review-h3 {
+        padding-left: 0;
+        padding-right: 0;
+    }
+
     .product-img-container {
         min-height: 0;
     }
@@ -194,6 +211,12 @@
     /* || PRODUCT STYLES  */
     .sort-select-wrapper {
         margin-top: 1rem!important;
+    }
+
+    .product-details-container,
+    .card-body {
+        padding-left: 0.9375rem;
+        padding-right: 0.9375rem;
     }
     
     .product-img-container {
