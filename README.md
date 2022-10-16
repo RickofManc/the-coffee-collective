@@ -275,3 +275,36 @@ Firstly, a strong bold font has been selected in 'Bebas Neue' for titles and sub
 <br />
 
 ## Data Model
+
+As part of the project planning phase a high-level design of the site [structure](#Structure) has been created to understand the main entities, and the relationship between these entities set within a Hierarchical structure.
+This led to understanding the next level down through mapping out the tables, columns and attributes required for the database. The initial draft in Excel has been mapped into a data schema below using [draw.io](https://www.draw.io/index.html) to help understand how the entities and data will relate across the site.
+
+In consideration of the a requirement for the data to be searchable, and in time understand patterns and trends in user behaviour, an Object-Relational Database using MVT architecture has been selected. I've opted for a PostgreSQL DBMS (Database Management System) as it can support the aforementioned requirements, PostgreSQL can also support multiple programming languages and libraries that which will be used to build the application.
+
+The diagram below shows the entity relationships between categories, products, product reviews, users, and an order. The Product Model is used by the Review Model to ensure the right product is being reviewed. The diagram also highlights that one product can have many reviews. 
+
+The key component in this relationship is the user. I have used the default Django User Model with customisations for simplicity. Both the user and product models are used by Order and Order Line Item models (as users have an option to checkout as a user or as guest).
+
+With this architecture a user can add many products to one order, and leave many product reviews. 
+
+There are currently seven categories created within Category table. These are used to group the products and can be accessed from the navigation menu. They can managed through the Django admin panel, along with user data, products, reviews and orders. 
+
+<br />
+
+The diagram highlights the following relationships:
+* One product can have many reviews
+* One product can have one category
+* One category can have many products
+* One order can have many products
+* One user can have one order
+* One user can add a review to many products
+* One user can add many reviews to one product
+
+
+The Contact Model (within the Company All) does not have a relationship with the other apps, however I have included for awareness towards future development.
+
+ 
+<p align="center">
+    <img src="readme-images/the_coffee_collective_erd.png" alt="Entity relationship diagram for this website"/>
+</p>
+<br />
