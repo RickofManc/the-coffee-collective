@@ -55,7 +55,7 @@ hr {
     border-radius: 0;
     padding: 0.1rem 0.75rem;
     background-color: #6c757d;
-    color: #fff
+    color: #fff;
 }
 
 .back-btn {
@@ -502,10 +502,6 @@ footer {
     /* || HOMEPAGE STYES */
     .homepage-carousel-section {
         margin-bottom: 4rem;
-    }
-
-    .homepage-recommendations-div {
-
     }
     
     .homepage-business-card > .card-body > img,
