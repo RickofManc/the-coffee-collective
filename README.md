@@ -327,3 +327,74 @@ Meta data is included within the HTML head element to increase the traffic to th
 
 
 ***
+
+<br />
+
+## Technologies
+
+
+### Languages
+
+* HTML5
+* CSS3
+* Python
+* JavaScript
+
+
+### Frameworks & Libraries
+
+* [Django 3.2](https://docs.djangoproject.com/en/4.0/releases/3.2/) has been adopted as more preferable over the newest beta Django 4 to rapidly and securely develop this application.
+* [dj_database_url](https://pypi.org/project/dj-database-url/) library used to allow Database urls to connect to the Postgres database.
+* [Psycopg2](https://pypi.org/project/psycopg2/) supports the connection to the Postgres database.
+* [Gunicorn](https://gunicorn.org/) was used as the Web Server to run Django on Heroku.
+* [Django-allauth](https://django-allauth.readthedocs.io/en/latest/) used for addressing user authentication, registration and account management.
+* [Bootstrap4](https://getbootstrap.com/docs/4.6/getting-started/introduction/) was used to build responsive web pages.
+* [Crispy Forms](https://django-crispy-forms.readthedocs.io/en/latest/) is simplifying rendering on several forms.
+* [Font Awesome](https://fontawesome.com/icons) source of all site icons.
+* [Bulma](https://bulma.io/extensions/) used to support the line height of Font Awesome icons.
+* [Pillow](https://pillow.readthedocs.io/en/stable/) to support image processing capabilities.
+
+
+
+
+### Software & Web Applications
+
+* [Balsamiq](https://balsamiq.com/) to build wireframes for the Skelton phase.
+* [Figma](https://www.figma.com/) for the high-level site structure.
+* [draw.io](https://www.draw.io/index.html) to diagram data schema/model.
+* [GitPod](https://gitpod.io/) used for the IDE and [GitHub](https://github.com/) as a hosting repository.
+* [Google Developer Tools](https://developers.google.com/web/tools/chrome-devtools) Used as the primary method for developing the sites responsiveness and identifying bugs.
+* [GitHub Kanban board](https://github.com/users/RickofManc/projects/5/views/1) adopted for managing and tracking the user stories using the kanban agile methodology.
+* [Heroku](https://dashboard.heroku.com/) to host the live website, including database.
+* [Kaffeine](https://kaffeine.herokuapp.com/) used to ping the Heroku every 30 minutes to ensure the website doesn't go to sleep, ensuring fastest load times.
+*[AWS](https://aws.amazon.com/) used to store media files.
+* [Wave](https://wave.webaim.org/) - Accessibility Testing to ensure content is readable for all users.
+* [HTML Validator](https://validator.w3.org/) validates HMTL code.
+* [W3 CSS Validator](https://jigsaw.w3.org/css-validator/validator) validates CSS code.
+* [PEP8 Validator](http://pep8online.com/)  validates Python code.
+* [JSHint](https://jshint.com/) validates JavaScript code.
+* [Code Beautify](https://codebeautify.org/) validates the code formatting for browser reading.
+* [IE NetREnderer](https://netrenderer.com/index.php) for cross browser testing, specifically Microsoft IE versions 11 and Edge.
+* [LambdaTest](https://www.lambdatest.com/) for cross browser testing, specifically macOS Safari and Opera.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
