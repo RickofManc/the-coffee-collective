@@ -1,4 +1,5 @@
 from django.db import models
+from django.contrib.auth import get_user_model
 
 
 class Category(models.Model):
@@ -35,3 +36,23 @@ class Product(models.Model):
 
     def __str__(self):
         return self.name
+
+
+class Review(models.Model):
+    """
+    Models the fields for adding product reviews.
+    """
+    User = get_user_model()
+    product = models.ForeignKey(
+        Product, on_delete=models.CASCADE, related_name='reviews'
+    )
+    username = models.ForeignKey(User, on_delete=models.CASCADE,
+                                 related_name="user_reviews")
+    message = models.TextField(help_text="Add your review here")
+    created_on = models.DateTimeField(auto_now_add=True)
+
+    class Meta:
+        ordering = ["-created_on"]
+
+    def __str__(self):
+        return f"Review {self.message} by {self.username}"
