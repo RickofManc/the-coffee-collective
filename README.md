@@ -14,7 +14,7 @@
 
 <br />
 
-The Coffee Collective is a small family run cart serving fresh coffee to city workers in Manchester. The family migrated from Italy in the 1970's and established a business that would allow them to use their knowledge and skills to help their new home. A cart was created and peddled to the city each morning to sell coffee to Mancunians. In the days before takeaway cups, customers stood and socialised whilst sipping their morning espressos and so became known to passers-by and onlookers as "the coffee collective".
+The Coffee Collective is a small family run coffee shop serving fresh coffee to city workers in Manchester. The family migrated from Italy in the 1970's and established a business that would allow them to use their knowledge and skills to help their new home. A cart was created and peddled to the city each morning to sell coffee to Mancunians. In the days before takeaway cups, customers stood and socialised whilst sipping their morning espressos and so became known to passers-by and onlookers as "the coffee collective".
 
 ***
 <br />
@@ -370,6 +370,7 @@ Meta data is included within the HTML head element to increase the traffic to th
 * [Heroku](https://dashboard.heroku.com/) to host the live website, including database.
 * [Kaffeine](https://kaffeine.herokuapp.com/) used to ping the Heroku every 30 minutes to ensure the website doesn't go to sleep, ensuring fastest load times.
 * [AWS](https://aws.amazon.com/) used to store media files.
+* [Stripe](https://stripe.com/gb?utm_campaign=paid_brand-UK_en_Search_Brand_Stripe-2032860449&utm_medium=cpc&utm_source=google&ad_content=604272871169&utm_term=stripe&utm_matchtype=e&utm_adposition=&utm_device=c&gclid=Cj0KCQjw166aBhDEARIsAMEyZh5nI26c2sSyFBiwTN1FZ35IpJyD3FJbthyXoAWkHhAYl8tT-Oru8aUaAtVyEALw_wcB) used to receive customer payments.
 * [Wave](https://wave.webaim.org/) - Accessibility Testing to ensure content is readable for all users.
 * [HTML Validator](https://validator.w3.org/) validates HMTL code.
 * [W3 CSS Validator](https://jigsaw.w3.org/css-validator/validator) validates CSS code.
@@ -392,7 +393,170 @@ Meta data is included within the HTML head element to increase the traffic to th
 
 
 
+***
 
+<br />
+
+## Deployment
+
+This project was deployed using the steps below with version releasing active. Please do not make any changes to files within this repository as any changes pushed to the main branch will be automatically reflected on the live website. Instead, please follow the steps below which guide you to forking the website where changes can be made without impact to the live website. Thanks!
+
+
+### Fork and Deploy Locally with GitHub
+
+<details>
+    <summary></summary>
+
+To fork this website to either propose changes or to use as an idea for another website, follow these steps:
+1. If you haven't yet, you should first set up Git. Don't forget to set up authentication to GitHub.com from Git as well.
+1. Navigate to the [The Coffee Collective](https://the-coffee-collective.herokuapp.com/).
+1. Click the 'Fork' button on the upper right part of the page. It's in between 'Watch' and 'Star'.
+1. You will now have a fork of 'The Coffee Collective' repository added to your GitHub profile. Navigate to your own profile and find the forked repository to add the required files.
+1. Above the list of forked files click the 'Code' button.
+1. A drop-down menu will appear providing a choice of cloning options. Select the one which is applicable to your setup.
+</br>
+Further details on completing the last step can be found on GitHub's [Fork a Repo](https://docs.github.com/en/get-started/quickstart/fork-a-repo) page
+
+To deploy locally with GitHub, follow these steps:
+1. Log into your GitHub repository, create a GitHub account if necessary
+1. Click 'Settings' in the main Repository menu
+1. Click 'Pages' from the left-hand side navigation menu
+1. Within the Source section, click the "Branch" button and change from 'None' to 'Main'
+1. The page should automatically refresh with a url displayed
+1. Test the link by clicking on the url
+1. From this point you can push code to this page using the following steps from with GitPod;
+    1. With the application open, open the command line terminal (CLI)
+    1. Stage any changes using the command 'git add .' or by specifying the file with changes i.e 'git add settings.py'
+    1. Commit the changes to GitHub by adding a commit message describing the changes i.e. 'git commit -m "Update docbook dependency and generate epub"
+    1. Finally add the command 'git push' which will push all the code to GitHub. You can view the deployed code using the url generated within the steps above.
+    1. Additionally if you would like to run the application locally pre/post any changes, from the terminal type 'python3 manage.py runserver'.
+    1. A dialog box should open asking you to open port 8000, click 'Open' and navigate to the opened tab/window which should allow you to view the running application.
+    1. If the dialog box does not automatically appear, find the 'Remote Explorer' section of the left hand navbar within GitPod and click on the port '8000' and the internet/globe icon to the right which should open the running application.
+</details>
+
+
+### Gmail SMTP
+
+<details>
+    <summary></summary>
+
+Gmail SMTP has been used to send order confirmations and user contact emails in the deployed version. To use this configuration, copy and adapt the code below into your settings.py file.
+
+```
+if 'DEVELOPMENT' in os.environ:
+    EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+    DEFAULT_FROM_EMAIL = '(ADD YOUR EMAIL ADDRESS)@gmail.com'
+else:
+    EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+    EMAIL_USE_TLS = True
+    EMAIL_PORT = 587
+    EMAIL_HOST = 'smtp.gmail.com'
+    EMAIL_HOST_USER =  os.environ.get('EMAIL_HOST_USER')
+    EMAIL_HOST_PASSWORD = os.environ.get('EMAIL_HOST_PASS')
+    DEFAULT_FROM_EMAIL = os.environ.get('EMAIL_HOST_USER')
+```
+</details>
+
+
+### Amazon Web Services (AWS) Storage
+
+<details>
+    <summary></summary>
+Considering the development of the site could require a significant volume of product images, AWS has been used as the cloud host for imagery. To implement this you will need and AWS account and to create an S3 Bucket and User Profile. Developer guidance can be followed on AWS's site.
+
+To serve the images you will need to add the following config to your settings.py file.
+
+```
+if 'USE_AWS' in os.environ:
+    # Cache control
+    AWS_S3_OBJECT_PARAMETERS = {
+        'Expires': 'Thu, 31 Dec 2099 20:00:00 GMT',
+        'CacheControl': 'max-age=94608000',
+    }
+    # Bucket config
+    AWS_STORAGE_BUCKET_NAME = 'the-coffee-collective'
+    AWS_S3_REGION_NAME = 'eu-west-2'
+    AWS_ACCESS_KEY_ID = os.environ.get('AWS_ACCESS_KEY_ID')
+    AWS_SECRET_ACCESS_KEY = os.environ.get('AWS_SECRET_ACCESS_KEY')
+    AWS_S3_CUSTOM_DOMAIN = f'{AWS_STORAGE_BUCKET_NAME}.s3.amazonaws.com'
+    # Static and media files
+    STATICFILES_STORAGE = 'custom_storages.StaticStorage'
+    STATICFILES_LOCATION = 'static'
+    DEFAULT_FILE_STORAGE = 'custom_storages.MediaStorage'
+    MEDIAFILES_LOCATION = 'media'
+    # Override static and media URLs in Production
+    STATIC_URL = f'https://{AWS_S3_CUSTOM_DOMAIN}/{STATICFILES_LOCATION}'
+    MEDIA_URL = f'https://{AWS_S3_CUSTOM_DOMAIN}/{MEDIAFILES_LOCATION}'
+```
+</details>
+
+
+### Stripe
+
+<details>
+    <summary></summary>
+
+Stripe has been used to receive payments from customers. To implement you need to have an account with Stripe and follow the [documentation](https://stripe.com/docs) add incorporate the guided HTML, Python and JavaScript code.
+</details>
+
+
+### Deploy with Heroku
+
+<details>
+    <summary></summary>
+
+1. Log in to Heroku at https://heroku.com - create an account if needed.
+1. From the Heroku dashboard, click the Create new app button. For a new account an icon will be visible on screen to allow you to Create an app, otherwise a link to this function is located under the New dropdown menu at the top right of the screen.
+1. On the Create New App page, enter a unique name for the application and select region. Then click Create app.
+1. On the Application Configuration page for the new app, click on the Resources tab.
+1. In the Add-ons search bar enter "Postgres" and select "Heroku Postgres" from the list - click the "Submit Order Form" button on the pop-up dialog.
+1. Next, click on Settings on the Application Configuration page and click on the "Reveal Config Vars" button - check the DATABASE_URL has been automatically set up.
+1. Add a new Config Var called DISABLE_COLLECTSTATIC and assign it a value of 1 - Remove this when releasing for Production.
+1. Add a new Config Var called SECRET_KEY and assign it a value - any random string of letters, digits and symbols.
+1. The settings.py file should be updated to use the DATABASE_URL and SECRET_KEY environment variable values as follows :
+
+        DATABASES = {'default': dj_database_url.parse(os.environ.get('DATABASE_URL'))}
+
+        SECRET_KEY = os.environ.get('SECRET_KEY')
+
+1. In Gitpod, in the project terminal window, to initialize the data model in the postgres database, run the command : python3 manage.py migrate
+1. Update the requirements.txt file with all necessary supporting files by entering the command : pip freeze > requirements.txt
+1. Commit and push any local changes to GitHub.
+1. In order to be able to run the application on localhost, add SECRET_KEY and DATABASE_URL and their values to env.py
+
+Connect GitHub Repo to Heroku App
+
+1. Navigate to Application Configuration page for the application on Heroku and click on the Deploy tab.
+1. Select GitHub as the Deployment Method and if prompted, confirm that you want to connect to GitHub. Enter and search for the required repository, then click on Connect to link them up..
+1. Scroll down the page and choose to either Automatically Deploy each time changes are pushed to GitHub, or Manually deploy - I chose the latter for the initial deployment to watch the build and then opted for Automatic Deployment.
+1. The application can be run from the Application Configuration page by clicking on the Open App button.
+1. Each time you push code from your GitHub Repo it will be automatically reflected in your Heroku App.
+
+The url for this website can be found here https://the-coffee-collective.herokuapp.com/
+</details>
+
+
+### Pre Production Deployment
+
+<details>
+    <summary></summary>
+
+When you are ready to move to production, the following steps must be taken to ensure your site works correctly and is secure.
+
+In GitPod:
+1. Set DEBUG flag to False in settings.py
+1. Check the following line exists in settings.py: X_FRAME_OPTIONS = 'SAMEORIGIN'
+1. Update the requirements.txt file with all necessary supporting files by entering the command : pip freeze > requirements.txt
+1. Commit and push code to GitHub
+In the Heroku App:
+1. Settings > Config Vars : Delete environment variable : DISABLE_COLLECTSTATIC
+1. Deploy : Click on deploy branch
+</details>
+    
+
+***
+
+<br />
 
 
 
