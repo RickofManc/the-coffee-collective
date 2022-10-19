@@ -23,6 +23,8 @@ urlpatterns = [
             ),),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 
-# override the standard 404 and 500 handlers
+# override the standard error handlers
+handler403 = 'tcc.views.handler403'
 handler404 = 'tcc.views.handler404'
+handler405 = 'tcc.views.handler405'
 handler500 = 'tcc.views.handler500'
