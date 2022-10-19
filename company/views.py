@@ -93,6 +93,7 @@ def contact(request, *args, **kwargs):
             email = form.cleaned_data['email'],
             subject = form.cleaned_data['subject'],
             message = form.cleaned_data['message'],
+            form.save()
            
             # send mail combining field forms
             send_mail({subject}, f'{name}, {email}, {message}',
