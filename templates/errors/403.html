@@ -1,17 +1,15 @@
 {% extends 'base.html' %}
 {% load static %}
 {% block content %}
-<!-- Details of 500 error and button to navigate to home -->
+<!-- Details of 403 error and button to navigate to home -->
 <div class="container">
     <div class="row">
         <div class="col-12 mt-3">
             <h1 class="display-4 error-page-header">
-                500 Internal Server Error
+                404 Page Error
             </h1>
-            <p class="lead-error-p">Oops! Something has gone wrong with our website.</p>
+            <p class="lead-error-p">Sorry! We cannot find or display the page you are requesting.</p>
             <hr class="my-4">
-            <p>This isn't a problem with your browser, your computer, or your internet connection. We have been alerted
-                to this issue and will have a quick espresso and start fixing it.</p>
             <p>Please use the button below to return to our store.</p>
             <p class="lead">
                 <a class="btn btn-lg standard-btn" href="{% url 'home' %}" role="button">Home</a>
