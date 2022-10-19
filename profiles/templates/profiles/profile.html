@@ -27,8 +27,8 @@
                 {% csrf_token %}
                 {{ form|crispy }}
                 <!-- Button to cancel if navigated to in error or made an error -->
-                <input class="back-btn" type="button" name="cancel" value="Cancel" 
-                onClick="window.location='https://the-coffee-collective.herokuapp.com/';return false;" />
+                <input class="back-btn" type="button" name="cancel" value="Cancel"
+                    onClick="window.location='https://the-coffee-collective.herokuapp.com/';return false;" />
                 <!-- Button to submit changes to Profile Information -->
                 <button class="btn standard-btn">Save Changes</button>
             </form>
@@ -56,9 +56,10 @@
                             <td>
                                 <ul class="list-unstyled">
                                     {% for item in order.lineitems.all %}
-                                    <li class="smal">
-                                        {% if item.product.has_sizes %}Size
-                                        {{ item.product.size }}{% endif %}{{ item.product.name }} x{{ item.quantity }}
+                                    <li class="small">
+                                        {% if item.product.has_sizes %} 
+                                        Size {{ item.product_size }}
+                                        {% endif %} {{ item.product.name }} x{{ item.quantity }}
                                     </li>
                                     {% endfor %}
                                 </ul>
@@ -76,16 +77,16 @@
 {% else %}
 <!-- Information to user if navigated to in error without being signed in -->
 <div class="container-fluid">
-  <div class="row justify-content-center">
-    <div class="card-block">
-      <p class="card-text">
-        Sorry you must be signed in to access this page, please use the button below to
-        return to our homepage
-      </p>
-      <a href="{% url 'home' %}" type="button" class="anchor-tag-btn">Home
-      </a>
+    <div class="row justify-content-center">
+        <div class="card-block">
+            <p class="card-text">
+                Sorry you must be signed in to access this page, please use the button below to
+                return to our homepage
+            </p>
+            <a href="{% url 'home' %}" type="button" class="anchor-tag-btn">Home
+            </a>
+        </div>
     </div>
-  </div>
 </div>
 {% endif %}
 {% endblock %}
