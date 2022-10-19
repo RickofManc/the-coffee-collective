@@ -11,7 +11,7 @@
 <!-- Page header -->
 <div class="container-fluid">
     <div class="row">
-        <div class="col text-center mt-3">
+        <div class="col text-center mt-3 mb-3">
             <h1 class="page-title">Thank You!</h1>
             <hr class="w-50 mb-1">
             <p>Your order information is below, with a copy emailed to <strong>{{ order.email }}</strong>.</p>
@@ -22,12 +22,12 @@
         <div class="col-12 col-lg-7">
             <div class="p2">
                 <div class="row">
-                    <h2>Order Confirmation</h2>
+                    <h2 class="page-subtitle mb-3">Order Confirmation</h2>
                 </div>
                 <!-- Order Info -->
                 <div class="row">
                     <div class="col">
-                        <h3 class="text-muted">Order Info:</h3>
+                        <h3 class="page-h3-title mt-2">Order Info:</h3>
                     </div>
                 </div>
                 <div class="row">
@@ -43,14 +43,14 @@
                 <!-- Order Details -->
                 <div class="row">
                     <div class="col">
-                        <h3 class="text-muted">Order Details:</h3>
+                        <h3 class="page-h3-title mt-2">Order Details:</h3>
                     </div>
                 </div>
                 {% for item in order.lineitems.all %}
                 <div class="row">
                     <div class="col-12 col-md-4">
                         <p class="mb-0">
-                            {{ item.product.name }}{% if item.product_size %} - Size {{ item.product.size }}{% endif %}
+                            {{ item.product.name }}{% if item.product_size %} - Size {{ item.product_size }}{% endif %}
                         </p>
                     </div>
                     <div class="col-12 col-md-8 text-md-right">
@@ -61,7 +61,7 @@
                 <!-- Delivery Details section -->
                 <div class="row">
                     <div class="col">
-                        <h3 class="text-muted">Delivery Details:</h3>
+                        <h3 class="page-h3-title mt-2">Delivery Details:</h3>
                     </div>
                 </div>
                 <!-- Buyer Name -->
@@ -144,7 +144,7 @@
                 <!-- Payment Info -->
                 <div class="row">
                     <div class="col">
-                        <h3 class="text-muted">Payment Info:</h3>
+                        <h3 class="page-h3-title mt-2">Payment Info:</h3>
                     </div>
                 </div>
                 <!-- Order Total -->
