@@ -174,7 +174,7 @@ def checkout_success(request, order_number):
             if user_profile_form.is_valid():
                 user_profile_form.save()
 
-    messages.success(request, f'Your order has been successfully processed" \
+    messages.success(request, f'Your order has been successfully processed \
         <br> Your order number is {order_number}. <br> A confirmation \
             email will be sent to {order.email}')
     # Clear the bag contents as processed

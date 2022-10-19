@@ -12,7 +12,7 @@ class AccessibilityStatement(CreateView):
     gets : requested template by name
     returns : rendered view of the html template
     """
-    template_name = "accessibility_statement.html"
+    template_name = 'accessibility_statement.html'
 
     def get(self, request, *args, **kwargs):
         return render(request, self.template_name, {})
@@ -24,7 +24,7 @@ class CopyrightStatement(CreateView):
     gets : requested template by name
     returns : rendered view of the html template
     """
-    template_name = "copyright_statement.html"
+    template_name = 'copyright_statement.html'
 
     def get(self, request, *args, **kwargs):
         return render(request, self.template_name, {})
@@ -36,7 +36,7 @@ class TermsAndConditions(CreateView):
     gets : requested template by name
     returns : rendered view of the html template
     """
-    template_name = "terms_and_conditions.html"
+    template_name = 'terms_and_conditions.html'
 
     def get(self, request, *args, **kwargs):
         return render(request, self.template_name, {})
@@ -48,7 +48,7 @@ class Sustainability(CreateView):
     gets : requested template by name
     returns : rendered view of the html template
     """
-    template_name = "sustainability.html"
+    template_name = 'sustainability.html'
 
     def get(self, request, *args, **kwargs):
         return render(request, self.template_name, {})
@@ -60,7 +60,7 @@ class Faqs(CreateView):
     gets : requested template by name
     returns : rendered view of the html template
     """
-    template_name = "faqs.html"
+    template_name = 'faqs.html'
 
     def get(self, request, *args, **kwargs):
         return render(request, self.template_name, {})
@@ -72,7 +72,7 @@ class OurStory(CreateView):
     gets : requested template by name
     returns : rendered view of the html template
     """
-    template_name = "our_story.html"
+    template_name = 'our_story.html'
 
     def get(self, request, *args, **kwargs):
         return render(request, self.template_name, {})
@@ -86,7 +86,7 @@ def contact(request, *args, **kwargs):
     Email sent externally to TCC Gmail.
     Retains user on same page after commenting.
     """
-    if request.method == "POST":
+    if request.method == 'POST':
         form = ContactForm(request.POST)
         if form.is_valid():
             name = form.cleaned_data['name'],
@@ -107,8 +107,8 @@ def contact(request, *args, **kwargs):
             return redirect(reverse('home'))
         else:
             messages.error(
-                request, "Something went wrong with your submission.\
-                Please try again."
+                request, 'Something went wrong with your submission.\
+                Please try again.'
             )
     # blank form created if any other method is used
     else:

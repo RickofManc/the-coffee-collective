@@ -17,9 +17,9 @@ urlpatterns = [
     path('checkout/', include('checkout.urls')),
     path('profile/', include('profiles.urls')),
     path('company/', include('company.urls')),
-    path("favicon.ico",
+    path('favicon.ico',
          RedirectView.as_view(
-            url=staticfiles_storage.url("images/favicon.ico")
+            url=staticfiles_storage.url('images/favicon.ico')
             ),),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 

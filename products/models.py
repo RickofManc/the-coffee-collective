@@ -47,12 +47,12 @@ class Review(models.Model):
         Product, on_delete=models.CASCADE, related_name='reviews'
     )
     username = models.ForeignKey(User, on_delete=models.CASCADE,
-                                 related_name="user_reviews")
-    message = models.TextField(help_text="Add your review here")
+                                 related_name='user_reviews')
+    message = models.TextField(help_text='Add your review here')
     created_on = models.DateTimeField(auto_now_add=True)
 
     class Meta:
-        ordering = ["-created_on"]
+        ordering = ['-created_on']
 
     def __str__(self):
-        return f"Review {self.message} by {self.username}"
+        return f'Review {self.message} by {self.username}'

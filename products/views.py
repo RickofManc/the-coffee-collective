@@ -70,7 +70,7 @@ def product_detail(request, product_id):
 
     # Return the requested product or 404
     product = get_object_or_404(Product, pk=product_id)
-    reviews = product.reviews.order_by("-created_on")
+    reviews = product.reviews.order_by('-created_on')
 
     if request.user.is_authenticated:
         review_form = ReviewForm(data=request.POST)
