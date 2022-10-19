@@ -16,3 +16,4 @@ class Contact(models.Model):
         """ Set verbose name """
         verbose_name = 'Contact Form'
         verbose_name_plural = 'Contact Forms'
+        ordering = ['-date_submitted']
