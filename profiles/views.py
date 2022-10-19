@@ -35,8 +35,8 @@ def profile(request):
     return render(request, template, context)
 
 
-def order_history(request, order_number):
-    """ Display the users order history """
+def single_order(request, order_number):
+    """ Displays a single historic order to user """
     order = get_object_or_404(Order, order_number=order_number)
 
     messages.info(request, (

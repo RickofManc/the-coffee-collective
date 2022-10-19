@@ -7,5 +7,5 @@ from . import views
 
 urlpatterns = [
     path('', views.profile, name='profile'),
-    path('order_history/<order_number>', views.order_history, name='order_history'),
+    path('single_order/<order_number>', views.single_order, name='single_order'),
 ]
