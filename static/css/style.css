@@ -197,6 +197,39 @@ input[name='q']::placeholder P {
     transform: rotate(45deg) translate(-8px, -8px);
 }
 
+/* Toast Messages */
+.message-container {
+    position: fixed;
+    top: 4.5rem;
+    right: 0.9375rem;
+    z-index: 999999999;
+    background-color: #aab7c4;
+}
+
+.bag-notification-wrapper {
+    height: 6.25rem;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+.toast-text {
+    color: #351c75!important;
+}
+
+.toast-body {
+    background-color: #fff;
+}
+
+.toast-button {
+    border: #674ea7 solid 0.075rem;
+    border-radius: 0;
+}
+
+.bg-warning {
+    background-color: #351c75!important;
+    color: #fff!important;
+}
+
 /* || HOMEPAGE STYLES */
 section {
     margin-bottom: 5rem;
@@ -328,21 +361,6 @@ footer {
     font-size: 2.5rem;
     color: #6c757d;
     margin-right: 1.5rem;
-}
-
-/* || MESSAGE STYLES */
-.message-container {
-    position: fixed;
-    top: 4.5rem;
-    right: 0.9375rem;
-    z-index: 999999999;
-}
-
-/* Add to bag success message */
-.bag-notification-wrapper {
-    height: 6.25rem;
-    overflow-x: hidden;
-    overflow-y: auto;
 }
 
 /* || ALLAUTH FORM FORMATTING  */
