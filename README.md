@@ -1,8 +1,10 @@
 # The Coffee Collective
 
-[Insert Website Mockup]
+<p align="center">
+        <img src="readme-images/the_coffee_collective_website_mockup.png" alt="How the website displays on differing devices"/>
+    </p>
 
-[Insert Link to Live Website]
+[Live Website](https://the-coffee-collective.herokuapp.com/)
 
 [GitHub Repo](https://github.com/RickofManc/the-coffee-collective)
 
@@ -65,9 +67,9 @@ Following a design thinking approach and using the knowledge and experience of t
     </p>
 </details><br />
 
-The output from this phase supported the ideation of potential features and also the creation of User Stories complete with Acceptance Criteria and high-level tasks for the Development Phase. The GitHub Projects Kanban Board has been used to prioritise, update and track all User Stories through to completion. Note this Kanban Board was also used for bug fixing and issue resolution, please see the Testing section of this document for further information.
+The output from this phase supported the ideation of potential features and also the creation of User Stories complete with Acceptance Criteria and high-level tasks for the Development Phase. A [GitHub Projects Kanban Board](https://github.com/users/RickofManc/projects/5/views/1) has been used to manage and track all User Stories through to completion as workflow items. The archive section has been used as a Product Backlog for features that will be developed in the next release, and therefore brought onto the Release Backlog. Note this Kanban Board was also used for bug fixing and issue resolution, please see the Testing section of this document for further information.
 
-The table below provide an overview of how the features are driving the epics, that in turn have been used to develop the user stories required to deliver the features.
+The table below provide an overview of how the features are driving the epics, that in turn have been used to develop the user stories and tasks required to deliver the features.
 
 
 <details><summary><b>Epics and User Stories Overview</b></summary>
@@ -308,6 +310,12 @@ I've utilised Google Maps within an iframe on the Homepage to promote the physic
 
 
 ### Facebook Page
+
+
+
+
+### XML Sitemap
+
 
 
 
