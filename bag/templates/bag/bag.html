@@ -20,25 +20,25 @@
     <!-- Container for Bag Items -->
     <div class="row">
         <div class="col mt-3 mb-4">
-            <p class="text-muted mb-5">Here is a summary of your bag, please check you are happy with all items before
+            <p class="text-muted text-center mb-4">Here is a summary of your bag, please check you are happy with all items before
                 proceeding to checkout below.</p>
             {% if bag_items %}
                 <!-- Layout for mobile devices -->
                 <div class="d-block d-md-none">
                     {% for item in bag_items %}
                     <div class="row">
-                        <div class="col-12 col-sm-6 mb-2">
+                        <div class="col-12 col-sm-6 mt-2 mb-2">
                             {% include 'bag/includes/product-image.html' %}
                         </div>
-                        <div class="col-12 col-sm-6 mb-2">
+                        <div class="col-12 col-sm-6 mt-2 mb-2">
                             {% include 'bag/includes/product-info.html' %}
                         </div>
-                        <div class="col-12 col-sm-6 mb-2">
-                            <p class="my-0 text-right">£{{ item.product.price }}</p>
+                        <div class="col-12 col-sm-6 mt-2 mb-2">
+                            <p class="my-0 text-right">Price: £{{ item.product.price }}</p>
                             <p class="my-0 text-right"><strong>Subtotal:
-                                </strong>£{{ item.product.price | calc_subtotal:item.quantity }}</p>
+                                £{{ item.product.price | calc_subtotal:item.quantity }}</strong></p>
                         </div>
-                        <div class="col-12 col-sm-6 mb-4">
+                        <div class="col-12 col-sm-6 mt-4 mb-4 quantity-div">
                             {% include 'bag/includes/quantity-form.html' %}
                         </div>
                     </div>    
@@ -61,8 +61,8 @@
                     </div>
                 </div>
                 <!-- Layout for medium and large devices -->
-                <div class="table-responsive rounded-0 d-none d-md-block">
-                    <table class="table table-sm table-borderless">
+                <div class="table-responsive rounded-0 d-none d-md-block bag-contents-table-div mt-3">
+                    <table class="table table-sm table-borderless bag-contents-table">
                         <!-- Table headers -->
                         <thead>
                             <tr>

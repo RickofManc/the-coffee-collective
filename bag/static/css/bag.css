@@ -34,19 +34,48 @@
     text-align: center;
 }
 
+.bag-contents-table-div {
+    text-align: -webkit-center;
+}
+
+.bag-contents-table {
+    width: 80%;
+}
+
 
 /****************************************************************/
 
 /* |||| MEDIA QUERIES  */
 
 /* // Extra Small devices (iPhone 5, Galaxy Fold, 280px and up) */
-@media (min-width: 280px) {}
+@media (min-width: 280px) {
+    
+    .update-form-div {
+        margin-left: 25%;
+        margin-right: 25%;
+    }
+    
+    .free-delivery-alert {
+        color: #351c75;
+        text-align: center;
+    }
+}
 
 /* // Small devices (landscape phones, 576px and up) */
 @media (min-width: 576px) {}
 
 /* Medium devices (tablets, 768px and up) */
-@media (min-width: 768px) {}
+@media (min-width: 768px) {
+
+    .update-form-div {
+        margin-left: 0;
+        margin-right: 0;
+    }
+    
+    .free-delivery-alert {
+        text-align: right;
+    }
+}
 
 /* Large devices (desktops, 992px and up) */
 @media (min-width: 992px) {}
