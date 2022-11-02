@@ -559,7 +559,13 @@ if 'USE_AWS' in os.environ:
 <details>
     <summary></summary>
 
-Stripe has been used to receive payments from customers. To implement you need to have an account with Stripe and follow the [documentation](https://stripe.com/docs) add incorporate the guided HTML, Python and JavaScript code.
+Stripe has been used to receive payments from customers. To implement you need to have an account with Stripe and follow the [documentation](https://stripe.com/docs) add incorporate the guided HTML, Python and JavaScript code. Be sure to add the secret key generated with Stripe to your Heroku Config Variables.
+
+Once Stripe is activate you can test the checkout process with a test credit card detail provided by Stripe. Please use these details (below) and not real card details as there is no guarantee monies can be returned as this is a fictitious site.
+
+# CARD NO            MM / YY  CVC  ZIP/Post Code
+4242 4242 4242 4242  04 / 24  242  42424
+
 </details>
 
 
