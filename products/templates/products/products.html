@@ -51,8 +51,10 @@
                         (A-Z)</option>
                     <option value="category_desc" {% if current_sorting == 'category_desc' %}selected{% endif %}>
                         Category (Z-A)</option>
-                    <option value="intensity_asc" {% if current_sorting == 'intensity_asc' %}selected{% endif %}>Coffee Intensity (weak to strong)</option>
-                    <option value="intensity_desc" {% if current_sorting == 'intensity_desc' %}selected{% endif %}>Coffee Intensity (strong to weak)</option>
+                    <option value="intensity_asc" {% if current_sorting == 'intensity_asc' %}selected{% endif %}>Coffee
+                        Intensity (weak to strong)</option>
+                    <option value="intensity_desc" {% if current_sorting == 'intensity_desc' %}selected{% endif %}>
+                        Coffee Intensity (strong to weak)</option>
                 </select>
             </div>
         </div>
@@ -100,14 +102,11 @@
                                     {% endif %}
                                 </div>
                             </div>
-                            <!-- Buttons to Learn More / Add to Bag -->
+                            <!-- Button to Learn More -->
                             <div class="row">
-                                <div class="col">
-                                    <a href="{% url 'product_detail' product.id %}"
-                                        class="btn learn-more-btn">Learn<br>More</a>
-                                </div>
-                                <div class="col">
-                                    <a href="" class="btn quick-add-btn">Quick<br>Add</a>
+                                <div class="col learn-more-btn-div">
+                                    <a href="{% url 'product_detail' product.id %}" class="btn learn-more-btn">Learn
+                                        More</a>
                                 </div>
                             </div>
                         </div>
