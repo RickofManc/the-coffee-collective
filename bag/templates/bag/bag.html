@@ -20,98 +20,99 @@
     <!-- Container for Bag Items -->
     <div class="row">
         <div class="col mt-3 mb-4">
-            <p class="text-muted text-center mb-4">Here is a summary of your bag, please check you are happy with all items before
+            <p class="text-muted text-center mb-4">Here is a summary of your bag, please check you are happy with all
+                items before
                 proceeding to checkout below.</p>
             {% if bag_items %}
-                <!-- Layout for mobile devices -->
-                <div class="d-block d-md-none">
-                    {% for item in bag_items %}
-                    <div class="row">
-                        <div class="col-12 col-sm-6 mt-2 mb-2">
-                            {% include 'bag/includes/product-image.html' %}
-                        </div>
-                        <div class="col-12 col-sm-6 mt-2 mb-2">
-                            {% include 'bag/includes/product-info.html' %}
-                        </div>
-                        <div class="col-12 col-sm-6 mt-2 mb-2">
-                            <p class="my-0 text-right">Price: £{{ item.product.price }}</p>
-                            <p class="my-0 text-right"><strong>Subtotal:
+            <!-- Layout for mobile devices -->
+            <div class="d-block d-md-none">
+                {% for item in bag_items %}
+                <div class="row">
+                    <div class="col-12 col-sm-6 mt-2 mb-2">
+                        {% include 'bag/includes/product-image.html' %}
+                    </div>
+                    <div class="col-12 col-sm-6 mt-2 mb-2">
+                        {% include 'bag/includes/product-info.html' %}
+                    </div>
+                    <div class="col-12 col-sm-6 mt-2 mb-2">
+                        <p class="my-0 text-right">Price: £{{ item.product.price }}</p>
+                        <p class="my-0 text-right"><strong>Subtotal:
                                 £{{ item.product.price | calc_subtotal:item.quantity }}</strong></p>
-                        </div>
-                        <div class="col-12 col-sm-6 mt-4 mb-4 quantity-div">
+                    </div>
+                    <div class="col-12 col-sm-6 mt-4 mb-4 quantity-div">
+                        {% include 'bag/includes/quantity-form.html' %}
+                    </div>
+                </div>
+                <!-- Divider between each item above -->
+                <div class="row">
+                    <div class="col">
+                        <hr>
+                    </div>
+                </div>
+                {% endfor %}
+                <div class="row">
+                    <div class="col-12 col-sm-6 mb-2 mt-2">
+                        {% include 'bag/includes/bag-total.html' %}
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12 col-sm-6 mb-2 text-center">
+                        {% include 'bag/includes/checkout-buttons.html' %}
+                    </div>
+                </div>
+            </div>
+            <!-- Layout for medium and large devices -->
+            <div class="table-responsive rounded-0 d-none d-md-block bag-contents-table-div mt-3">
+                <table class="table table-sm table-borderless bag-contents-table">
+                    <!-- Table headers -->
+                    <thead>
+                        <tr>
+                            <th scope="col">Product Info</th>
+                            <th scope="col"></th>
+                            <th scope="col">Price</th>
+                            <th scope="col">Qty</th>
+                            <th scope="col" class="text-right">Subtotal</th>
+                        </tr>
+                    </thead>
+                    <!-- Table row for Product details -->
+                    {% for item in bag_items %}
+                    <tr>
+                        <td class="p-3 w-25">
+                            {% include 'bag/includes/product-image.html' %}
+                        </td>
+                        <td class="py-3">
+                            {% include 'bag/includes/product-info.html' %}
+                        </td>
+                        <td class="py-3">
+                            <p class="my-0">£{{ item.product.price }}</p>
+                        </td>
+                        <td class="py-3 w-25">
                             {% include 'bag/includes/quantity-form.html' %}
-                        </div>
-                    </div>    
-                    <!-- Divider between each item above -->
-                    <div class="row">
-                        <div class="col">
-                            <hr>
-                        </div>
-                    </div>
+                        </td>
+                        <td class="py-3">
+                            <p class="my-0 text-right">£{{ item.product.price | calc_subtotal:item.quantity }}</p>
+                        </td>
+                    </tr>
                     {% endfor %}
-                    <div class="row">
-                        <div class="col-12 col-sm-6 mb-2 mt-2">
+                    <!-- Table row for Bag Total (£) -->
+                    <tr>
+                        <td colspan="5" class="pt-5 text-right">
                             {% include 'bag/includes/bag-total.html' %}
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-12 col-sm-6 mb-2 text-center">
+                        </td>
+                    </tr>
+                    <!-- Table row for navigation buttons Keep Shopping/Checkout -->
+                    <tr>
+                        <td colspan="5" class="text-right">
                             {% include 'bag/includes/checkout-buttons.html' %}
-                        </div>
-                    </div>
-                </div>
-                <!-- Layout for medium and large devices -->
-                <div class="table-responsive rounded-0 d-none d-md-block bag-contents-table-div mt-3">
-                    <table class="table table-sm table-borderless bag-contents-table">
-                        <!-- Table headers -->
-                        <thead>
-                            <tr>
-                                <th scope="col">Product Info</th>
-                                <th scope="col"></th>
-                                <th scope="col">Price</th>
-                                <th scope="col">Qty</th>
-                                <th scope="col" class="text-right">Subtotal</th>
-                            </tr>
-                        </thead>
-                        <!-- Table row for Product details -->
-                        {% for item in bag_items %}
-                        <tr>
-                            <td class="p-3 w-25">
-                                {% include 'bag/includes/product-image.html' %}
-                            </td>
-                            <td class="py-3">
-                                {% include 'bag/includes/product-info.html' %}
-                            </td>
-                            <td class="py-3">
-                                <p class="my-0">£{{ item.product.price }}</p>
-                            </td>
-                            <td class="py-3 w-25">
-                                {% include 'bag/includes/quantity-form.html' %}
-                            </td>
-                            <td class="py-3">
-                                <p class="my-0 text-right">£{{ item.product.price | calc_subtotal:item.quantity }}</p>
-                            </td>
-                        </tr>
-                        {% endfor %}
-                        <!-- Table row for Bag Total (£) -->
-                        <tr>
-                            <td colspan="5" class="pt-5 text-right">
-                                {% include 'bag/includes/bag-total.html' %}
-                            </td>
-                        </tr>
-                        <!-- Table row for navigation buttons Keep Shopping/Checkout -->
-                        <tr>
-                            <td colspan="5" class="text-right">
-                                {% include 'bag/includes/checkout-buttons.html' %}
-                            </td>
-                        </tr>
-                    </table>
-                </div>
+                        </td>
+                    </tr>
+                </table>
+            </div>
             {% else %}
-                <!-- Information and navigation if the bag is empty -->
-                <p class="lead mb-5">Your bag is empty.</p>
-                <!-- Back to products page -->
-                <button><a href="{% url 'products' %}" class="btn back-btn">Keep<br>Shopping</a></button>
+            <!-- Information and navigation if the bag is empty -->
+            <p class="lead mb-5">Your bag is empty.</p>
+            <!-- Back to products page -->
+            <button><a href="{% url 'products' %}" class="btn back-btn">Keep<br>Shopping</a></button>
             {% endif %}
         </div>
     </div>
