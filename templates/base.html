@@ -11,6 +11,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
   <meta name="author" content="Rick Atherton" />
+  <meta name="description"
+    content="The Coffee Collective are a community of coffee lovers, they sell hand roasted coffee on the streets of Manchester everyday, and they also sell online with delivery to your door.">
   <meta name="keywords"
     content="Espresso coffee beans, Fresh coffee machine, Fresh coffee beans, Fresh coffee ground, Cafetiere coffee ground strong, Coffee mug, Coffee cup, Coffee lover clothing, Cafetiere, Fresh coffee near me, Coffee in Manchester" />
   {% endblock %}
@@ -78,25 +80,25 @@
     <!-- Dropdown Nav Menus & Search Feature -->
     {% include 'includes/main-nav.html' %}
   </nav>
-  
+
   <!-- Container to display standard messages to the user -->
   {% if messages %}
-    <!-- Flexbox container for aligning the Bootstrap toasts -->
-      <div class="message-container">
-        {% for message in messages %}
-          {% with message.level as level %}
-            {% if level == 40 %}
-                {% include 'includes/toasts/toast_error.html' %}
-            {% elif level == 30 %}
-                {% include 'includes/toasts/toast_warning.html' %}
-            {% elif level == 25 %}
-                {% include 'includes/toasts/toast_success.html' %}
-            {% else %}
-                {% include 'includes/toasts/toast_info.html' %}
-            {% endif %}
-          {% endwith %}
-        {% endfor %}
-      </div>
+  <!-- Flexbox container for aligning the Bootstrap toasts -->
+  <div class="message-container">
+    {% for message in messages %}
+    {% with message.level as level %}
+    {% if level == 40 %}
+    {% include 'includes/toasts/toast_error.html' %}
+    {% elif level == 30 %}
+    {% include 'includes/toasts/toast_warning.html' %}
+    {% elif level == 25 %}
+    {% include 'includes/toasts/toast_success.html' %}
+    {% else %}
+    {% include 'includes/toasts/toast_info.html' %}
+    {% endif %}
+    {% endwith %}
+    {% endfor %}
+  </div>
   {% endif %}
 
   <!-- Main content where independent html templates will act as the different page views -->
