@@ -319,11 +319,9 @@ I've utilised Google Maps within an iframe on the Homepage to promote the physic
 
 To further increase traffic to the website, a Facebook page has been created that will display information about the products and family run business.
 
-
 <p align="center">
     <img src="readme-images/the_coffee_collective_facebook_mockup.png" alt="Homepage feature allowing users to navigate to the coffee shop" />
 </p>
-
 
 <br />
 
@@ -333,6 +331,135 @@ To further increase traffic to the website, a Facebook page has been created tha
 <br />
 
 ## Features
+
+
+### Brand Navbar and Navbar Search
+
+Using a customised Bootstrap 4 'Brand Navbar' I have implemented a fixed navbar that remains at the top of all pages all of the time. This allows users to easily move between pages using the drop down menu's or directly clicking Search, My Account or their Bag.
+
+<p align="center">
+    <img src="readme-images/the_coffee_collective_navbar.png" />
+</p>
+
+The navbar is responsive, collapsing to a conventional burger menu on mobile devices.
+
+<p align="center">
+    <img src="readme-images/the_coffee_collective_mobile_navbar.png" />
+</p>
+
+<br />
+
+
+### Homepage 
+
+The homepage carries several features from enticing imagery through the carousal complete with links to products, key information about the physical coffee shop location, an introduction to the owners and an optional sign-up to a newsletter.
+
+<p align="center">
+    <img src="readme-images/the_coffee_collective_homepage_features.png" />
+</p>
+
+<br />
+
+
+### Footer
+
+The footer offers a contrasting colour theme from the navbar to support users navigation in distinguishing the top from the bottom of the website. The footer is available on all site pages to enable quick access to key information to improve the users journey and promote the businesses socials.
+
+<p align="center">
+    <img src="readme-images/the_coffee_collective_footer.png" />
+</p>
+
+<br />
+
+
+### Brand Logo
+
+I've opted not incorporate the logo within the navbar as the font choice provides impact given the contrasting colours. The logo has been used as the favicon and is available for other areas of the site as it develops. The choice of font has been carried through to the labelling of the hand roasted coffee to provide a consistent and trusting feel for users.
+
+<p align="center">
+    <img src="readme-images/the_coffee_collective_brand_logo.png" />
+</p>
+
+<br />
+
+
+### Products & Customers Reviews
+
+Using a Bootstrap Grid, the products are set out in rows with each product aligned to a card. The card provides brief info with users able to find out more from either conventionally clicking on the image or by the 'Learn More' button in case the image does not load. 
+
+<p align="center">
+    <img src="readme-images/the_coffee_collective_products.png" />
+</p>
+
+<br />
+
+Clicking through provides more information on the specific product with options to add the item to their bag. Size options are also visible on this page.
+This page also promotes feedback from users through 'Customer Reviews'. Only users who are registered can leave a review so there is a handy link to encourage this feature. Reviews are published immediately to provide a feeling of success to the user. The business assess reviews regularly to ensure there is nothing inflammatory - at which point they could be deleted through Django Admin.
+
+<p align="center">
+    <img src="readme-images/the_coffee_collective_product_in_detail.png" />
+</p>
+
+<br />
+
+### Bag
+
+
+
+<br />
+
+### Checkout
+
+
+
+<br />
+
+### User Profile
+
+
+
+
+<br />
+
+### Contact
+
+
+
+### FAQs
+
+
+
+### Company Information
+
+
+
+
+
+### Admin
+
+
+
+
+
+##### Product Management
+
+
+Add
+
+Edit
+
+Delete
+
+
+
+
+### Error Pages
+
+To support user navigation should they experience an error, I have included custom 403, 404, 500 and 505 pages so users can easily navigate back to the homepage.
+
+
+
+
 
 
 
