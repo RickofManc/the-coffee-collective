@@ -113,20 +113,21 @@ An agile approach of keeping the features simple and aligned to the strategy for
 #### In Scope Features
 * Responsive Navbar complete with product search, category menus, user account access.
 * A streamlined checkout that is easy-to-edit and retains products between visits.
-* New product listings, discounts and recommendations visible on the homepage.
-* Optional user accounts with editable profile data, order history and the storing of shipping details
+* Information about the business visible on the homepage, and a dedicated 'About' page.
+* Optional user accounts with editable profile data, order history and the storing of shipping details.
 * Registered users will be able to leave product reviews to help build trust in the products for new customers.
-* A 10% discount code provided to those users signing up for the monthly newsletter.
+* Users can keep informed on products and news from the business through signing up to the newsletter.
 * Free shipping on orders over £30.
-* Business pages to inform of the company, and their position towards Accessibility, Copyright etc.
+* FAQ's to help the users navigation and experience of the site and service.
+* Specific pages to inform users of the business' position Accessibility, Copyright etc.
 * Clear Terms & Conditions.
-* FAQ's to help the users navigation and experience of the site and service
 
 
 #### Out of Scope Features - for future release
 * Site visitors being able to compare products side by side.
 * Realtime stock inventory updating the site when a product is out of stock.
 * All site visitors should have an option to share a product listing via social media.
+* A 10% discount code provided to those users signing up for the monthly newsletter.
 * Single Sign-on to user accounts with social media logins.
 * The status of a placed order with the users account area.
 * Sale of e-vouchers to buy as gifts to be redeemed in the store.
@@ -269,19 +270,25 @@ Firstly, a strong bold font has been selected in 'Bebas Neue' for titles and sub
 <br />
 
 
-
 ***
 
 <br />
 
 ## Web Marketing Strategy
 
-Using the user research where I created user personas and the other aspects of design thinking, I have created marketing features to improve search results ranking and in turn increase traffic to the clients website.
+Building on the insights gained as part of the Design Thinking phase and Keyword research as part of the Skeleton phase, I've introduced specific features to market the business. The primary aim of which is to optimise search engine ranking and in turn increase traffic to the website.
 
 
 ### Search Engine Optimisation (SEO)
 
-SEO research is key to driving traffic from a browser based search i.e. Google to the website.
+SEO research is key to driving traffic from a browser based search i.e. Google to the website. The keyword research (see Skeleton section) has played a crucial role in incorporate words that users typical search for when looking to purchase coffee online. To help improve the search engine ranking I ensured each web page has it's own title, and the site carries meta tags for a description and keywords which encapsulate the general content and focus of this B2C site.
+
+
+### XML Sitemap 
+
+Additionally to help the search engines crawl the website, I have created an XML sitemap file which has been located within the site repo. The file was created using the free service through [XML-Sitemaps.com](https://www.xml-sitemaps.com/). A sitemap is a way of organizing a website, identifying the URLs and the data under each section. Previously, the sitemaps were primarily geared for the users of the website. However, Google's XML format was designed for the search engines, allowing them to find the data faster and more efficiently.
+
+A robots.txt file has also be included in the build to tell the search engine crawlers which URLs the crawler can access on this site. This is used mainly to avoid overloading the site with requests.
 
 
 ### MailChimp Newsletter
@@ -308,16 +315,17 @@ I've utilised Google Maps within an iframe on the Homepage to promote the physic
 </details><br />
 
 
-
 ### Facebook Page
 
+To further increase traffic to the website, a Facebook page has been created that will display information about the products and family run business.
 
 
+<p align="center">
+    <img src="readme-images/the_coffee_collective_facebook_mockup.png" alt="Homepage feature allowing users to navigate to the coffee shop" />
+</p>
 
-### XML Sitemap
 
-
-
+<br />
 
 
 ***
