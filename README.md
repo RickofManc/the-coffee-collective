@@ -332,6 +332,10 @@ To further increase traffic to the website, a Facebook page has been created tha
 
 ## Features
 
+This section will outline the key features deployed as part of the MVP. Further information of how these features were selected and what is in scope for future releases can be found in the 'Strategic Opportunities' section.
+
+<br />
+
 
 ### Brand Navbar and Navbar Search
 
@@ -340,6 +344,8 @@ Using a customised Bootstrap 4 'Brand Navbar' I have implemented a fixed navbar 
 <p align="center">
     <img src="readme-images/the_coffee_collective_navbar.png" />
 </p>
+
+<br />
 
 The navbar is responsive, collapsing to a conventional burger menu on mobile devices.
 
@@ -353,6 +359,8 @@ The navbar is responsive, collapsing to a conventional burger menu on mobile dev
 ### Homepage 
 
 The homepage carries several features from enticing imagery through the carousal complete with links to products, key information about the physical coffee shop location, an introduction to the owners and an optional sign-up to a newsletter.
+
+<br />
 
 <p align="center">
     <img src="readme-images/the_coffee_collective_homepage_features.png" />
@@ -393,6 +401,7 @@ Using a Bootstrap Grid, the products are set out in rows with each product align
 
 <br />
 
+
 Clicking through provides more information on the specific product with options to add the item to their bag. Size options are also visible on this page.
 This page also promotes feedback from users through 'Customer Reviews'. Only users who are registered can leave a review so there is a handy link to encourage this feature. Reviews are published immediately to provide a feeling of success to the user. The business assess reviews regularly to ensure there is nothing inflammatory - at which point they could be deleted through Django Admin.
 
@@ -402,31 +411,84 @@ This page also promotes feedback from users through 'Customer Reviews'. Only use
 
 <br />
 
+
 ### Bag
 
+The bag page provides an overview of all of the items added by the user. The information aims to confirm what the user has selected with a table of information about the product and a supporting image. The price of all items is calculated and provided as a 'subtotal' with the delivery charge (if applicable). Users can amend the quantity of a product or remove entirely from the basket before proceeding the to the secure checkout. Furthermore there is a button to enable the user to 'Keep Shopping' to add further items to their bag.
 
+<p align="center">
+    <img src="readme-images/the_coffee_collective_bag.png" />
+</p>
 
 <br />
+
 
 ### Checkout
 
+This page enables the user to complete their transaction. As with the bag page it is separated into two sections, delivery and billing details, and an overview of the items being purchased. Placeholder text is provided to ease the users journey.
 
+Stripe payments have been integrated to manage transactions and collect payment. For the MVP test payments have been enabled using the following card details.
+
+#### CARD NO
+4242 4242 4242 4242
+#### MM / YY
+04 / 24
+#### CVC
+242
+#### Post Code
+42424
+
+<p align="center">
+    <img src="readme-images/the_coffee_collective_checkout.png" />
+</p>
 
 <br />
+
+Upon completion of the transaction, users are automatically navigated to the checkout success page (below) which provides a confirmaiton of the items purchased, with the added comfort of the confirmation being emailed to the address provided.
+
+<p align="center">
+    <img src="readme-images/the_coffee_collective_checkout_success.png" />
+</p>
+
+<br />
+
 
 ### User Profile
 
+Accessed through the 'My Account' link in the navbar, a registered and signed-in user can update their saved delivery details and view order history. Each transaction is a row with a table. The 'Order Number' can be clicked to open the order confirmation page.
 
-
+<p align="center">
+    <img src="readme-images/the_coffee_collective_profile_page.png" />
+</p>
 
 <br />
 
+
 ### Contact
 
+Users can contact the business via a form that can be navigated to either directly from the footer, or through the 'About' drop down menu within the navbar.
+In attempt to answer and questions or concerns as quick as possible, users are encouraged to first visit the FAQs page to see whether the question has already been answered
+If not, a short and simple form can be completed and submitted.  
+
+<p align="center">
+    <img src="readme-images/the_coffee_collective_contact.png" />
+</p>
+
+<br />
+
+When the user submits the form, feedback is provided through a success message confirming receipt of the form.
+
+<p align="center">
+    <img src="readme-images/the_coffee_collective_success_message.png" />
+</p>
+
+<br />
 
 
 ### FAQs
 
+
+<br />
 
 
 ### Company Information
@@ -434,11 +496,15 @@ This page also promotes feedback from users through 'Customer Reviews'. Only use
 
 
 
+<br />
+
 
 ### Admin
 
 
 
+
+<br />
 
 
 ##### Product Management
@@ -451,6 +517,8 @@ Edit
 Delete
 
 
+
+<br />
 
 
 ### Error Pages
@@ -698,8 +766,14 @@ Stripe has been used to receive payments from customers. To implement you need t
 
 Once Stripe is activate you can test the checkout process with a test credit card detail provided by Stripe. Please use these details (below) and not real card details as there is no guarantee monies can be returned as this is a fictitious site.
 
-# CARD NO            MM / YY  CVC  ZIP/Post Code
-4242 4242 4242 4242  04 / 24  242  42424
+#### CARD NO
+4242 4242 4242 4242
+#### MM / YY
+04 / 24
+#### CVC
+242
+#### Post Code
+42424
 
 </details>
 
