@@ -219,12 +219,18 @@
 
     /* || PRODUCT STYLES  */
     .product-img-container {
-        min-height: 17rem;
+        min-height: 22rem;
     }
 }
 
 /* Extra large devices (large desktops, 1200px and up) */
-@media (min-width: 1200px) {}
+@media (min-width: 1200px) {
+
+    /* || PRODUCT STYLES  */
+    .product-img-container {
+        min-height: 25rem;
+    }
+}
 
 
 /* Extra extra large devices (large desktops, 2560px and up) */
@@ -237,6 +243,7 @@
     .product-details-container,
     .product-img-container {
         margin-top: 5rem!important;
+        min-height: 35rem;
     }
 
     .product-detail-title {
