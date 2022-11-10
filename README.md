@@ -472,6 +472,7 @@ If not, a short and simple form can be completed and submitted.
 
 <br />
 
+
 When the user submits the form, feedback is provided through a success message confirming receipt of the form.
 
 <p align="center">
@@ -483,36 +484,47 @@ When the user submits the form, feedback is provided through a success message c
 
 ### FAQs
 
+A section of frequently asked questions have been included to help provide a positive user experiences. Naturally users will have questions, so this page sets out to answers these quicker than having to call the coffee shop or wait for a response to an email. The set of questions identified for MVP can be added to as we discover more questions from increased users on the site. An accordion style feature has been selected to enable easy scrolling of the questions, and a simple drop down to reveal the answer once the user has found an appropriate question. 
+
+<p align="center">
+    <img src="readme-images/the_coffee_collective_faqs.png" />
+</p>
 
 <br />
 
 
 ### Company Information
 
+To convert 'Browsers' and 'Researchers' into buyers we have to convey the reasons why they should purchase from TCC. If we can communicate this we should be able to instil the same beliefs TCC have in their coffee into these user types. If successful trade should increase. To do this I have included a page on the company, and it's rich history in the coffee trade, and in addition key information on sustainability and accessibility to communicate some of the values of TCC.
 
-
+<p align="center">
+    <img src="readme-images/the_coffee_collective_our_story.png" />
+</p>
 
 <br />
 
 
 ### Admin
 
+To convert 'Browsers' and 'Researchers' into buyers we have to convey the reasons why they should purchase from TCC. If we can communicate this we should be able to instil the same beliefs TCC have in their coffee into these user types. If successful trade should increase. To do this I have included a page on the company, and it's rich history in the coffee trade, and in addition key information on sustainability and accessibility to communicate some of the values of TCC.
 
-
+<p align="center">
+    <img src="readme-images/the_coffee_collective_our_story.png" />
+</p>
 
 <br />
 
 
 ##### Product Management
 
-
-Add
-
-Edit
-
-Delete
+This feature is enabled for super users only. Currently there is only one super user however the client may wish to add more as the inventory list increases. 
+With this role based permission setting you can perform CRUD (Create, Review, Update and Delete) products from either the front or back end. 
+The front end product management incorporates Bootstrap and Crispy to present clean forms to either Add, Edit or Delete a product. Super admins can review a product within the Product Details page - which when signed-in as a super user presents to links to either 'Edit' or 'Delete' and item. Otherwise this user type can add a product through the 'My Account' drop-down nav menu, and selecting 'Product Management'. Below is an image of one of these screens, the ability to Update/Edit a product in the front end. 
 
 
+<p align="center">
+    <img src="readme-images/the_coffee_collective_edit_product.png" />
+</p>
 
 <br />
 
@@ -520,11 +532,14 @@ Delete
 ### Error Pages
 
 To support user navigation should they experience an error, I have included custom 403, 404, 500 and 505 pages so users can easily navigate back to the homepage.
+Therefore reducing the risk of the user leaving the site completely due to a bad user experience. Below is an example of one of these pages (which are all styled the same).
+
+<p align="center">
+    <img src="readme-images/the_coffee_collective_error_page.png" />
+</p>
 
 
-
-
-
+<br />
 
 
 ***
@@ -636,24 +651,26 @@ Meta data is included within the HTML head element to increase the traffic to th
 * [LambdaTest](https://www.lambdatest.com/) for cross browser testing, specifically macOS Safari and Opera.
 
 
-
-
-
 ***
 
 <br />
 
+
 ## Testing
 
+Following a manual process for development and deployment, I have chosen to perform manual testing for the MVP.
+Testing procedures will ensure the deployed site aligns to the site in development through covering the following aspects:
+
+* Page validation - ensuring that all features are working, including all links perform as designed.
+* Responsiveness - ensuring each page is responsive through the three media queries covering mobiles, tablets-laptops and desktop monitors.
+* Accessibility - each page is tested for compliance with accessibility guidelines using the WAVE online assessment tool.
+* Performance - using Chrome's developer tool 'Lighthouse Testing' pages are tested for performance, best-practice and SEO.
+* Browser - pages are tested for layout, features and general performance across Chrome, Firefox, Edge, Internet Explorer 11 and Opera.
+* Device - manual testing will be performed on an iOS and Android mobile, Tablet, Laptop and Desktop to ensure all users have a positive experience no matter which device or browser they prefer to use. 
+* Code validation - ensuring the code base is validated using industry standard tools for HTML, CSS, JavaScript and Python code.
 
 
-
-
-
-
-
-
-
+<br />
 
 ***
 
