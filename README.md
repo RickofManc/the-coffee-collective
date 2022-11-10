@@ -429,14 +429,10 @@ This page enables the user to complete their transaction. As with the bag page i
 
 Stripe payments have been integrated to manage transactions and collect payment. For the MVP test payments have been enabled using the following card details.
 
-#### CARD NO
-4242 4242 4242 4242
-#### MM / YY
-04 / 24
-#### CVC
-242
-#### Post Code
-42424
+| CARD NO             | MM / YY | CVC | Post Code |
+| ------------------- | ------- | --- | --------- |
+| 4242 4242 4242 4242 | 04 / 24 | 242 | 42424     |
+
 
 <p align="center">
     <img src="readme-images/the_coffee_collective_checkout.png" />
@@ -444,7 +440,7 @@ Stripe payments have been integrated to manage transactions and collect payment.
 
 <br />
 
-Upon completion of the transaction, users are automatically navigated to the checkout success page (below) which provides a confirmaiton of the items purchased, with the added comfort of the confirmation being emailed to the address provided.
+Upon completion of the transaction, users are automatically navigated to the checkout success page (below) which provides a confirmation of the items purchased, with the added comfort of the confirmation being emailed to the address provided.
 
 <p align="center">
     <img src="readme-images/the_coffee_collective_checkout_success.png" />
@@ -458,7 +454,7 @@ Upon completion of the transaction, users are automatically navigated to the che
 Accessed through the 'My Account' link in the navbar, a registered and signed-in user can update their saved delivery details and view order history. Each transaction is a row with a table. The 'Order Number' can be clicked to open the order confirmation page.
 
 <p align="center">
-    <img src="readme-images/the_coffee_collective_profile_page.png" />
+    <img src="readme-images/the_coffee_collective_profile.png" />
 </p>
 
 <br />
@@ -766,14 +762,9 @@ Stripe has been used to receive payments from customers. To implement you need t
 
 Once Stripe is activate you can test the checkout process with a test credit card detail provided by Stripe. Please use these details (below) and not real card details as there is no guarantee monies can be returned as this is a fictitious site.
 
-#### CARD NO
-4242 4242 4242 4242
-#### MM / YY
-04 / 24
-#### CVC
-242
-#### Post Code
-42424
+| CARD NO             | MM / YY | CVC | Post Code |
+| ------------------- | ------- | --- | --------- |
+| 4242 4242 4242 4242 | 04 / 24 | 242 | 42424     |
 
 </details>
 
@@ -848,9 +839,9 @@ In the Heroku App:
 ## Credit & Attributes
 
 
-### Credit
+### Credit & Thanks
 
-* Mentor Brian Macharia for continuing to guide and feedback throughout the projects lifecycle, especially on how to improve UX and my code.
+* Mentor Brian Macharia for continuing to guide and feedback throughout the projects lifecycle, especially on how to improve UX and my code through what has been a very challenging and difficult project to undertake.
 
 
 ### Attributes
