@@ -46,5 +46,11 @@
       "segafredo",
       "Segafredo",
       "Triennale"
-   ]
+   ],
+   "json.schemas": [
+   
+   ],
+   "jshint.options": {
+      "esversion":6
+   },
 }
