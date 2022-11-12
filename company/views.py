@@ -94,7 +94,7 @@ def contact(request, *args, **kwargs):
             subject = form.cleaned_data['subject'],
             message = form.cleaned_data['message'],
             form.save()
-           
+
             # send mail combining field forms
             send_mail({subject}, f'{name}, {email}, {message}',
                       settings.EMAIL_HOST_USER, [settings.EMAIL_HOST_USER],
@@ -102,7 +102,7 @@ def contact(request, *args, **kwargs):
             messages.success(
                 request, 'Thank you for contacting us \
                 - we will reply within 24 hours!')
-           
+
             # redirect to home page
             return redirect(reverse('home'))
         else:
