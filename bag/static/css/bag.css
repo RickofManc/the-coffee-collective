@@ -49,12 +49,12 @@
 
 /* // Extra Small devices (iPhone 5, Galaxy Fold, 280px and up) */
 @media (min-width: 280px) {
-    
+
     .update-form-div {
         margin-left: 25%;
         margin-right: 25%;
     }
-    
+
     .free-delivery-alert {
         color: #351c75;
         text-align: center;
@@ -71,7 +71,7 @@
         margin-left: 0;
         margin-right: 0;
     }
-    
+
     .free-delivery-alert {
         text-align: right;
     }

@@ -128,7 +128,6 @@
     letter-spacing: 0.08rem;
 }
 
-
 /* || PRODUCT FORM STYLES  */
 .btn-file {
     position: relative;
@@ -231,7 +230,6 @@
         min-height: 25rem;
     }
 }
-
 
 /* Extra extra large devices (large desktops, 2560px and up) */
 @media (min-width: 2560px) {

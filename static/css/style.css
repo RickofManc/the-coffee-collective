@@ -97,7 +97,7 @@ button {
 }
 
 input:-internal-autofill-selected {
-    background-color: none!important;
+    background-color: #fff!important;
 }
 
 input[name='q']::placeholder P {
