@@ -1,8 +1,11 @@
 from django.shortcuts import render, redirect, reverse, get_object_or_404
+from django.views import generic, View
+from django.views.generic import DeleteView
 from django.contrib import messages
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth import get_user_model
 from django.contrib.messages.views import SuccessMessageMixin
+from django.contrib.auth.mixins import LoginRequiredMixin
 from django.contrib import messages
 from django.db.models import Q
 from django.db.models.functions import Lower
@@ -122,6 +125,7 @@ def add_product(request):
 @login_required
 def edit_product(request, product_id):
     """ Edit a product from the front end """
+    # if not superuser redirect home
     if not request.user.is_superuser:
         messages.error(request, 'Sorry, only the owners can do that')
         return redirect(reverse('home'))
@@ -148,6 +152,35 @@ def edit_product(request, product_id):
     return render(request, template, context)
 
 
+class DeleteProductView(LoginRequiredMixin, SuccessMessageMixin, DeleteView):
+    """
+    Displays Delete Product page.
+    gets : requested template by name
+    returns : rendered view of the html template
+    Returns user to homepage on form submission.
+    """    
+    def get(self, request, product_id):
+        """ get product request """
+        # if not superuser redirect home
+        if not request.user.is_superuser:
+            messages.error(request, 'Sorry, only the owners can do that')
+            return redirect(reverse('home'))
+        else:
+            # return product to page
+            product = get_object_or_404(Product, pk=product_id)
+            return render(request, 'products/delete_product_page.html',
+                          {'product': product})
+
+        # def post(self, request, product_id, *args, **kwargs):
+        #     """ post delete view """
+        #     product = get_object_or_404(Product, pk=product_id)
+        #     product.delete()
+        #     messages.success(
+        #         request, f'Success, {product.name} has been deleted.')
+        #     return redirect(
+        #         reverse(reverse('home')))
+
+
 @login_required
 def delete_product(request, product_id):
     """ Delete a product from the front end """
@@ -158,4 +191,4 @@ def delete_product(request, product_id):
     product = get_object_or_404(Product, pk=product_id)
     product.delete()
     messages.success(request, 'Product successfully deleted')
-    return redirect(request('products'))
+    return redirect(reverse('products'))
