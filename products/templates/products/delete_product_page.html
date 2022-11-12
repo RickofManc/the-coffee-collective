@@ -1,0 +1,71 @@
+{% extends "base.html" %}
+{% load static %}
+{% load i18n %}
+{% block title %}{% trans 'Delete Product' %}{% endblock %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'css/products.css' %}">
+{% endblock %}
+
+{% block content %}
+<!-- User must be authenticated to view these page and perform actions -->
+{% if request.user.is_superuser %}
+<!-- Page header -->
+<div class="container-fluid">
+    <div class="row">
+        <div class="col text-center mt-3 mb-3">
+            <h1 class="page-title">Product Management</h1>
+            <hr class="w-50 mb-1">
+        </div>
+    </div>
+    <!-- Container for Deleting a product -->
+    <div class="row">
+        <div class="col-md-8 mt-3 offset-md-2">
+            <div class="card-body">
+                <h2 class="page-subtitle mb-3">Request to delete a product</h2>
+                <!-- Confirming the product identified for deletion -->
+                <h3 class="page-h3-title">{{ product.name }}</h3>
+                <br />
+                <p class="card-text">Are you sure you would like to delete this product?</p>
+                <p class="card-text">If yes, please click the 'Delete' button below.</p>
+                <p class="card-text">Note, this product cannot be reinstated once deleted.</p>
+            </div>
+        </div>
+    </div>
+    <!-- Container for delete form -->
+    <div class="row">
+        <div class="col-md-8 mt-3 offset-md-2">
+            <div class="card-body">
+                <!-- Form used to perform the action with the database -->
+                <form method="POST" action="{% url 'delete_product_page' product.pk %}" enctype="multipart/form-data">
+                    <div class="form-group">
+                        <div class="input-group">
+                        {% csrf_token %}
+                        <!-- Option to cancel if navigated to in error -->
+                        <a href="{% url 'products' %}" class="btn rounded-0 back-btn cancel-anchor-btn">Cancel</a>
+                        <!-- Button to delete the product from the database -->
+                        <button class="btn rounded-0 standard-btn delete-btn" type="submit">Delete</button>
+                        
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+{% else %}
+<!-- Information to user if navigated to in error without being signed in -->
+<div class="container fluid">
+  <div class="row justify-content-center">
+    <div class="card-block">
+      <p class="card-text">
+        Sorry you must be signed in to access this page, use the button below to
+        return to our homepage
+      </p>
+      <a href="{% url 'home' %}" class="btn rounded-0 standard-btn">Home
+      </a>
+    </div>
+  </div>
+</div>
+{% endif %} 
+{% endblock %}
