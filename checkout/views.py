@@ -1,7 +1,8 @@
 import stripe
 import json
 
-from django.shortcuts import render, reverse, redirect, get_object_or_404, HttpResponse
+from django.shortcuts import render, reverse, redirect
+from django.shortcuts import get_object_or_404, HttpResponse
 from django.contrib import messages
 from django.conf import settings
 from django.views.decorators.http import require_POST
@@ -73,7 +74,8 @@ def checkout(request):
                         order_line_item.save()
                     # if the item has sizes
                     else:
-                        for size, quantity in item_data['items_by_size'].items():
+                        for size, quantity in item_data['items_by_size']\
+                                                        .items():
                             order_line_item = OrderLineItem(
                                 order=order,
                                 product=product,
@@ -84,22 +86,25 @@ def checkout(request):
                 # Error message if product does not exist (rare)
                 except Product.DoesNotExist:
                     messages.error(request, (
-                        "One of the products in your bag wasn't found in our database."
+                        "One of the products in your bag wasn't \
+                         found in our database."
                         "Please contact us for further assistance."))
                     order.delete()
                     return redirect(reverse('view_bag'))
-            # Option for user to save their details
+            # Option for user to save details
             request.session['save_info'] = 'save-info' in request.POST
-            return redirect(reverse('checkout_success', args=[order.order_number]))
+            return redirect(reverse('checkout_success',
+                                    args=[order.order_number]))
         else:
-            messages.error(request, 'Sorry, there was an error with your form. \
+            messages.error(request, 'Sorry, there was an error with your form.\
                 Please recheck you information.')
     # Else if session data not received process as below
     else:
         # request bag session
         bag = request.session.get('bag', {})
         if not bag:
-            messages.error(request, "There's nothing in your bag at the moment")
+            messages.error(request, "There's nothing in your \
+                                     bag at the moment")
             return redirect(reverse('products'))
 
         current_bag = bag_contents(request)
@@ -149,7 +154,6 @@ def checkout(request):
 
 def checkout_success(request, order_number):
     """ Function to handle successful checkouts """
-    
     save_info = request.session.get('save_info')
     order = get_object_or_404(Order, order_number=order_number)
 
