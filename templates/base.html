@@ -9,12 +9,12 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-  <meta name="author" content="Rick Atherton" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="author" content="Rick Atherton">
   <meta name="description"
     content="The Coffee Collective are a community of coffee lovers, they sell hand roasted coffee on the streets of Manchester everyday, and they also sell online with delivery to your door.">
   <meta name="keywords"
-    content="Espresso coffee beans, Fresh coffee machine, Fresh coffee beans, Fresh coffee ground, Cafetiere coffee ground strong, Coffee mug, Coffee cup, Coffee lover clothing, Cafetiere, Fresh coffee near me, Coffee in Manchester" />
+    content="Espresso coffee beans, Fresh coffee machine, Fresh coffee beans, Fresh coffee ground, Cafetiere coffee ground strong, Coffee mug, Coffee cup, Coffee lover clothing, Cafetiere, Fresh coffee near me, Coffee in Manchester">
   {% endblock %}
 
   {% block extra_meta %}
@@ -23,8 +23,8 @@
   <!-- Core CSS -->
   {% block corecss %}
   <!-- Google Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link
     href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap"
     rel="stylesheet">
@@ -34,7 +34,7 @@
   <!-- Mailchimp Form -->
   <link href="//cdn-images.mailchimp.com/embedcode/classic-071822.css" rel="stylesheet" type="text/css">
   <!-- CSS Styles -->
-  <link rel="stylesheet" href="{% static 'css/style.css' %}" />
+  <link rel="stylesheet" href="{% static 'css/style.css' %}">
   {% endblock %}
 
   {% block extra_css %}
@@ -113,7 +113,7 @@
 
   {% block postloadjs %}
   <!-- Script to automatically remove user messages after 5 seconds -->
-  <script type="text/javascript">
+  <script>
     setTimeout(function () {
       let messages = document.getElementById("msg");
       let alert = new bootstrap.Alert(messages);
@@ -121,13 +121,13 @@
     }, 5000);
   </script>
   <!-- Script to animate burger icon on mobile devices -->
-  <script type="text/javascript">
+  <script>
     function myFunction(x) {
       x.classList.toggle("change");
     }
   </script>
   <!-- Script from Bootstrap to enable toast messaging -->
-  <script type="text/javascript">
+  <script>
     $('.toast').toast('show');
   </script>
   {% endblock %}

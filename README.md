@@ -14,12 +14,12 @@
 
 ## Background
 
-<br />
+<br>
 
 The Coffee Collective is a small family run coffee shop serving fresh coffee to city workers in Manchester. The family migrated from Italy in the 1970's and established a business that would allow them to use their knowledge and skills to help their new home. A cart was created and peddled to the city each morning to sell coffee to Mancunians. In the days before takeaway cups, customers stood and socialised whilst sipping their morning espressos and so became known to passers-by and onlookers as "the coffee collective".
 
 ***
-<br />
+<br>
 
 ## Index - Table of Contents
 
@@ -36,26 +36,26 @@ The Coffee Collective is a small family run coffee shop serving fresh coffee to 
 * [Deployment](#Deployment)
 * [Credit & Attributes](#Credit-&-attributes)
 
-<br />
+<br>
 
 ***
-<br />
+<br>
 
 ## User Experience Research and Design
 
-<br />
+<br>
 
 ### Problem Statement
 
 During the last forty years the family has diversified and setup a popular shop in the city where patrons still stand and socialise. The shop has become so popular that many coffee roasters provide bags of coffee for sale as some customers like to enjoy fresh coffee in work or at home. The COVID pandemic reduced the footfall considerably and whilst the cart was used for supplying coffee outside and socially distanced, the family know an e-commerce site would greatly help their financial stability. Furthermore, due to their popularity, the local coffee roasters would welcome the opportunity to sell their products through another channel.
 
-<br />
+<br>
 
 ### Objective
 
 Understand the user requirements to enable development of a B2C web application that allows The Coffee Collective's customers to purchase coffee online with delivery to their chosen address. The e-commerce site will also allow the family to promote new stock lines such as coffee cups, coffee making equipment and clothing. Customers will have an option to create a user account to ease future transactions through saved details, view order history etc. All site visitors will have the opportunity to sign-up for latest news and promotions delivered monthly by email.
 
-<br />
+<br>
 
 ### Design Thinking
 
@@ -65,7 +65,7 @@ Following a design thinking approach and using the knowledge and experience of t
     <p align="center">
         <img src="readme-images/the_coffee_collective_user_personas.png" alt="User Personas highlighting the needs of the differing types of users"/>
     </p>
-</details><br />
+</details><br>
 
 The output from this phase supported the ideation of potential features and also the creation of User Stories complete with Acceptance Criteria and high-level tasks for the Development Phase. A [GitHub Projects Kanban Board](https://github.com/users/RickofManc/projects/5/views/1) has been used to manage and track all User Stories through to completion as workflow items. The archive section has been used as a Product Backlog for features that will be developed in the next release, and therefore brought onto the Release Backlog. Note this Kanban Board was also used for bug fixing and issue resolution, please see the Testing section of this document for further information.
 
@@ -76,9 +76,8 @@ The table below provide an overview of how the features are driving the epics, t
     <p align="center">
         <img src="readme-images/the_coffee_collective_epics_and_user_stories.png" alt="Table highlighting the Epics, Features and User Stories"/>
     </p>
-</details><br />
+</details><br>
 
-<br />
 
 #### Strategic Opportunities
 
@@ -89,21 +88,21 @@ A list of features has been established from the User Stories. These features ha
     <p align="center">
         <img src="readme-images/the_coffee_collective_MoSCoW_assessment.png" alt="Table highlighting each features assessment of Must do, Should do, Could do and Won't do (for the MVP)"/>
     </p>
-</details><br />
+</details><br>
 
 
 <details><summary><b>Importance versus Feasibility Assessment</b></summary>
     <p align="center">
         <img src="readme-images/the_coffee_collective_importance_versus_feasibility_assessment.png" alt="Table highlighting each features assessment of importance versus feasibility for the MVP"/>
     </p>
-</details><br />
+</details><br>
 
 
 <p align="center">
     <img src="readme-images/the_coffee_collective_features_roadmap.png" alt="Chart highlighting each features assessment for importance against feasibility for the MVP"/>
 </p>
 
-<br />
+<br>
 
 ### Scope
 
@@ -133,7 +132,7 @@ An agile approach of keeping the features simple and aligned to the strategy for
 * Sale of e-vouchers to buy as gifts to be redeemed in the store.
 * Country/Language switching for global shopping convenience.
 
-<br />
+<br>
 
 
 ### Structure
@@ -149,7 +148,7 @@ This website will be built with the following design considerations. The final s
 * A sitemap (available from the Footer) will display all the important categories and pages in a single page so users can find easily what they want.
 
 
-<br />
+<br>
 
 ### Skeleton
 
@@ -161,7 +160,7 @@ Aesthetically the layout and content will be clean and clear to promote the prod
 
 In building the skeleton I used Wireframes to enable the client to feedback on how their site will look and interact ahead of development.
 
-<br />
+<br>
 
 **Keyword Research**
 
@@ -197,7 +196,7 @@ The output highlighted below helped with the naming conventions and descriptions
 * Buy coffee beans online
 * Locally roasted coffee near me
 
-<br />
+<br>
 
 #### Wireframes
 
@@ -211,23 +210,23 @@ The website is responsive through differing screen widths being designed for mob
     <p align="center">
         <img src="readme-images/the_coffee_collective_homepage_wireframe.png" alt="Homepage wireframe for desktop and mobile devices" />
     </p>
-</details><br />
+</details><br>
 
 <details>
     <summary><b>Products Page Wireframe</b></summary>
     <p align="center">
         <img src="readme-images/the_coffee_collective_all_products_page_wireframe.png" alt="Products page wireframe for desktop and mobile devices" />
     </p>
-</details><br />
+</details><br>
 
 <details>
     <summary><b>Product in Detail Page Wireframe</b></summary>
     <p align="center">
         <img src="readme-images/the_coffee_collective_product_in_detail_page_wireframe.png" alt="Product in detail page wireframe for desktop and mobile devices" />
     </p>
-</details><br />
+</details><br>
 
-<br />
+<br>
 
 ### Surface
 
@@ -244,7 +243,7 @@ Purple has been offset with some softer Grey tones to ensure where necessary inf
     <img src="readme-images/the_coffee_collective_colour_palette.png" alt="The Coffee Collective Colour Palette"/>
 </p>
 
-<br />
+<br>
 
 The mock-up's enabled me to work through differing layout styles with this colour palette in mind, whilst using [Contrast Checker](https://coolors.co/contrast-checker) to test whether the combinations of colours would be accessible for visual impaired users. The main Purple tone was evaluated as 'Super' whilst the slightly lighter shade will be used for larger text areas as guided.
 
@@ -254,7 +253,7 @@ The mock-up's enabled me to work through differing layout styles with this colou
         <img src="readme-images/the_coffee_collective_contrast_checker.png" alt="Results of checking the colour palette for good contrast to support visually impaired users"/>
     </p>
 </details>
-<br />
+<br>
 
 
 #### Fonts
@@ -267,12 +266,12 @@ Firstly, a strong bold font has been selected in 'Bebas Neue' for titles and sub
     <img src="readme-images/the_coffee_collective_fonts.png" alt="Image showing the two font choices Bebas Neue and Open Sans"/>
 </p>
 
-<br />
+<br>
 
 
 ***
 
-<br />
+<br>
 
 ## Web Marketing Strategy
 
@@ -300,7 +299,7 @@ To allow the business to communicate with their customers to promote products an
     <p align="center">
         <img src="readme-images/the_coffee_collective_mailchimp_newsletter.png" alt="Homepage feature allowing users to sign-up for a newsletter" />
     </p>
-</details><br />
+</details><br>
 
 
 ### Coffee Shop Location
@@ -312,7 +311,7 @@ I've utilised Google Maps within an iframe on the Homepage to promote the physic
     <p align="center">
         <img src="readme-images/the_coffee_collective_google_maps.png" alt="Homepage feature allowing users to navigate to the coffee shop" />
     </p>
-</details><br />
+</details><br>
 
 
 ### Facebook Page
@@ -323,18 +322,18 @@ To further increase traffic to the website, a Facebook page has been created tha
     <img src="readme-images/the_coffee_collective_facebook_mockup.png" alt="Homepage feature allowing users to navigate to the coffee shop" />
 </p>
 
-<br />
+<br>
 
 
 ***
 
-<br />
+<br>
 
 ## Features
 
 This section will outline the key features deployed as part of the MVP. Further information of how these features were selected and what is in scope for future releases can be found in the 'Strategic Opportunities' section.
 
-<br />
+<br>
 
 
 ### Brand Navbar and Navbar Search
@@ -345,7 +344,7 @@ Using a customised Bootstrap 4 'Brand Navbar' I have implemented a fixed navbar 
     <img src="readme-images/the_coffee_collective_navbar.png" />
 </p>
 
-<br />
+<br>
 
 The navbar is responsive, collapsing to a conventional burger menu on mobile devices.
 
@@ -353,20 +352,20 @@ The navbar is responsive, collapsing to a conventional burger menu on mobile dev
     <img src="readme-images/the_coffee_collective_mobile_navbar.png" />
 </p>
 
-<br />
+<br>
 
 
 ### Homepage 
 
 The homepage carries several features from enticing imagery through the carousal complete with links to products, key information about the physical coffee shop location, an introduction to the owners and an optional sign-up to a newsletter.
 
-<br />
+<br>
 
 <p align="center">
     <img src="readme-images/the_coffee_collective_homepage_features.png" />
 </p>
 
-<br />
+<br>
 
 
 ### Footer
@@ -377,7 +376,7 @@ The footer offers a contrasting colour theme from the navbar to support users na
     <img src="readme-images/the_coffee_collective_footer.png" />
 </p>
 
-<br />
+<br>
 
 
 ### Brand Logo
@@ -388,7 +387,7 @@ I've opted not incorporate the logo within the navbar as the font choice provide
     <img src="readme-images/the_coffee_collective_brand_logo.png" />
 </p>
 
-<br />
+<br>
 
 
 ### Products & Customers Reviews
@@ -399,7 +398,7 @@ Using a Bootstrap Grid, the products are set out in rows with each product align
     <img src="readme-images/the_coffee_collective_products.png" />
 </p>
 
-<br />
+<br>
 
 
 Clicking through provides more information on the specific product with options to add the item to their bag. Size options are also visible on this page.
@@ -409,7 +408,7 @@ This page also promotes feedback from users through 'Customer Reviews'. Only use
     <img src="readme-images/the_coffee_collective_product_in_detail.png" />
 </p>
 
-<br />
+<br>
 
 
 ### Bag
@@ -420,7 +419,7 @@ The bag page provides an overview of all of the items added by the user. The inf
     <img src="readme-images/the_coffee_collective_bag.png" />
 </p>
 
-<br />
+<br>
 
 
 ### Checkout
@@ -438,7 +437,7 @@ Stripe payments have been integrated to manage transactions and collect payment.
     <img src="readme-images/the_coffee_collective_checkout.png" />
 </p>
 
-<br />
+<br>
 
 Upon completion of the transaction, users are automatically navigated to the checkout success page (below) which provides a confirmation of the items purchased, with the added comfort of the confirmation being emailed to the address provided.
 
@@ -446,7 +445,7 @@ Upon completion of the transaction, users are automatically navigated to the che
     <img src="readme-images/the_coffee_collective_checkout_success.png" />
 </p>
 
-<br />
+<br>
 
 
 ### User Profile
@@ -457,7 +456,7 @@ Accessed through the 'My Account' link in the navbar, a registered and signed-in
     <img src="readme-images/the_coffee_collective_profile.png" />
 </p>
 
-<br />
+<br>
 
 
 ### Contact
@@ -470,7 +469,7 @@ If not, a short and simple form can be completed and submitted.
     <img src="readme-images/the_coffee_collective_contact.png" />
 </p>
 
-<br />
+<br>
 
 
 When the user submits the form, feedback is provided through a success message confirming receipt of the form.
@@ -479,7 +478,7 @@ When the user submits the form, feedback is provided through a success message c
     <img src="readme-images/the_coffee_collective_success_message.png" />
 </p>
 
-<br />
+<br>
 
 
 ### FAQs
@@ -490,7 +489,7 @@ A section of frequently asked questions have been included to help provide a pos
     <img src="readme-images/the_coffee_collective_faqs.png" />
 </p>
 
-<br />
+<br>
 
 
 ### Company Information
@@ -501,7 +500,7 @@ To convert 'Browsers' and 'Researchers' into buyers we have to convey the reason
     <img src="readme-images/the_coffee_collective_our_story.png" />
 </p>
 
-<br />
+<br>
 
 
 ### Admin
@@ -512,7 +511,7 @@ To convert 'Browsers' and 'Researchers' into buyers we have to convey the reason
     <img src="readme-images/the_coffee_collective_our_story.png" />
 </p>
 
-<br />
+<br>
 
 
 ##### Product Management
@@ -526,7 +525,7 @@ The front end product management incorporates Bootstrap and Crispy to present cl
     <img src="readme-images/the_coffee_collective_edit_product.png" />
 </p>
 
-<br />
+<br>
 
 
 ### Error Pages
@@ -539,12 +538,12 @@ Therefore reducing the risk of the user leaving the site completely due to a bad
 </p>
 
 
-<br />
+<br>
 
 
 ***
 
-<br />
+<br>
 
 ## Data Model
 
@@ -561,7 +560,7 @@ With this architecture a user can add many products to one order, and leave many
 
 There are currently seven categories created within Category table. These are used to group the products and can be accessed from the navigation menu. They can managed through the Django admin panel, along with user data, products, reviews and orders. 
 
-<br />
+<br>
 
 The diagram highlights the following relationships:
 * One product can have many reviews
@@ -580,7 +579,7 @@ The Contact Model (within the Company App) does not have a relationship with the
     <img src="readme-images/the_coffee_collective_erd.png" alt="Entity relationship diagram for this website"/>
 </p>
 
-<br />
+<br>
 
 
 ### Data Security
@@ -600,7 +599,7 @@ Meta data is included within the HTML head element to increase the traffic to th
 
 ***
 
-<br />
+<br>
 
 ## Technologies
 
@@ -653,7 +652,7 @@ Meta data is included within the HTML head element to increase the traffic to th
 
 ***
 
-<br />
+<br>
 
 
 ## Testing
@@ -670,11 +669,11 @@ Testing procedures will ensure the deployed site aligns to the site in developme
 * Code validation - ensuring the code base is validated using industry standard tools for HTML, CSS, JavaScript and Python code.
 
 
-<br />
+<br>
 
 ***
 
-<br />
+<br>
 
 ## Deployment
 
@@ -842,7 +841,7 @@ In the Heroku App:
 
 ***
 
-<br />
+<br>
 
 
 
@@ -851,7 +850,7 @@ In the Heroku App:
 
 ***
 
-<br />
+<br>
 
 ## Credit & Attributes
 
