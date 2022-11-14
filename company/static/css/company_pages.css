@@ -30,6 +30,10 @@
   text-decoration: none;
 }
 
+.remove-list-style {
+  list-style-type: none;
+}
+
 /* FAQs Vertical Accordion credited to Monica Wheeler on CodePen  */
 #faqs-section {
   width: 100%;
