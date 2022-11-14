@@ -1,64 +1,66 @@
 <!-- Search Feature -->
-<li class="list-inline-item">
-    <a class="text-black nav-link d-block d-lg-none" href="#" id="mobile-search" data-toggle="dropdown"
-        aria-haspopup="true" aria-expanded="false">
-        <div class="text-center">
-            <div class="nav-icon"><i class="fas fa-search fa-lg"></i></div>
-            <p class="my-0 nav-label">Search</p>
-        </div>
-    </a>
-    <div class="dropdown-menu w-100 p-3 rounded-0 my-auto mx-auto text text-center" aria-labelledby="mobile-search">
-        <form class="form" method="GET" action="{% url 'products' %}">
-            <div class="input-group w-100">
-                <input class="form-control border border-black rounded-0" type="text" name="q"
-                    placeholder="Search our site">
-                <!-- Search button -->
-                <div class="input-group-append">
-                    <button class="form-control btn btn-outline-success border border-black rounded-0" type="submit">
-                        <span class="icon">
-                            <i class="fa-solid fa-magnifying-glass fa-lg"></i>
-                        </span>
-                    </button>
-                </div>
+<menu>
+    <li class="list-inline-item">
+        <a class="text-black nav-link d-block d-lg-none" href="#" id="mobile-search" data-toggle="dropdown"
+            aria-haspopup="true" aria-expanded="false">
+            <div class="text-center">
+                <div class="nav-icon"><i class="fas fa-search fa-lg"></i></div>
+                <p class="my-0 nav-label">Search</p>
             </div>
-        </form>
-    </div>
-</li>
-<!-- User Account Menu -->
-<li class="list-inline-item dropdown">
-    <a class="text-black nav-link d-block d-lg-none" href="#" id="user-options" data-toggle="dropdown"
-        aria-haspopup="true" aria-expanded="false">
-        <div class="text-center">
-            <div class="nav-icon"><i class="fa-solid fa-user fa-lg"></i></div>
-            <p class="my-0 nav-label">My Account</p>
+        </a>
+        <div class="dropdown-menu w-100 p-3 rounded-0 my-auto mx-auto text text-center" aria-labelledby="mobile-search">
+            <form class="form" method="GET" action="{% url 'products' %}">
+                <div class="input-group w-100">
+                    <input class="form-control border border-black rounded-0" type="text" name="q"
+                        placeholder="Search our site">
+                    <!-- Search button -->
+                    <div class="input-group-append">
+                        <button class="form-control btn btn-outline-success border border-black rounded-0" type="submit">
+                            <span class="icon">
+                                <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+                            </span>
+                        </button>
+                    </div>
+                </div>
+            </form>
         </div>
-    </a>
-    <div class="dropdown-menu" aria-labelledby="user-options">
-        {% if request.user.is_authenticated %}
-        {% if request.user.is_superuser %}
-        <a href="{% url 'add_product' %}" class="dropdown-item user-profile-link">Product Management</a>
-        {% endif %}
-        <a href="{% url 'profile' %}" class="dropdown-item user-profile-link">My Profile</a>
-        <a href="{% url 'account_logout' %}" class="dropdown-item user-profile-link">Sign Out</a>
-        {% else %}
-        <a href="{% url 'account_signup' %}" class="dropdown-item user-profile-link">Register</a>
-        <a href="{% url 'account_login' %}" class="dropdown-item user-profile-link">Sign In</a>
-        {% endif %}
-    </div>
-</li>
-<!-- Shopping Bag -->
-<li class="list-inline-item">
-    <a class="{% if grand_total %}text-primary font-weight-bold{% else %}text-black{% endif %} nav-link d-block d-lg-none"
-        href="{% url 'view_bag' %}">
-        <div class="text-center">
-            <div class="nav-icon"><i class="fas fa-bag-shopping"></i></div>
-            <p class="my-0 nav-label">
-                {% if grand_total %}
-                £{{ grand_total|floatformat:2 }}
-                {% else %}
-                £0.00
-                {% endif %}
-            </p>
+    </li>
+    <!-- User Account Menu -->
+    <li class="list-inline-item dropdown">
+        <a class="text-black nav-link d-block d-lg-none" href="#" id="user-options" data-toggle="dropdown"
+            aria-haspopup="true" aria-expanded="false">
+            <div class="text-center">
+                <div class="nav-icon"><i class="fa-solid fa-user fa-lg"></i></div>
+                <p class="my-0 nav-label">My Account</p>
+            </div>
+        </a>
+        <div class="dropdown-menu" aria-labelledby="user-options">
+            {% if request.user.is_authenticated %}
+            {% if request.user.is_superuser %}
+            <a href="{% url 'add_product' %}" class="dropdown-item user-profile-link">Product Management</a>
+            {% endif %}
+            <a href="{% url 'profile' %}" class="dropdown-item user-profile-link">My Profile</a>
+            <a href="{% url 'account_logout' %}" class="dropdown-item user-profile-link">Sign Out</a>
+            {% else %}
+            <a href="{% url 'account_signup' %}" class="dropdown-item user-profile-link">Register</a>
+            <a href="{% url 'account_login' %}" class="dropdown-item user-profile-link">Sign In</a>
+            {% endif %}
         </div>
-    </a>
-</li>
+    </li>
+    <!-- Shopping Bag -->
+    <li class="list-inline-item">
+        <a class="{% if grand_total %}text-primary font-weight-bold{% else %}text-black{% endif %} nav-link d-block d-lg-none"
+            href="{% url 'view_bag' %}">
+            <div class="text-center">
+                <div class="nav-icon"><i class="fas fa-bag-shopping"></i></div>
+                <p class="my-0 nav-label">
+                    {% if grand_total %}
+                    £{{ grand_total|floatformat:2 }}
+                    {% else %}
+                    £0.00
+                    {% endif %}
+                </p>
+            </div>
+        </a>
+    </li>
+</menu>
