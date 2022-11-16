@@ -74,12 +74,12 @@
                             {% if product.image %}
                             <a href="{% url 'product_detail' product.id %}">
                                 <img class="card-img-top img-fluid mx-auto d-block" src="{{ product.image.url }}"
-                                    alt="{{ product.name }}">
+                                    alt="An image of the {{ product.name }} product">
                             </a>
                             {% else %}
                             <a href="{% url 'product_detail' product.id %}">
                                 <img class="card-img-top img-fluid mx-auto d-block" src="{{ MEDIA_URL }}noimage.png"
-                                    alt="{{ product.name }}">
+                                    alt="An image of this product is not available">
                             </a>
                             {% endif %}
                         </div>
@@ -121,7 +121,7 @@
 
 {% block postloadjs %}
 {{ block.super }}
-<script type="text/javascript">
+<script>
     $('#sort-selector').change(function () {
         var selector = $(this);
         var currentUrl = new URL(window.location);
