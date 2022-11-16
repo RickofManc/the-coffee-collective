@@ -171,6 +171,7 @@ input[name='q']::placeholder P {
 .burger-menu-container {
     display: inline-block;
     cursor: pointer;
+    margin-left: 0.75rem
 }
 
 .bar1,
@@ -195,6 +196,16 @@ input[name='q']::placeholder P {
 .change .bar3 {
     -webkit-transform: rotate(45deg) translate(-8px, -8px);
     transform: rotate(45deg) translate(-8px, -8px);
+}
+
+.navbar-toggler {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    border: none;
 }
 
 /* Toast Messages */
@@ -468,6 +479,10 @@ footer {
         margin-right: 0;
     }
 
+    .burger-menu-container {
+        margin-left: 0.5rem;
+    }
+
     /* || HOMEPAGE STYLES */
     .homepage-carousel-section {
         margin-bottom: 0;
@@ -510,6 +525,10 @@ footer {
     /* Recommendations */
     .recommendation-img {
         width: 18.5rem;
+    }
+
+    .burger-menu-container {
+        margin-left: 0.5rem;
     }
 }
 
