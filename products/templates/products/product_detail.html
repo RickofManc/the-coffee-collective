@@ -102,7 +102,8 @@
                                     <div class="input-group input-group-{{ product.id }}">
                                         <!-- Decrease quantity button -->
                                         <div class="input-group-prepend">
-                                            <button class="decrement-qty btn decrement-qty_{{ product.id }}"
+                                            <button id="al" aria-label="Reduce quantity"
+                                                class="decrement-qty btn decrement-qty_{{ product.id }}"
                                                 data-item_id="{{ product.id }}">
                                                 <span class="icon">
                                                     <i class="fas fa-minus"></i>
@@ -115,7 +116,8 @@
                                             id="id_qty_{{ product.id }}">
                                         <!-- Increase quantity button -->
                                         <div class="input-group-append">
-                                            <button class="increment-qty btn increment-qty_{{ product.id }}"
+                                            <button id="al" aria-label="Increase quantity"
+                                                class="increment-qty btn increment-qty_{{ product.id }}"
                                                 data-item_id="{{ product.id }}">
                                                 <span class="icon">
                                                     <i class="fas fa-plus"></i>
