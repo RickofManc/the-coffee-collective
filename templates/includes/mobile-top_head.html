@@ -12,10 +12,11 @@
             <form class="form" method="GET" action="{% url 'products' %}">
                 <div class="input-group w-100">
                     <input class="form-control border border-black rounded-0" type="text" name="q"
-                        placeholder="Search our site">
+                        placeholder="Search our site" aria-labelledby="mobile-search">
                     <!-- Search button -->
                     <div class="input-group-append">
-                        <button class="form-control btn btn-outline-success border border-black rounded-0" type="submit">
+                        <button class="form-control btn btn-outline-success border border-black rounded-0" type="submit"
+                            aria-labelledby="mobile-search">
                             <span class="icon">
                                 <i class="fa-solid fa-magnifying-glass fa-lg"></i>
                             </span>

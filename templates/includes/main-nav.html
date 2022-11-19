@@ -11,7 +11,8 @@
                 Fresh Coffee
             </a>
             <div class="dropdown-menu">
-                <a class="dropdown-item" href="{% url 'products' %}?category=ground_coffee,coffee_beans">All Products</a>
+                <a class="dropdown-item" href="{% url 'products' %}?category=ground_coffee,coffee_beans">All
+                    Products</a>
                 <a class="dropdown-item" href="{% url 'products' %}?category=ground_coffee">Ground Coffee</a>
                 <a class="dropdown-item" href="{% url 'products' %}?category=coffee_beans">Coffee Beans</a>
             </div>
@@ -21,7 +22,9 @@
                 Coffee Making
             </a>
             <div class="dropdown-menu">
-                <a class="dropdown-item" href="{% url 'products' %}?category=cafetieres,moka_pots,coffee_cups,machines,coffee_clothing">All Products</a>
+                <a class="dropdown-item"
+                    href="{% url 'products' %}?category=cafetieres,moka_pots,coffee_cups,machines,coffee_clothing">All
+                    Products</a>
                 <a class="dropdown-item" href="{% url 'products' %}?category=cafetieres">Cafetiere</a>
                 <a class="dropdown-item" href="{% url 'products' %}?category=moka_pots">Moka Pot</a>
                 <a class="dropdown-item" href="{% url 'products' %}?category=coffee_cups">Coffee Cups</a>
@@ -60,11 +63,11 @@
                     <form class="form" method="GET" action="{% url 'products' %}">
                         <div class="input-group w-100">
                             <input class="form-control border border-black rounded-0" type="text" name="q"
-                                placeholder="Search our site">
+                                placeholder="Search our site" aria-labelledby="search">
                             <!-- Search button -->
                             <div class="input-group-append">
                                 <button class="form-control btn btn-outline-success border border-black rounded-0"
-                                    type="submit">
+                                    type="submit" aria-labelledby="search">
                                     <span class="icon">
                                         <i class="fa-solid fa-magnifying-glass fa-lg"></i>
                                     </span>

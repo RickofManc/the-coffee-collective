@@ -307,6 +307,10 @@ section {
     font-size: 0.875rem;
 }
 
+.asterisk {
+    color: #351c75!important;
+}
+
 /* || MAIN CONTENT STYLES  */
 .main-content {
     position: relative;
