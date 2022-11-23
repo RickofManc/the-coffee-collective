@@ -22,7 +22,9 @@
         <div class="col-12 col-lg-7">
             <div class="p2">
                 <div class="row">
-                    <h2 class="page-subtitle mb-3">Order Confirmation</h2>
+                    <div class="col">
+                        <h2 class="page-subtitle mb-3">Order Confirmation</h2>
+                    </div>
                 </div>
                 <!-- Order Info -->
                 <div class="row">
@@ -179,7 +181,7 @@
     </div>
     <!-- Optional navigation -->
     <div class="row">
-        <div class="col-12 col-lg-7 text-right">
+        <div class="col text-center mt-3 mb-3">
             {% if from_profile %}
                 <!-- If logged in navigate to Profile page -->
                 <a href="{% url 'profile' %}" class="btn rounded-0 my-2">
