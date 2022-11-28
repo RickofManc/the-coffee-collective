@@ -155,6 +155,10 @@ details[open] .control-icon-expand {
     padding-left: 0 !important;
     padding-right: 0 !important;
   }
+
+  details {
+    width: 96%;
+  }
 }
 
 /* // Small devices (landscape phones, 576px and up) */
@@ -182,7 +186,12 @@ details[open] .control-icon-expand {
 }
 
 /* Large devices (desktops, 992px and up) */
-@media (min-width: 992px) {}
+@media (min-width: 992px) {
+  
+  details {
+    width: 75%;
+  }
+}
 
 /* Extra large devices (large desktops, 1200px and up) */
 @media (min-width: 1200px) {
