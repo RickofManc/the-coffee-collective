@@ -503,18 +503,7 @@ To convert 'Browsers' and 'Researchers' into buyers we have to convey the reason
 <br>
 
 
-### Admin
-
-To convert 'Browsers' and 'Researchers' into buyers we have to convey the reasons why they should purchase from TCC. If we can communicate this we should be able to instil the same beliefs TCC have in their coffee into these user types. If successful trade should increase. To do this I have included a page on the company, and it's rich history in the coffee trade, and in addition key information on sustainability and accessibility to communicate some of the values of TCC.
-
-<p align="center">
-    <img src="readme-images/the_coffee_collective_our_story.png" />
-</p>
-
-<br>
-
-
-##### Product Management
+### Admin - Product Management
 
 This feature is enabled for super users only. Currently there is only one super user however the client may wish to add more as the inventory list increases. 
 With this role based permission setting you can perform CRUD (Create, Review, Update and Delete) products from either the front or back end. 
@@ -536,7 +525,6 @@ Therefore reducing the risk of the user leaving the site completely due to a bad
 <p align="center">
     <img src="readme-images/the_coffee_collective_error_page.png" />
 </p>
-
 
 <br>
 
