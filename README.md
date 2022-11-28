@@ -550,7 +550,7 @@ Therefore reducing the risk of the user leaving the site completely due to a bad
 As part of the project planning phase a high-level design of the site [structure](#Structure) has been created to understand the main entities, and the relationship between these entities set within a Hierarchical structure.
 This led to understanding the next level down through mapping out the tables, columns and attributes required for the database. The initial draft in Excel has been mapped into a data schema below using [draw.io](https://www.draw.io/index.html) to help understand how the entities and data will relate across the site.
 
-In consideration of the a requirement for the data to be searchable, and in time understand patterns and trends in user behaviour, an Object-Relational Database using MVT architecture has been selected. I've opted for a PostgreSQL DBMS (Database Management System) as it can support the aforementioned requirements, PostgreSQL can also support multiple programming languages and libraries that which will be used to build the application.
+In consideration of the a requirement for the data to be searchable, and in time understand patterns and trends in user behaviour, an Object-Relational Database using MVT architecture has been selected. I've opted to use PostgreSQL DBMS (Database Management System) as it can support the aforementioned requirements, PostgreSQL can also support multiple programming languages and libraries that which will be used to build the application.
 
 The diagram below shows the entity relationships between categories, products, product reviews, users, and an order. The Product Model is used by the Review Model to ensure the right product is being reviewed. The diagram also highlights that one product can have many reviews. 
 
@@ -585,7 +585,7 @@ The Contact Model (within the Company App) does not have a relationship with the
 ### Data Security
 
 Specific steps have been taken to ensure the security of users data and the websites integrity. These are as follows;
-* The use of an env.py file to store key variables for accessing secure environments i.e. Postgres Database.
+* The use of an env.py file to store key variables for accessing secure environments i.e. PostgreSQL Database.
 * A gitignore file has been incorporated to ensure the env.py file is never committed to production. Therefore retaining the security of these key variables.
 * Additionally, these variables are stored within the Config Variables in Heroku to ensure GitPod and Heroku can synchronise securely.
 * Cross Site Request Forgery (CSRF) tokens have been applied to all HTML Forms. Their application provides protection from malicious attacks where users maybe performing certain actions or sending data when logged-in.
@@ -615,8 +615,9 @@ Meta data is included within the HTML head element to increase the traffic to th
 ### Frameworks & Libraries
 
 * [Django 3.2](https://docs.djangoproject.com/en/4.0/releases/3.2/) has been adopted as more preferable over the newest beta Django 4 to rapidly and securely develop this application.
-* [dj_database_url](https://pypi.org/project/dj-database-url/) library used to allow Database urls to connect to the Postgres database.
-* [Psycopg2](https://pypi.org/project/psycopg2/) supports the connection to the Postgres database.
+* [dj_database_url](https://pypi.org/project/dj-database-url/) library used to allow Database urls to connect to the PostgreSQL database.
+* [Psycopg2](https://pypi.org/project/psycopg2/) supports the connection to the PostgreSQL database.
+* [ElephantSQL](https://elephantsql.com/) as a free service providing a configured and optimized PostgreSQL database.
 * [Gunicorn](https://gunicorn.org/) was used as the Web Server to run Django on Heroku.
 * [Django-allauth](https://django-allauth.readthedocs.io/en/latest/) used for addressing user authentication, registration and account management.
 * [Bootstrap4](https://getbootstrap.com/docs/4.6/getting-started/introduction/) was used to build responsive web pages.
@@ -713,6 +714,36 @@ To deploy locally with GitHub, follow these steps:
 </details>
 
 
+### PostgreSQL Database
+
+<details>
+    <summary></summary>
+
+ElephantSQL replaced the originally selected free Heroku add-on PostgreSQL database due to the Heroku version becoming a chargeable service.
+Whilst in mid-project I followed steps provided by the Code Institute to migrate the database from the Heroku version to Elephant. Dependant on your circumstances you may wish to use Heroku, Elephant or another service for your database. 
+
+1. If using Elephant, navigate to elephantsql.com and click 'Get a managed database today'. When presented with options for differing plans, I chose the free 'Tiny Turtle' plan.
+1. Select “Log in with GitHub” and authorize ElephantSQL with your selected GitHub account.
+1. In the Create new team form:
+    * Add a team name (your own name is fine).
+    * Read and agree to the Terms of Service.
+    * Select Yes for GDPR.
+    * Provide your email address.
+    * Click “Create Team”.
+1. Your account should now be created.
+1. Now you will need to create your database. Navigate to your elephantsql.com dashboard, and click "Create New Instance".
+1. Set up your plan:
+    * Give your plan a Name (this is commonly the name of the project).
+    * Select the Tiny Turtle (Free) plan.
+    * You can leave the Tags field blank.
+1. Select a data center near you.
+1. Then click "Review".
+1. Check your details are correct and then click "Create Instance".
+1. Return to the ElephantSQL dashboard and click on the database instance name for this project.
+1. You will return to this projects dashboard as part of the steps to 'Deploy with Heroku' as you will need the DATABASE_URL.
+
+</details>
+
 ### Gmail SMTP
 
 <details>
@@ -794,10 +825,10 @@ Once Stripe is activate you can test the checkout process with a test credit car
 1. From the Heroku dashboard, click the Create new app button. For a new account an icon will be visible on screen to allow you to Create an app, otherwise a link to this function is located under the New dropdown menu at the top right of the screen.
 1. On the Create New App page, enter a unique name for the application and select region. Then click Create app.
 1. On the Application Configuration page for the new app, click on the Resources tab.
-1. In the Add-ons search bar enter "Postgres" and select "Heroku Postgres" from the list - click the "Submit Order Form" button on the pop-up dialog.
-1. Next, click on Settings on the Application Configuration page and click on the "Reveal Config Vars" button - check the DATABASE_URL has been automatically set up.
-1. Add a new Config Var called DISABLE_COLLECTSTATIC and assign it a value of 1 - Remove this when releasing for Production.
-1. Add a new Config Var called SECRET_KEY and assign it a value - any random string of letters, digits and symbols.
+1. Next, click on Settings on the Application Configuration page and click on "Reveal Config Vars".
+1. Add a new Config Var called DISABLE_COLLECTSTATIC and assign it a value of 1, and click Add to save it. Remove this when releasing for Production.
+1. Add a new Config Var called SECRET_KEY and assign it a value - any random string of letters, digits and symbols, and click Add to save it.
+1. Add a new Config Var called DATABASE_URL and paste in the value for your ElephantSQL database, and click Add to save it.
 1. The settings.py file should be updated to use the DATABASE_URL and SECRET_KEY environment variable values as follows :
 
         DATABASES = {'default': dj_database_url.parse(os.environ.get('DATABASE_URL'))}
