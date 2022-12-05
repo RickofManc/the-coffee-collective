@@ -487,6 +487,10 @@ footer {
         margin-left: 0.5rem;
     }
 
+    .navbar-toggler {
+        width: 24%;
+    }
+
     /* || HOMEPAGE STYLES */
     .homepage-carousel-section {
         margin-bottom: 0;
