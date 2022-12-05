@@ -652,11 +652,14 @@ Testing procedures will ensure the deployed site aligns to the site in developme
 * Page validation - ensuring that all features are working, including all links perform as designed.
 * Responsiveness - ensuring each page is responsive through the three media queries covering mobiles, tablets-laptops and desktop monitors.
 * Accessibility - each page is tested for compliance with accessibility guidelines using the WAVE online assessment tool.
-* Performance - using Chrome's developer tool 'Lighthouse Testing' pages are tested for performance, best-practice and SEO.
+* Performance - using Chrome's developer tool 'Lighthouse Testing' pages are tested for performance, best-practice SEO and accessibility.
 * Browser - pages are tested for layout, features and general performance across Chrome, Firefox, Edge, Internet Explorer 11 and Opera.
 * Device - manual testing will be performed on an iOS and Android mobile, Tablet, Laptop and Desktop to ensure all users have a positive experience no matter which device or browser they prefer to use. 
 * Code validation - ensuring the code base is validated using industry standard tools for HTML, CSS, JavaScript and Python code.
 
+As the size of results tables as summaries is quite large, I've opted to document this in a separate file.
+
+[Navigate to TESTING.md](TESTING.md)
 
 <br>
 
