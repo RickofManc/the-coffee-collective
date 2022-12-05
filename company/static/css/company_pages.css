@@ -18,7 +18,8 @@
 
 .faq-list {
   list-style-type: none;
-  padding-inline-end: 2.5rem;
+  padding-inline-end: 0;
+  padding-inline-start: 0;
 }
 
 .faq-list-item {
@@ -159,6 +160,10 @@ details[open] .control-icon-expand {
   details {
     width: 96%;
   }
+
+  .remove-list-style{
+    padding-inline-start: 0;
+  }
 }
 
 /* // Small devices (landscape phones, 576px and up) */
@@ -183,6 +188,10 @@ details[open] .control-icon-expand {
     padding-left: 0.9375rem !important;
     padding-right: 0.9375rem !important;
   }
+
+  .remove-list-style{
+    padding-inline-start: 1.25rem;
+  }
 }
 
 /* Large devices (desktops, 992px and up) */
@@ -190,6 +199,10 @@ details[open] .control-icon-expand {
   
   details {
     width: 75%;
+  }
+
+  .remove-list-style{
+    padding-inline-start: 2.5rem;
   }
 }
 
