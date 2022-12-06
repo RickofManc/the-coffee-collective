@@ -13,5 +13,6 @@ urlpatterns = [
          name='sustainability',),
     path('faqs/', views.Faqs.as_view(), name='faqs',),
     path('our_story/', views.OurStory.as_view(), name='our_story',),
+    path('health_benefits/', views.HealthBenefits.as_view(), name='health_benefits',),
     path('', views.contact, name='contact'),
 ]
