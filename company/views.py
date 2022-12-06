@@ -78,6 +78,18 @@ class OurStory(CreateView):
         return render(request, self.template_name, {})
 
 
+class HealthBenefits(CreateView):
+    """
+    Displays Health Benefits page.
+    gets : requested template by name
+    returns : rendered view of the html template
+    """
+    template_name = 'health_benefits.html'
+
+    def get(self, request, *args, **kwargs):
+        return render(request, self.template_name, {})
+
+
 def contact(request, *args, **kwargs):
     """
     Displays Contact Us page form.
