@@ -12,7 +12,7 @@
         <div class="carousel-caption d-none d-md-block">
           <!-- Shop now button -->
           <a class="carousel-anchor"
-            href="{% url 'products' %}?category=cafetieres,moka_pots,coffee_cups,machines,coffee_clothing"
+            href="{% url 'products' %}"
             aria-label="Navigates to view all products">
             <h5>Shop Now</h5>
             <p>Enjoy our coffee in your home and at work</p>
@@ -23,12 +23,12 @@
         <img src="{% static 'images/carousal_coffee_benefits.webp' %}" class="d-block w-100 img-responsive"
           alt="Coffee beans growing on a plant in the sunshine">
         <div class="carousel-caption d-none d-md-block">
-          <!-- Shop now button -->
+          <!-- Learn more button -->
           <a class="carousel-anchor"
-            href="{% url 'products' %}?category=cafetieres,moka_pots,coffee_cups,machines,coffee_clothing"
-            aria-label="Navigates to view all products">
-            <h5>Shop Now</h5>
-            <p>Enjoy the health benefits coffee provides</p>
+            href="{% url 'health_benefits' %}"
+            aria-label="Navigates to information on the health benefits of coffee">
+            <h5>Learn more</h5>
+            <p>Enjoy the health benefits coffee can provide</p>
           </a>
         </div>
       </div>
