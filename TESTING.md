@@ -476,21 +476,21 @@ The following bugs were identified as part of the testing phase and will be inve
 
 ### Bugs that require a fix for MVP
 
-B1. As a site admin performing a product delete from the front end, a 500 Internal Server Error was triggered after clicking submit on the final screen. This requires further investigation.
-B2. A link contained on the Our Story page to navigate users to sign-in/register is broken as it directs users to the homepage.
+B1. As a site admin performing a product delete from the front end, a 500 Internal Server Error was triggered after clicking submit on the final screen. This requires further investigation.<br>
+B2. A link contained on the Our Story page to navigate users to sign-in/register is broken as it directs users to the homepage.<br>
 
 ### Bugs that require further investigation and potentially fixed for MVP
 
-B3. Decouple the bag details from the toast success - so that a bag toast is only displayed when adding or removing items from the bag. This will improve the users experience through clearly feeding back on how they are interacting with the site.
-B4. Centralise the image of Luca and text from the homepage on mobile devices - so that it follows the format of the business location and opening times above.
-B5. Investigate why search results are not found when entering more than one descriptive word, or not returning results as expected.
-B6. To avoid user confusion, consider removing the product rating unless we can provide functionality for users to interact with the rating. Possibly change this to a 'like' system which would provide a method for leaving quick feedback.
-B7. The use of the 'Intensity' field as a method of sorting products works well if sorting coffee products. However it loses its value and is a little misleading for non-coffee products. To fix I will investigate whether we can limit the displaying of this field to only show on the coffee relating pages, otherwise it may be clearer to remove as a sorting options.
-B8. The homepage initial load on mobiles is scoring poorly on Chromes Developer Tools. Investigate whether resizing images will improve page loading times for mobiles.
+B3. Decouple the bag details from the toast success - so that a bag toast is only displayed when adding or removing items from the bag. This will improve the users experience through clearly feeding back on how they are interacting with the site.<br>
+B4. Centralise the image of Luca and text from the homepage on mobile devices - so that it follows the format of the business location and opening times above.<br>
+B5. Investigate why search results are not found when entering more than one descriptive word, or not returning results as expected.<br>
+B6. To avoid user confusion, consider removing the product rating unless we can provide functionality for users to interact with the rating. Possibly change this to a 'like' system which would provide a method for leaving quick feedback.<br>
+B7. The use of the 'Intensity' field as a method of sorting products works well if sorting coffee products. However it loses its value and is a little misleading for non-coffee products. To fix I will investigate whether we can limit the displaying of this field to only show on the coffee relating pages, otherwise it may be clearer to remove as a sorting options.<br>
+B8. The homepage initial load on mobiles is scoring poorly on Chromes Developer Tools. Investigate whether resizing images will improve page loading times for mobiles.<br>
 
 
 ### Bugs that won't be fixed for MVP
 
-B9. There was one isolated issue whereby the inherit styles for the Mailchimp element didn't load completely correct on my local machine when using Firefox. This also included the 'Subscribe' button not being functional. I tried to replicate this virtually using Firefox within the Lambda tool, however the feature loaded correctly and was functional.
-B10. env.py code error - E501 as line breached 79 characters, however when I tried to split the Database URL over two lines it not longer functioned. As a result I have chosen to allow this exception for the MVP.
-B11. profiles.js and stripe_elements.js code errors - ES6 warning to use 'esversion:6'. I researched a fix and added JSHint ES6 to the settings.JSON file, however this did not clear the warning. As this was a warning and I could not identify any issues with functionality I chose to allow this exception for the MVP.
+B9. There was one isolated issue whereby the inherit styles for the Mailchimp element didn't load completely correct on my local machine when using Firefox. This also included the 'Subscribe' button not being functional. I tried to replicate this virtually using Firefox within the Lambda tool, however the feature loaded correctly and was functional.<br>
+B10. env.py code error - E501 as line breached 79 characters, however when I tried to split the Database URL over two lines it not longer functioned. As a result I have chosen to allow this exception for the MVP.<br>
+B11. profiles.js and stripe_elements.js code errors - ES6 warning to use 'esversion:6'. I researched a fix and added JSHint ES6 to the settings.JSON file, however this did not clear the warning. As this was a warning and I could not identify any issues with functionality I chose to allow this exception for the MVP.<br>
