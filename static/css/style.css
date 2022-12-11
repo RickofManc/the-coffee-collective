@@ -494,6 +494,10 @@ footer {
     }
 
     /* Recommendations */
+    .homepage-recommendations-section {
+        text-align: center;
+    }
+    
     .recommendation-img {
         width: 12.5rem;
     }
@@ -553,6 +557,11 @@ footer {
     .homepage-business-card > .card-body > img,
     .homepage-business-card > .card-body > .embed-responsive > iframe {
         margin-top: 1.5rem;
+    }
+
+    /* Recommendations */
+    .homepage-recommendations-section {
+        text-align: left;
     }
 
     /* || FOOTER STYLES  */
