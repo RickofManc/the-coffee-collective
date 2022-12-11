@@ -37,14 +37,14 @@
         <div class="col-md-8 mt-3 offset-md-2">
             <div class="card-body">
                 <!-- Form used to perform the action with the database -->
-                <form method="POST" action="{% url 'delete_product_page' product.pk %}" enctype="multipart/form-data">
+                <form method="POST">
                     <div class="form-group">
                         <div class="input-group">
-                        {% csrf_token %}
-                        <!-- Option to cancel if navigated to in error -->
-                        <a href="{% url 'products' %}" class="btn rounded-0 back-btn cancel-anchor-btn">Cancel</a>
-                        <!-- Button to delete the product from the database -->
-                        <button class="btn rounded-0 standard-btn delete-btn" type="submit">Delete</button>
+                            {% csrf_token %}
+                            <!-- Option to cancel if navigated to in error -->
+                            <a href="{% url 'products' %}" class="btn rounded-0 back-btn cancel-anchor-btn">Cancel</a>
+                            <!-- Button to delete the product from the database -->
+                            <input class="btn rounded-0 standard-btn delete-btn" type="submit" value="Delete">
                         </div>
                     </div>
                 </form>
@@ -55,16 +55,16 @@
 {% else %}
 <!-- Information to user if navigated to in error without being signed in -->
 <div class="container fluid">
-  <div class="row justify-content-center">
-    <div class="card-block">
-      <p class="card-text">
-        Sorry you must be signed in to access this page, use the button below to
-        return to our homepage
-      </p>
-      <a href="{% url 'home' %}" class="btn rounded-0 standard-btn">Home
-      </a>
+    <div class="row justify-content-center">
+        <div class="card-block">
+            <p class="card-text">
+                Sorry you must be signed in to access this page, use the button below to
+                return to our homepage
+            </p>
+            <a href="{% url 'home' %}" class="btn rounded-0 standard-btn">Home
+            </a>
+        </div>
     </div>
-  </div>
 </div>
-{% endif %} 
+{% endif %}
 {% endblock %}
