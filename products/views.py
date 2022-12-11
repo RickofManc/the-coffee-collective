@@ -153,43 +153,18 @@ def edit_product(request, product_id):
     return render(request, template, context)
 
 
-class DeleteProductView(LoginRequiredMixin, SuccessMessageMixin, DeleteView):
-    """
-    Displays Delete Product page.
-    gets : requested template by name
-    returns : rendered view of the html template
-    Returns user to homepage on form submission.
-    """
-    def get(self, request, product_id):
-        """ get product request """
-        # if not superuser redirect home
-        if not request.user.is_superuser:
-            messages.error(request, 'Sorry, only the owners can do that')
-            return redirect(reverse('home'))
-        else:
-            # return product to page
-            product = get_object_or_404(Product, pk=product_id)
-            return render(request, 'products/delete_product_page.html',
-                          {'product': product})
-
-        # def post(self, request, product_id, *args, **kwargs):
-        #     """ post delete view """
-        #     product = get_object_or_404(Product, pk=product_id)
-        #     product.delete()
-        #     messages.success(
-        #         request, f'Success, {product.name} has been deleted.')
-        #     return redirect(
-        #         reverse(reverse('home')))
-
-
 @login_required
 def delete_product(request, product_id):
     """ Delete a product from the front end """
     if not request.user.is_superuser:
-        messages.error(request, 'Sorry, only the owners can do that')
+        messages.error(request, 'Sorry, only the owners can do that.')
         return redirect(reverse('home'))
 
     product = get_object_or_404(Product, pk=product_id)
-    product.delete()
-    messages.success(request, 'Product successfully deleted')
-    return redirect(reverse('products'))
+    
+    if request.method == 'POST':
+        product.delete()
+        messages.success(request, f'{product.name} successfully deleted.')
+        return redirect(reverse('products'))
+
+    return render(request, 'products/confirm_delete.html')
