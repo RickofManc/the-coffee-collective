@@ -632,7 +632,7 @@ Meta data is included within the HTML head element to increase the traffic to th
 * [Wave](https://wave.webaim.org/) - Accessibility Testing to ensure content is readable for all users.
 * [HTML Validator](https://validator.w3.org/) validates HMTL code.
 * [W3 CSS Validator](https://jigsaw.w3.org/css-validator/validator) validates CSS code.
-* [PEP8 Validator](http://pep8online.com/)  validates Python code.
+* [CI Python Linter for Python](https://pep8ci.herokuapp.com/) validates Python code.
 * [JSHint](https://jshint.com/) validates JavaScript code.
 * [Code Beautify](https://codebeautify.org/) validates the code formatting for browser reading.
 * [IE NetREnderer](https://netrenderer.com/index.php) for cross browser testing, specifically Microsoft IE versions 11 and Edge.
@@ -649,11 +649,13 @@ Meta data is included within the HTML head element to increase the traffic to th
 Following a manual process for development and deployment, I have chosen to perform manual testing for the MVP.
 Testing procedures will ensure the deployed site aligns to the site in development through covering the following aspects:
 
-* Page validation - ensuring that all features are working, including all links perform as designed.
+* User stories - validate that the user requirements have been delivered for the MVP release.
+* User Acceptance Testing (UAT) - ensuring the website is meeting real world expectations.
+* Page validation - check all features and links from across the site are working as designed and developed.
 * Responsiveness - ensuring each page is responsive through the three media queries covering mobiles, tablets-laptops and desktop monitors.
 * Accessibility - each page is tested for compliance with accessibility guidelines using the WAVE online assessment tool.
-* Performance - using Chrome's developer tool 'Lighthouse Testing' pages are tested for performance, best-practice SEO and accessibility.
-* Browser - pages are tested for layout, features and general performance across Chrome, Firefox, Edge, Internet Explorer 11 and Opera.
+* Performance - using Chrome's developer tool 'Lighthouse Testing' pages are tested for performance, best-practice, SEO and accessibility.
+* Browser - pages are tested for layout, features and general performance across Chrome, Firefox, Edge, Safari and Opera.
 * Device - manual testing will be performed on an iOS and Android mobile, Tablet, Laptop and Desktop to ensure all users have a positive experience no matter which device or browser they prefer to use. 
 * Code validation - ensuring the code base is validated using industry standard tools for HTML, CSS, JavaScript and Python code.
 
