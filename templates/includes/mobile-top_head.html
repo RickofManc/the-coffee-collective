@@ -32,15 +32,15 @@
             aria-haspopup="true" aria-expanded="false">
             <div class="text-center">
                 <div class="nav-icon"><i class="fa-solid fa-user fa-lg"></i></div>
-                <p class="my-0 nav-label">My Account</p>
+                <p class="my-0 nav-label">Account</p>
             </div>
         </a>
         <div class="dropdown-menu" aria-labelledby="user-options">
             {% if request.user.is_authenticated %}
             {% if request.user.is_superuser %}
-            <a href="{% url 'add_product' %}" class="dropdown-item user-profile-link">Product Management</a>
+            <a href="{% url 'add_product' %}" class="dropdown-item user-profile-link">Add Products</a>
             {% endif %}
-            <a href="{% url 'profile' %}" class="dropdown-item user-profile-link">My Profile</a>
+            <a href="{% url 'profile' %}" class="dropdown-item user-profile-link">Profile</a>
             <a href="{% url 'account_logout' %}" class="dropdown-item user-profile-link">Sign Out</a>
             {% else %}
             <a href="{% url 'account_signup' %}" class="dropdown-item user-profile-link">Register</a>
