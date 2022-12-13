@@ -1,9 +1,10 @@
 from django.shortcuts import render, get_object_or_404
 from django.contrib import messages
 from django.contrib.auth.decorators import login_required
-from .models import UserProfile
+from .models import UserProfile, UserWishList
 from .forms import UserProfileForm
 from checkout.models import Order
+from products.models import Product
 
 
 @login_required
@@ -51,3 +52,13 @@ def single_order(request, order_number):
     }
 
     return render(request, template, context)
+
+
+@login_required
+def user_wish_list(request):
+    """ Display the users wish list """
+    if request.user.is_authenticated:
+        return render(request, 'profiles/wishlist.html')
+    else:
+        messages.error(request, 'Sorry you must be a member to have a Wish List.')
+        return redirect('home')
