@@ -1,0 +1,80 @@
+{% extends "base.html" %}
+{% load static %}
+{% load i18n %}
+{% block title %}{% trans 'Wishlist' %}{% endblock %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'css/profiles.css' %}">
+{% endblock %}
+
+{% block content %}
+<!-- User will be logged in to access this page -->
+!-- User will be logged in to access this page -->
+{% if user.is_authenticated %}
+<!-- Main container for page content -->
+<div class="container-fluid">
+    <!-- Page header -->
+    <div class="row">
+        <div class="col text-center mt-3 mb-3">
+            <h1 class="page-title">Wish List</h1>
+            <hr class="w-50 mb-1">
+        </div>
+    </div>
+    <div class="row">
+        <!-- Wish List container -->
+        <div class="col-12 col-lg-6 mb-4">
+            <h2 class="page-subtitle mb-3">Products you wish to buy</h2>   
+        </div>
+        {% if wishlist_items %}
+        <div class="order-history table-responsive">
+            <table class="table table-sm table-borderless">
+                <thead class="thead-dark">
+                    <tr>
+                        <th>Product</th>
+                        <th>Size</th>
+                        <th>Price</th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody class="table-striped">
+                    {% for product in wishlist_items %}
+                    <tr>
+                        <td>
+                            <ul class="list-unstyled">
+                                <li class="small">{{ product.name }}</li>
+                                <li><img class="img-responsive" src="{{ MEDIA_URL}}{{ product.image }}"
+                                alt="{{ product.name }} image"></li>
+                            </ul>
+                        </td>
+                        <td class="col-date">{% if item.product.has_sizes %}
+                            Size {{ item.product_size }}
+                            {% endif %} {{ item.product.name }} x{{ item.quantity }}</td>
+                        <td>£{{ product.price }}</td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+        {% endif %}
+    </div>
+</div>
+{% else %}
+<!-- Information to user if navigated to in error without being signed in -->
+<div class="container-fluid">
+    <div class="row justify-content-center">
+        <div class="card-block">
+            <p class="card-text">
+                Sorry you must be signed in to access this page, please use the button below to
+                return to our homepage
+            </p>
+            <a href="{% url 'home' %}" type="button" class="anchor-tag-btn">Home
+            </a>
+        </div>
+    </div>
+</div>
+{% endif %}
+{% endblock %}
+
+{% block postloadjs %}
+{{ block.super }}
+{% endblock %}
