@@ -41,6 +41,7 @@
             <a href="{% url 'add_product' %}" class="dropdown-item user-profile-link">Add Products</a>
             {% endif %}
             <a href="{% url 'profile' %}" class="dropdown-item user-profile-link">Profile</a>
+            <a href="{% url 'wishlist' %}" class="dropdown-item user-profile-link">Wish List</a>
             <a href="{% url 'account_logout' %}" class="dropdown-item user-profile-link">Sign Out</a>
             {% else %}
             <a href="{% url 'account_signup' %}" class="dropdown-item user-profile-link">Register</a>
