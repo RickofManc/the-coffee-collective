@@ -112,7 +112,7 @@
                             {% if request.user.is_authenticated %}
                             <!-- Button to add item to Wish List -->
                             <div class="row">
-                                <div class="col learn-more-btn-div">
+                                <div class="col wish-list-btn-div">
                                     <a href="{% url 'add_to_wishlist' product.pk %}" id="{{ product.pk }}-wishlist-btn" class="btn wish-list-btn">Add to Wish List</a>
                                 </div>
                             </div>

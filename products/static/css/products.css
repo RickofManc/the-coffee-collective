@@ -39,6 +39,10 @@
     color: #fff;
 }
 
+.wish-list-btn-div {
+    margin-top: 0.45rem;
+}
+
 .wish-list-btn {
     width: inherit;
     border-radius: 0;
@@ -198,6 +202,7 @@
         max-width: 100%;
     }
 
+    .wish-list-btn-div,
     .learn-more-btn-div {
         padding: 0;
     }
@@ -214,6 +219,7 @@
         margin-top: 1rem!important;
     }
 
+    .wish-list-btn-div,
     .learn-more-btn-div,
     .product-details-container,
     .card-body {
