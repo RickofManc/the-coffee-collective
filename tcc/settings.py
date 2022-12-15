@@ -70,12 +70,6 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
-# CACHES = {
-#     'default': {
-#         'BACKEND': 'django.core.cache.backends.db.DatabaseCache',
-#         'LOCATION': 'tcc_cache_table',
-#     }
-# }
 
 # Message storage for supporting Bootstrap toasts
 MESSAGE_STORAGE = 'django.contrib.messages.storage.session.SessionStorage'
