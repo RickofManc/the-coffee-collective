@@ -63,8 +63,7 @@
     <div class="row">
         <!-- Grid layout for products -->
         <div class="product-container col-10 mx-auto">
-            <div class="row mt-1 mb-2"></div>
-            <div class="row">
+            <div class="row mt-1 mb-2">
                 <!-- Bootstrap card combined with for loop to show all products -->
                 {% for product in products %}
                 <div class="col-sm-6 col-md-6 col-lg-4 col-xl-3 mb-4 xl-screen-products-grid">
@@ -113,7 +112,8 @@
                             <!-- Button to add item to Wish List -->
                             <div class="row">
                                 <div class="col wish-list-btn-div">
-                                    <a href="{% url 'add_to_wishlist' product.pk %}" id="{{ product.pk }}-wishlist-btn" class="btn wish-list-btn">Add to Wish List</a>
+                                    <a href="{% url 'user_wishlist' product.id %}" class="btn wish-list-btn">Add to Wish
+                                        List</a>
                                 </div>
                             </div>
                             {% endif %}
