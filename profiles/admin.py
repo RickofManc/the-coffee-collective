@@ -1,12 +1,5 @@
 from django.contrib import admin
-from .models import UserProfile, UserWishList
-
-
-@admin.register(UserWishList)
-class WishListAdmin(admin.ModelAdmin):
-    model = UserWishList
-    fields = ('user', 'product')
-    list_display = ('id', 'user', 'product')
+from .models import UserProfile
 
 
 @admin.register(UserProfile)
