@@ -18,9 +18,10 @@ class Category(models.Model):
 
 
 class Product(models.Model):
-
-    category = models.ForeignKey('Category', null=True, blank=True,
-                                 on_delete=models.SET_NULL)
+    User = get_user_model()
+    category = models.ForeignKey(
+        'Category', null=True, blank=True, on_delete=models.SET_NULL
+    )
     sku = models.CharField(max_length=55, unique=True)
     name = models.CharField(max_length=155)
     subtitle = models.CharField(max_length=205)
@@ -33,6 +34,9 @@ class Product(models.Model):
     date_added = models.DateField(null=True, blank=True)
     image_url = models.URLField(max_length=1024, null=True, blank=True)
     image = models.ImageField(null=True, blank=True)
+    users_wishlist = models.ManyToManyField(
+        User, related_name='user_wishlist', blank=True
+    )
 
     def __str__(self):
         return self.name
