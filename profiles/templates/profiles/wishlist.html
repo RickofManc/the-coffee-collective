@@ -1,10 +1,11 @@
 {% extends "base.html" %}
 {% load static %}
 {% load i18n %}
-{% block title %}{% trans 'Wishlist' %}{% endblock %}
+{% block title %}{% trans 'Wish List' %}{% endblock %}
 
 {% block extra_css %}
 <link rel="stylesheet" href="{% static 'css/profiles.css' %}">
+<link rel="stylesheet" href="{% static 'css/products.css' %}">
 {% endblock %}
 
 {% block content %}
@@ -19,68 +20,96 @@
             <hr class="w-50 mb-1">
         </div>
     </div>
+    <!-- Wish list container -->
+    {% if wishlist %}
+    <!-- Container for products -->
     <div class="row">
-        <!-- Wish List container -->
-        {% if wishlist_items %}
-        <div class="col-12 mb-4">
-            <h2 class="page-subtitle mb-3">Products you wish to buy</h2>
+        <!-- Grid layout for products -->
+        <div class="product-container col-10 mx-auto">
+            <div class="row mt-1 mb-2">
+                <!-- Bootstrap card combined with for loop to show all products -->
+                {% for product in wishlist %}
+                <div class="col-sm-6 col-md-6 col-lg-4 col-xl-3 mb-4 xl-screen-products-grid">
+                    <div class="card h-100 border-0">
+                        <!-- Product image (if available) -->
+                        <div class="product-img-container text-center">
+                            {% if product.image %}
+                            <a href="{% url 'product_detail' product.id %}">
+                                <img class="card-img-top img-fluid mx-auto d-block" src="{{ product.image.url }}"
+                                    alt="An image of the {{ product.name }} product">
+                            </a>
+                            {% else %}
+                            <a href="{% url 'product_detail' product.id %}">
+                                <img class="card-img-top img-fluid mx-auto d-block" src="{{ MEDIA_URL }}noimage.png"
+                                    alt="An image of this product is not available">
+                            </a>
+                            {% endif %}
+                        </div>
+                        <!-- Product details -->
+                        <div class="card-body pb-0">
+                            <h2 class="card-title title-font mb-0">{{ product.name }}</h2>
+                            <h3 class="card-subtitle mb-2">{{ product.subtitle }}</h3>
+                        </div>
+                        <div class="card-footer pt-0">
+                            <div class="row">
+                                <div class="col mb-3 product-price">
+                                    <p class="lead mb-0">£{{ product.price }}</p>
+                                </div>
+                                <div class="col mb-3 product-rating">
+                                    {% if product.rating %}
+                                    <small class="lead rating-icon"><i class="fa-sharp fa-solid fa-mug-saucer"></i>
+                                        {{ product.rating }} / 5</small>
+                                    {% else %}
+                                    <small class="text-muted">No Rating</small>
+                                    {% endif %}
+                                </div>
+                            </div>
+                            <!-- Button to Learn More -->
+                            <div class="row">
+                                <div class="col learn-more-btn-div">
+                                    <a href="{% url 'product_detail' product.id %}" class="btn learn-more-btn">Learn
+                                        More</a>
+                                </div>
+                            </div>
+                            <!-- Button to remove item from Wish List -->
+                            <div class="row">
+                                <div class="col wish-list-btn-div">
+                                    <a href="{% url 'user_wishlist' product.id %}" class="btn wish-list-btn">Remove Wish
+                                        List</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
         </div>
-        <div class="order-history table-responsive">
-            <table class="table table-sm table-borderless">
-                <thead class="thead-dark">
-                    <tr>
-                        <th>Product</th>
-                        <th>Size</th>
-                        <th>Price</th>
-                        <th></th>
-                    </tr>
-                </thead>
-                <tbody class="table-striped">
-                    {% for product in wishlist_items %}
-                    <tr>
-                        <td>
-                            <ul class="list-unstyled">
-                                <li class="small">{{ product.name }}</li>
-                                <li><img class="img-responsive" src="{{ MEDIA_URL}}{{ product.image }}"
-                                        alt="{{ product.name }} image"></li>
-                            </ul>
-                        </td>
-                        <td class="col-date">{% if item.product.has_sizes %}
-                            Size {{ item.product_size }}
-                            {% endif %} {{ item.product.name }} x{{ item.quantity }}</td>
-                        <td>£{{ product.price }}</td>
-                    </tr>
-                    {% endfor %}
-                </tbody>
-            </table>
-        </div>
-        {% else %}
-        <div class="col-12 mb-4 text-center">
-            <h3 class="page-h3-title col-12 mb-4" style="padding-left: 0;">There are currently no items in your Wish
-                List.</h3>
-            <!-- Back to products page -->
-            <a href="{% url 'products' %}" class="btn back-btn">Keep<br>Shopping</a>
-        </div>
-        {% endif %}
     </div>
-</div>
-{% else %}
-<!-- Information to user if navigated to in error without being signed in -->
-<div class="container-fluid">
-    <div class="row justify-content-center">
-        <div class="card-block">
-            <p class="card-text">
-                Sorry you must be signed in to access this page, please use the button below to
-                return to our homepage
-            </p>
-            <a href="{% url 'home' %}" type="button" class="anchor-tag-btn">Home
-            </a>
+    {% else %}
+    <div class="col-12 mb-4 text-center">
+        <h3 class="page-h3-title col-12 mb-4" style="padding-left: 0;">There are currently no items in your Wish
+            List.</h3>
+        <!-- Back to products page -->
+        <a href="{% url 'products' %}" class="btn back-btn">Keep<br>Shopping</a>
+    </div>
+    {% endif %}
+    {% else %}
+    <!-- Information to user if navigated to in error without being signed in -->
+    <div class="container-fluid">
+        <div class="row justify-content-center">
+            <div class="card-block">
+                <p class="card-text">
+                    Sorry you must be signed in to access this page, please use the button below to
+                    return to our homepage
+                </p>
+                <a href="{% url 'home' %}" type="button" class="anchor-tag-btn">Home
+                </a>
+            </div>
         </div>
     </div>
-</div>
-{% endif %}
-{% endblock %}
+    {% endif %}
+    {% endblock %}
 
-{% block postloadjs %}
-{{ block.super }}
-{% endblock %}
+    {% block postloadjs %}
+    {{ block.super }}
+    {% endblock %}
