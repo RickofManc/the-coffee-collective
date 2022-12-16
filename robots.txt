@@ -1,3 +1,4 @@
 User-agent: *
-Disallow: 
+Disallow: /accounts/
+Disallow: /bag/
 Sitemap: https://the-coffee-collective.herokuapp.com/sitemap.xml
