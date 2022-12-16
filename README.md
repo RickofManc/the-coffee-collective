@@ -450,10 +450,21 @@ Upon completion of the transaction, users are automatically navigated to the che
 
 ### User Profile
 
-Accessed through the 'My Account' link in the navbar, a registered and signed-in user can update their saved delivery details and view order history. Each transaction is a row with a table. The 'Order Number' can be clicked to open the order confirmation page.
+Accessed through the 'Account' link in the navbar, a registered and signed-in user can update their saved delivery details and view order history. Each transaction is a row with a table. The 'Order Number' can be clicked to open the order confirmation page.
 
 <p align="center">
     <img src="readme-images/the_coffee_collective_profile.png" />
+</p>
+
+<br>
+
+
+### User Wish List
+
+Accessed through the 'Account' link in the navbar, a registered and signed-in user can make use of the wish list feature. This will give users an opportunity when browsing to add an product to the wish list to purchase at a later time. When viewing the wish list from the Account menu, users will be able to remove the item from their wish list.
+
+<p align="center">
+    <img src="readme-images/the_coffee_collective_user_wish_list.png" />
 </p>
 
 <br>
@@ -558,6 +569,7 @@ The diagram highlights the following relationships:
 * One user can have one order
 * One user can add a review to many products
 * One user can add many reviews to one product
+* One user can add many products to their wish list
 
 
 The Contact Model (within the Company App) does not have a relationship with the other apps, however I have included for awareness towards future development.
@@ -861,20 +873,14 @@ In the Heroku App:
 1. Settings > Config Vars : Delete environment variable : DISABLE_COLLECTSTATIC
 1. Deploy : Click on deploy branch
 </details>
-    
+
+
+<br> 
 
 ***
 
 <br>
 
-
-
-
-
-
-***
-
-<br>
 
 ## Credit & Attributes
 
@@ -893,6 +899,7 @@ Support with how to develop ideas into code also came from various online resour
 * [Django Project Docs](https://docs.djangoproject.com/en/4.0/ref/models/fields/) were referenced many times, especially in how to reference fields correctly across differing python files.
 * [Ordinary Coders](https://ordinarycoders.com/blog/article/add-a-custom-favicon-to-your-django-web-app) guided me on how to create and add a customised favicon.
 * [Monica Wheeler](https://codepen.io/frogmcw/pen/deqRwa) for the code to build the FAQs feature, Union Roasted Coffee provided inspiration for some of the typical questions users may ask.
+* [Very Academy](https://www.youtube.com/watch?v=OgA0TTKAtqQ&list=WL&index=3) for the video tutorial and code base for the Wish List feature. I attempted this initially on my own and differing internet forums, however in the end this approach was cleaner and therefore adopted.
 * [RocketLawyer](http://rocketlawyer.com/) for free creation of a basic Terms & Conditions document.
 
 #### Images
