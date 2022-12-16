@@ -51,7 +51,7 @@ def single_order(request, order_number):
     }
     return render(request, template, context)
 
-
+# Very Academy code from YouTube tutorial
 @login_required
 def wishlist(request):
     """ Display the users wish list page """
@@ -64,7 +64,7 @@ def wishlist(request):
             signed in to use a Wish List.')
         return redirect('home')
 
-
+# Very Academy code from YouTube tutorial
 @login_required
 def add_to_wishlist(request, id):
     product = get_object_or_404(Product, id=id)
