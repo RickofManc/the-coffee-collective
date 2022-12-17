@@ -46,3 +46,204 @@ thead {
 .col-date {
     max-width: 4rem;
 }
+
+
+/* Wish List Page */
+
+.product-img-container {
+    min-height: 23rem;
+    padding: 0rem 0.125rem;
+}
+
+.card-img-top {
+    width: auto;
+}
+
+.learn-more-btn {
+    width: inherit;
+    border-radius: 0;
+    text-align: center;
+    background-color: rgba(100, 105, 109, 0.19);
+    color: #383838;
+}
+
+.learn-more-btn:hover {
+    background-color: #674ea7;
+    color: #fff;
+}
+
+.wish-list-btn-div {
+    margin-top: 0.45rem;
+}
+
+.wish-list-btn {
+    width: inherit;
+    border-radius: 0;
+    text-align: center;
+    background-color: #674ea7;
+    color: #fff;
+}
+
+.wish-list-btn:hover {
+    background-color:rgba(100, 105, 109, 0.19);
+    color: #383838;
+}
+
+.card-body {
+    padding: 0.5rem 1.25rem;
+}
+
+.card-title {
+    background-color: #e1efe6;
+    padding: 0.25rem 0.5rem;
+    width: 100%;
+    text-align: left;
+}
+
+.card-subtitle {
+    color: #383838;
+    font-size: 1.25rem;
+    line-height: 1.5;
+    padding: 0.75rem 0.5rem;
+}
+
+.card-description {
+    padding: 0.75rem 0.5rem;
+    line-height: 1.5rem;
+}
+
+.card-footer {
+    padding: 1.25rem 0.9375rem;
+    margin-bottom: 3rem;
+    border-radius: 0;
+    border: 0;
+    background-color: #fff;
+}
+
+.product-detail-title {
+    font-size: 3rem;
+}
+
+.product-price,
+.product-rating {
+    font-size: 1.25rem;
+    font-weight: 500;
+    text-align: center;
+    padding-left: 0.75rem;
+    padding-right: 0.75rem;
+}
+
+.rating-icon i {
+    font-size: 1.25rem;
+    color: #674ea7;
+}
+
+
+/****************************************************************/
+
+/* |||| MEDIA QUERIES  */
+
+/* // Extra Small devices (iPhone 5, Galaxy Fold, 280px and up) */
+@media (min-width: 280px) {
+
+    /* || PRODUCT STYLES  */
+    .sort-select-wrapper {
+        margin-top: 0!important;
+    }
+    
+    .product-details-container,
+    .card-body,
+    .cust-review-h3 {
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    .product-img-container {
+        min-height: 0;
+    }
+
+    .img-fluid {
+        max-width: 100%;
+    }
+
+    .wish-list-btn-div,
+    .learn-more-btn-div {
+        padding: 0;
+    }
+}
+
+/* // Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) {}
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+
+    /* || PRODUCT STYLES  */
+    .product-img-container,
+    .wish-list-btn-div,
+    .learn-more-btn-div,
+    .card-body {
+        padding-left: 0.9375rem;
+        padding-right: 0.9375rem;
+    }
+    
+    .product-img-container {
+        min-height: 17rem;
+    }
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+
+    /* || PRODUCT STYLES  */
+    .product-img-container {
+        min-height: 22rem;
+    }
+}
+
+/* Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+
+    /* || PRODUCT STYLES  */
+    .product-img-container {
+        min-height: 25rem;
+    }
+}
+
+/* Extra extra large devices (large desktops, 2560px and up) */
+@media (min-width: 2560px) {
+    
+    .xl-screen-products-grid {
+        margin-bottom: 4rem!important;
+    }
+
+    .product-details-container,
+    .product-img-container {
+        margin-top: 5rem!important;
+        min-height: 35rem;
+    }
+
+    .product-detail-title {
+        font-size: 4rem;
+    }
+
+    .card-title {
+        font: 3rem;
+    }
+
+    .card-subtitle {
+        font-size: 1.75rem;
+    }
+    
+    .card-img-top {
+        min-height: 500px;
+    }
+
+    .xl-screen-img {
+        min-height: 66rem;
+    }
+
+    .card-description {
+        line-height: 3.5rem;
+    }
+}
