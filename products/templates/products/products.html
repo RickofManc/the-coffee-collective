@@ -112,7 +112,8 @@
                             <!-- Button to add item to Wish List -->
                             <div class="row">
                                 <div class="col wish-list-btn-div">
-                                    <a href="{% url 'user_wishlist' product.id %}" class="btn wish-list-btn">Add to Wish
+                                    <a role="button" aria-disabled="true" href="{% url 'user_wishlist' product.id %}"
+                                        class="btn wish-list-btn">Add to Wish
                                         List</a>
                                 </div>
                             </div>
