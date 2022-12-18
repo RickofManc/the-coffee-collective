@@ -66,14 +66,14 @@
                             <!-- Button to Learn More -->
                             <div class="row">
                                 <div class="col learn-more-btn-div">
-                                    <a href="{% url 'product_detail' product.id %}" class="btn learn-more-btn">Learn
+                                    <a href="{% url 'product_detail' product.id %}" role="button" aria-disabled="true" class="btn learn-more-btn">Learn
                                         More</a>
                                 </div>
                             </div>
                             <!-- Button to remove item from Wish List -->
                             <div class="row">
                                 <div class="col wish-list-btn-div">
-                                    <a href="{% url 'user_wishlist' product.id %}" class="btn wish-list-btn">Remove Wish
+                                    <a href="{% url 'user_wishlist' product.id %}" role="button" aria-disabled="true" class="btn wish-list-btn">Remove Wish
                                         List</a>
                                 </div>
                             </div>
