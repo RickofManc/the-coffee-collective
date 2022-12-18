@@ -26,7 +26,7 @@
     width: auto;
 }
 
-.learn-more-btn {
+.view-details-btn {
     width: inherit;
     border-radius: 0;
     text-align: center;
@@ -34,7 +34,7 @@
     color: #383838;
 }
 
-.learn-more-btn:hover {
+.view-details-btn:hover {
     background-color: #674ea7;
     color: #fff;
 }
@@ -203,7 +203,7 @@
     }
 
     .wish-list-btn-div,
-    .learn-more-btn-div {
+    .view-details-btn-div {
         padding: 0;
     }
 }
@@ -220,7 +220,7 @@
     }
 
     .wish-list-btn-div,
-    .learn-more-btn-div,
+    .view-details-btn-div,
     .product-details-container,
     .card-body {
         padding-left: 0.9375rem;

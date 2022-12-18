@@ -59,7 +59,7 @@ thead {
     width: auto;
 }
 
-.learn-more-btn {
+.view-details-btn {
     width: inherit;
     border-radius: 0;
     text-align: center;
@@ -67,7 +67,7 @@ thead {
     color: #383838;
 }
 
-.learn-more-btn:hover {
+.view-details-btn:hover {
     background-color: #674ea7;
     color: #fff;
 }
@@ -167,7 +167,7 @@ thead {
     }
 
     .wish-list-btn-div,
-    .learn-more-btn-div {
+    .view-details-btn-div {
         padding: 0;
     }
 }
@@ -181,7 +181,7 @@ thead {
     /* || PRODUCT STYLES  */
     .product-img-container,
     .wish-list-btn-div,
-    .learn-more-btn-div,
+    .view-details-btn-div,
     .card-body {
         padding-left: 0.9375rem;
         padding-right: 0.9375rem;

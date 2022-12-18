@@ -392,7 +392,7 @@ I've opted not incorporate the logo within the navbar as the font choice provide
 
 ### Products & Customers Reviews
 
-Using a Bootstrap Grid, the products are set out in rows with each product aligned to a card. The card provides brief info with users able to find out more from either conventionally clicking on the image or by the 'Learn More' button in case the image does not load. 
+Using a Bootstrap Grid, the products are set out in rows with each product aligned to a card. The card provides brief info with users able to find out more from either conventionally clicking on the image or by the 'View Details' button in case the image does not load. 
 
 <p align="center">
     <img src="readme-images/the_coffee_collective_products.png" />

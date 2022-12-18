@@ -101,11 +101,10 @@
                                     {% endif %}
                                 </div>
                             </div>
-                            <!-- Button to Learn More -->
+                            <!-- Button to View Details -->
                             <div class="row">
-                                <div class="col learn-more-btn-div">
-                                    <a role="button" aria-disabled="true" href="{% url 'product_detail' product.id %}" class="btn learn-more-btn">Learn
-                                        More</a>
+                                <div class="col view-details-btn-div">
+                                    <a role="button" aria-disabled="true" href="{% url 'product_detail' product.id %}" class="btn view-details-btn">View Details</a>
                                 </div>
                             </div>
                             {% if request.user.is_authenticated %}
