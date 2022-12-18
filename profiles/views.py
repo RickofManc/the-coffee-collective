@@ -51,6 +51,7 @@ def single_order(request, order_number):
     }
     return render(request, template, context)
 
+
 # Very Academy code from YouTube tutorial
 @login_required
 def wishlist(request):
@@ -63,6 +64,7 @@ def wishlist(request):
         messages.error(request, 'Sorry you must be \
             signed in to use a Wish List.')
         return redirect('home')
+
 
 # Very Academy code from YouTube tutorial
 @login_required
