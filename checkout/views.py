@@ -58,7 +58,7 @@ def checkout(request):
         if order_form.is_valid():
             order = order_form.save(commit=False)
             pid = request.POST.get('client_secret').split('_secret')[0]
-            order.stripe = pid
+            order.stripe_pid = pid
             order.original_bag = json.dumps(bag)
             order.save()
             for item_id, item_data in bag.items():
@@ -86,9 +86,9 @@ def checkout(request):
                 # Error message if product does not exist (rare)
                 except Product.DoesNotExist:
                     messages.error(request, (
-                        "One of the products in your bag wasn't \
-                         found in our database."
-                        "Please contact us for further assistance."))
+                        'One of the products in your bag was not \
+                         found in our database.'
+                        'Please contact us for further assistance.'))
                     order.delete()
                     return redirect(reverse('view_bag'))
             # Option for user to save details
@@ -103,8 +103,8 @@ def checkout(request):
         # request bag session
         bag = request.session.get('bag', {})
         if not bag:
-            messages.error(request, "There's nothing in your \
-                                     bag at the moment")
+            messages.error(request, 'There is nothing in your \
+                                     bag at the moment.')
             return redirect(reverse('products'))
 
         current_bag = bag_contents(request)
