@@ -47,7 +47,7 @@ The Coffee Collective is a small family run coffee shop serving fresh coffee to 
 
 ### Problem Statement
 
-During the last forty years the family has diversified and setup a popular shop in the city where patrons still stand and socialise. The shop has become so popular that many coffee roasters provide bags of coffee for sale as some customers like to enjoy fresh coffee in work or at home. The COVID pandemic reduced the footfall considerably and whilst the cart was used for supplying coffee outside and socially distanced, the family know an e-commerce site would greatly help their financial stability. Furthermore, due to their popularity, the local coffee roasters would welcome the opportunity to sell their products through another channel.
+During the last forty years the family has diversified and setup a popular shop in the city where patrons still stand and socialise. The shop has become so popular that many coffee roasters provide bags of coffee for sale as some customers like to enjoy fresh coffee in work or at home. The COVID pandemic reduced the footfall considerably and whilst the cart was used for supplying coffee outside and socially distanced, the family know an e-commerce site would greatly help their financial stability. Furthermore, due to their popularity, other local coffee roasters would welcome the opportunity to sell their products through another channel.
 
 <br>
 
@@ -67,9 +67,9 @@ Following a design thinking approach and using the knowledge and experience of t
     </p>
 </details><br>
 
-The output from this phase supported the ideation of potential features and also the creation of User Stories complete with Acceptance Criteria and high-level tasks for the Development Phase. A [GitHub Projects Kanban Board](https://github.com/users/RickofManc/projects/5/views/1) has been used to manage and track all User Stories through to completion as workflow items. The archive section has been used as a Product Backlog for features that will be developed in the next release, and therefore brought onto the Release Backlog. Note this Kanban Board was also used for bug fixing and issue resolution, please see the Testing section of this document for further information.
+The output from this phase supported the ideation of potential features and also the creation of User Stories complete with Acceptance Criteria and high-level tasks for the Development Phase. A [GitHub Projects Kanban Board](https://github.com/users/RickofManc/projects/5/views/1) has been used to manage and track all User Stories through to completion as workflow items. The archive section has been used as a Product Backlog for features that will be developed in the next release, and therefore brought onto the Release Backlog. Note this Kanban Board was not used for tracking bug fixes, instead please [refer to the TESTING.md](TESTING.md).
 
-The table below provide an overview of how the features are driving the epics, that in turn have been used to develop the user stories and tasks required to deliver the features.
+The table below provide an overview of how the features are driving the epics, that in turn have been used to develop the user stories and tasks required to deliver the features. Further details can be found in the [planning document within the repo](readme-docs/TCC_Planning.xlsx).
 
 
 <details><summary><b>Epics and User Stories Overview</b></summary>
@@ -120,6 +120,7 @@ An agile approach of keeping the features simple and aligned to the strategy for
 * FAQ's to help the users navigation and experience of the site and service.
 * Specific pages to inform users of the business' position Accessibility, Copyright etc.
 * Clear Terms & Conditions.
+* An additional quick win towards the end of the MVP was the introduction of a registered users wish list.
 
 
 #### Out of Scope Features - for future release
@@ -144,15 +145,13 @@ This website will be built with the following design considerations. The final s
 * Each product category page will have the ability to filter the results. Clicking on a product will reveal further information about the product and provide the ability to add to bag.
 * All of the above, and the user account, checkout, and business pages will be no more than 3 clicks away.
 * The Navbar menu will be simple in design and layout, collapsing for mobile and tablet devices.
-* Breadcrumbs will be added to the top of desktop pages allowing visitors to quickly navigate back to a previous section.
-* A sitemap (available from the Footer) will display all the important categories and pages in a single page so users can find easily what they want.
 
 
 <br>
 
 ### Skeleton
 
-Key to meeting delivering for the differing user personas is a homepage that can immediately meet their priority requirements whilst not over complicating the UI with too much information, and too many choices. The hierarchal structure will be supported by the Navbar that within a click can navigated users to the main product categories. Similarly the homepage will host a carousel with a hero image enticing users who want to either find sale items, or learn more about the products.
+Key to delivering the user personas is a homepage that can meet their immediate needs whilst not over complicating the UI with too much information, and too many choices. The hierarchal structure will be supported by a Navbar that within a click can navigated users to the main product categories. Similarly the homepage will host a carousel with a hero image enticing users who want to either find sale items, or learn more about the products.
 
 The homepage will also act as the main point of navigation to allow users to learn more about the business, the benefits of coffee and links to useful resources i.e. FAQ's.
 
@@ -200,7 +199,7 @@ The output highlighted below helped with the naming conventions and descriptions
 
 #### Wireframes
 
-As part of this phase wireframes for desktop and mobile devices have been produced using Balsamiq (see images below - the wireframe files are located with the project [GitHub Repo](https://github.com/RickofManc/the-coffee-collective)). I focused on mocking up the main layouts; the homepage, a page with multiple products and a detailed view of a product.
+As part of this phase wireframes for desktop and mobile devices have been produced using Balsamiq. See images below and also the wireframe files located within the  [GitHub repo](https://github.com/RickofManc/the-coffee-collective/tree/main/wireframes). I focused on mocking up the main layouts; the homepage, a page with multiple products and a detailed view of a product.
 
 The website is responsive through differing screen widths being designed for mobile first to a max-width of 767px. Tablets are responsive from 768px through to 1023px, laptops from 1023-1440px, and desktops from 1440px upward.
 
@@ -280,12 +279,12 @@ Building on the insights gained as part of the Design Thinking phase and Keyword
 
 ### Search Engine Optimisation (SEO)
 
-SEO research is key to driving traffic from a browser based search i.e. Google to the website. The keyword research (see Skeleton section) has played a crucial role in incorporate words that users typical search for when looking to purchase coffee online. To help improve the search engine ranking I ensured each web page has it's own title, and the site carries meta tags for a description and keywords which encapsulate the general content and focus of this B2C site.
+SEO research is key to driving traffic from a browser based search i.e. Google to the website. The keyword research (see Skeleton section) has played a crucial role in incorporating words that users typical search for when seeking to purchase coffee online. To help improve the search engine ranking I ensured each web page has it's own title, and the site carries meta tags for a description and keywords which encapsulate the general content and focus of this B2C site.
 
 
 ### XML Sitemap 
 
-Additionally to help the search engines crawl the website, I have created an XML sitemap file which has been located within the site repo. The file was created using the free service through [XML-Sitemaps.com](https://www.xml-sitemaps.com/). A sitemap is a way of organizing a website, identifying the URLs and the data under each section. Previously, the sitemaps were primarily geared for the users of the website. However, Google's XML format was designed for the search engines, allowing them to find the data faster and more efficiently.
+Additionally to help the search engines crawl the website, I've added an XML sitemap file to the main root directory. The file was created using the free service through [XML-Sitemaps.com](https://www.xml-sitemaps.com/). A sitemap is a way of organizing a website, identifying the URLs and the data under each section. Previously, the sitemaps were primarily geared for the users of the website. However, Google's XML format was designed for the search engines, allowing them to find the data faster and more efficiently.
 
 A robots.txt file has also be included in the build to tell the search engine crawlers which URLs the crawler can access on this site. This is used mainly to avoid overloading the site with requests.
 
@@ -331,14 +330,14 @@ To further increase traffic to the website, a Facebook page has been created tha
 
 ## Features
 
-This section will outline the key features deployed as part of the MVP. Further information of how these features were selected and what is in scope for future releases can be found in the 'Strategic Opportunities' section.
+This section will outline the key features deployed as part of the MVP. Further information of how these features were selected and what's in scope for future releases can be found in the 'Strategic Opportunities' section.
 
 <br>
 
 
 ### Brand Navbar and Navbar Search
 
-Using a customised Bootstrap 4 'Brand Navbar' I have implemented a fixed navbar that remains at the top of all pages all of the time. This allows users to easily move between pages using the drop down menu's or directly clicking Search, My Account or their Bag.
+Using a customised Bootstrap 4 'Brand Navbar' I have implemented a fixed navbar that remains at the top of all pages all of the time. This allows users to easily move between pages using the drop down menu's or directly clicking Search, Account or their Bag.
 
 <p align="center">
     <img src="readme-images/the_coffee_collective_navbar.png" />
@@ -505,7 +504,7 @@ A section of frequently asked questions have been included to help provide a pos
 
 ### Company Information
 
-To convert 'Browsers' and 'Researchers' into buyers we have to convey the reasons why they should purchase from TCC. If we can communicate this we should be able to instil the same beliefs TCC have in their coffee into these user types. If successful trade should increase. To do this I have included a page on the company, and it's rich history in the coffee trade, and in addition key information on sustainability and accessibility to communicate some of the values of TCC.
+To convert 'Browsers' and 'Researchers' into buyers we have to convey the reasons why they should purchase from TCC. If we can communicate this we should be able to instil the same beliefs TCC have in their coffee into these user types. If successful trade should increase. To do this I have included a page on the company, it's rich history in the coffee trade, and in addition key information on sustainability and accessibility to communicate some of the values of TCC.
 
 <p align="center">
     <img src="readme-images/the_coffee_collective_our_story.png" />
@@ -518,7 +517,7 @@ To convert 'Browsers' and 'Researchers' into buyers we have to convey the reason
 
 This feature is enabled for super users only. Currently there is only one super user however the client may wish to add more as the inventory list increases. 
 With this role based permission setting you can perform CRUD (Create, Review, Update and Delete) products from either the front or back end. 
-The front end product management incorporates Bootstrap and Crispy to present clean forms to either Add, Edit or Delete a product. Super admins can review a product within the Product Details page - which when signed-in as a super user presents to links to either 'Edit' or 'Delete' and item. Otherwise this user type can add a product through the 'My Account' drop-down nav menu, and selecting 'Product Management'. Below is an image of one of these screens, the ability to Update/Edit a product in the front end. 
+The front end product management incorporates Bootstrap and Crispy to present clean forms to either Add, Edit or Delete a product. Super admins can review a product within the Product Details page - which when signed-in as a super user presents to links to either 'Edit' or 'Delete' and item. Otherwise this user type can add a product through the 'Account' drop-down nav menu, and selecting 'Add Products'. Below is an image of one of these screens, the ability to Update/Edit a product in the front end. 
 
 
 <p align="center">
